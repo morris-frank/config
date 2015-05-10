@@ -1,0 +1,77 @@
+!Xresources
+
+!Xft.dpi:      40
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+! --- special colors ---
+*background: #36312C
+*foreground: #EBD1B7
+! --- standard colors ---
+! black
+*color0: #36312C
+! bright_black
+*color8: #12100e
+! red
+*color1: #9d550f
+! bright_red
+*color9: #db784d
+! green
+*color2: #95cc5e
+! bright_green
+*color10: #a7da1e
+! yellow
+*color3: #f8bb39
+! bright_yellow
+*color11: #ffe792
+! blue
+*color4: #8fbe00
+! bright_blue
+*color12: #a6e22e
+! magenta
+*color5: #e6654e
+! bright_magenta
+*color13: #e61f44
+! cyan
+*color6: #60a365
+! bright_cyan
+*color14: #00a8c6
+! white
+*color7: #f8f8f0
+! bright_white
+*color15: #ffffff
+
+!!Man - Pages
+*colorIT: #9d550f
+*colorBD: #f8bb39
+*colorUL: #95cc5e
+
+*font: -*-dina-medium-r-*-*-10-*-*-*-*-*-iso8859-*
+*boldFont: -*-dina-bold-r-*-*-10-*-*-*-*-*-iso8859-*
+
+!!Urxvt specifics
+!Plugins..
+URxvt*.perl-ext-common: default,matcher
+URxvt*.url-launcher: /usr/bin/chromium
+URxvt*.matcher.button: 1
+URxvt*.scrollBar: false
+
+URxvt*.saveLines: 12000
+URxvt*.cursorBlink: true
+URxvt*.cursorUnderline: true
+
+! Padding
+URxvt*.internalBorder:5
+URxvt*.borderless: true
+URxvt*.externalBorder:0
+
+!!Transparency
+URxvt*.depth: 32
+URxvt*.background: rgba:1111/1111/1111/eeee
+URxvt*.fading:           30
+
+

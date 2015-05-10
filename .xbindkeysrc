@@ -1,0 +1,62 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# xboomx, Wrapper für dmrun
+"xboomx"
+ m:0x40 + c:53
+	#Mod4 + x
+
+# Desktop sperren
+"/usr/local/bin/slimlock_wrapper"
+ m:0x0 + c:225
+	#XF86Search
+
+# Helligkeit verringern:
+"xbacklight -dec 20"
+ c:232
+	#XF86MonBrightnessDown
+
+# Helligkeit erhöhen:
+"xbacklight -inc 20"
+ c:233
+ 	#XF86MonBrightnessUp
+
+# Lautstärke verringern:
+"amixer -D pulse sset Master 5%-"
+ m:0x10 + c:122
+ 	#XF86AudioLowerVolume
+
+# Lautstärke erhöhen:
+"amixer -D pulse sset Master 5%+"
+ m:0x10 + c:123
+ 	#XF86AudioRaiseVolume
+
+# Lautstärke toggle:
+"amixer -D pulse sset Master toggle"
+ m:0x10 + c:121
+ 	#XF86AudioMute
+
+# xF86MyComputer
+"thunar ~"
+ m:0x10 + c:165
+ 	#XF86MyComputer
+
+# xF86Calculator
+#"speedcrunch"
+"urxvt -e calc"
+ m:0x10 + c:148
+
+# HAHA WINDOWS USER AM ARSCH
+"xeyes"
+ m:0x1c + c:119
+ 	#Control+Alt + Delete
+
+##################################
+# End of xbindkeys configuration #
+##################################
