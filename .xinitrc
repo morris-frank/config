@@ -25,9 +25,6 @@ xrdb -load ~/.Xresources &
 #personnal bindings
 xbindkeys &
 
-#thunar in daemon mode
-thunar --daemon &
-
 function wm() {
 	#set WM name
 	xsetroot -name $1 &
