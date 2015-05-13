@@ -22,8 +22,11 @@ xset -b &
 #Load X resources
 xrdb -load ~/.Xresources &
 
-#personnal bindings
+#personal bindings
 xbindkeys &
+
+#Start pcmanfm in daemon mode
+pcmanfm -d --no-desktop &
 
 function wm() {
 	#set WM name
