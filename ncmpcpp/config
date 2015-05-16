@@ -13,7 +13,7 @@ visualizer_look = "●▮"
 media_library_primary_tag = "album_artist"
 
 #song_list_format = "{%D/}%f"
-song_list_format = "{ $7%a $1» $5}{%t} $R$2%b"
+song_list_format = "{ $7%a $1» $5}{%t} $R$4%b$1«$2%y"
 song_status_format = "$8%a $1» $4%t $1» $1%b$8 (%y)$1"
 playlist_display_mode = "classic"
 statusbar_color = "white"
