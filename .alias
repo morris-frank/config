@@ -11,6 +11,7 @@ alias x='exit'
 alias h="history|grep "
 alias f="find . |grep "
 alias p="ps aux |grep "
+alias ncm="ncmpcpp"
 
 #such colors *.*
 if [ -x /usr/bin/vendor_perl/ls++ ]; then
