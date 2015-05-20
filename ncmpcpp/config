@@ -1,8 +1,12 @@
+#Standard Stuff
 ncmpcpp_directory = ~/.ncmpcpp
 lyrics_directory = ~/.ncmpcpp/lyrics
 mpd_host = 192.168.0.105
 mpd_port = 6600
 mpd_music_dir = /hdd/var/music
+mpd_crossfade_time = 10
+
+#Visualizer Stuff
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_output_name = "Visualizer feed"
 visualizer_in_stereo = yes
@@ -10,32 +14,44 @@ visualizer_sync_interval = 30
 visualizer_type = wave
 visualizer_look = "●▮"
 
-media_library_primary_tag = "album_artist"
-
-#song_list_format = "{%D/}%f"
-song_list_format = "{ $7%a $1» $5}{%t} $R$4%b$1«$2%y"
-song_status_format = "$8%a $1» $4%t $1» $1%b$8 (%y)$1"
-playlist_display_mode = "classic"
-statusbar_color = "white"
-header_visibility = "no"
-statusbar_visibility = "no"
-colors_enabled = "yes"
+playlist_disable_highlight_delay = 1
+message_delay_time = 5
+song_list_format = "{ $7%a $1» $5}{%t}{$1[%l]} $R$4%b$1«$2%y"
+song_status_format = "$8%a $1» $4%t $1» $1%b$8 [%y]$1"
+song_library_format = %t
 now_playing_prefix = "$b" 
 now_playing_suffix = "$/b"
-autocenter_mode = "yes"
-centered_cursor = "yes"
-color1 = "white"
-main_window_color = "white"
-color2 = "red"
-progressbar_look = "─- "
-titles_visibility = "no"
-mouse_support = "no"
-discard_colors_if_item_is_selected = "yes"
-cyclic_scrolling = "yes"
 
-follow_now_playing_lyrics = "no"
-jump_to_now_playing_song_at_start = "no"
-message_delay_time = "1"
-store_lyrics_in_song_dir = "yes"
-fetch_lyrics_for_current_song_in_background = "yes"
-playlist_disable_highlight_delay = "1"
+playlist_separate_albums = yes
+browser_display_mode = columns
+discard_colors_if_item_is_selected = yes
+incremental_seeking = yes
+seek_time = 1
+autocenter_mode = yes
+centered_cursor = yes
+progressbar_look = "=» "
+progressbar_boldness = yes
+user_interface = classic
+media_library_primary_tag = "album_artist"
+default_find_mode = wrapped
+header_visibility = yes
+statusbar_visibility = yes
+titles_visibility = no
+cyclic_scrolling = yes
+follow_now_playing_lyrics = yes
+fetch_lyrics_for_current_song_in_background = yes
+store_lyrics_in_song_dir= yes
+generate_win32_compatible_filenames = yes
+allow_for_physical_item_deletion = no
+locked_screen_width_part = 50
+ask_for_locked_screen_width_part = no
+jump_to_now_playing_song_at_start = yes
+ask_before_clearing_playlists = yes
+ignore_leading_the = yes
+media_library_sort_by_mtime = no
+colors_enabled = yes
+visualizer_color = "green"
+window_border_color = "red"
+playlist_display_mode = "classic"
+mouse_support = "no"
+main_window_color = "cyan"
