@@ -22,7 +22,6 @@ song_library_format = %t
 now_playing_prefix = "$b" 
 now_playing_suffix = "$/b"
 
-playlist_separate_albums = yes
 browser_display_mode = columns
 discard_colors_if_item_is_selected = yes
 incremental_seeking = yes
