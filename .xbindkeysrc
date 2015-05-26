@@ -41,6 +41,21 @@
 "amixer -D pulse sset Master toggle"
  m:0x10 + c:121
  	#XF86AudioMute
+ 	
+# MPC - nächster Song
+"mpc next"
+ m:0x10 + c:171
+  #XF86AudioNext
+  
+# MPC - Song davor
+"mpc prev"
+ m:0x10 + c:173
+  #XF86AudioPrev
+  
+# MPC - Start/Stop Musik
+"mpc toggle"
+ m:0x10 + c:172
+  #XF86AudioPlay
 
 # xF86MyComputer
 "thunar ~"

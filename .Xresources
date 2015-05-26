@@ -50,8 +50,17 @@ Xft.rgba: rgb
 *colorBD: #f8bb39
 *colorUL: #95cc5e
 
-*font: -*-dina-medium-r-*-*-10-*-*-*-*-*-iso8859-*
-*boldFont: -*-dina-bold-r-*-*-10-*-*-*-*-*-iso8859-*
+!*font: -*-dina-medium-r-*-*-10-*-*-*-*-*-iso8859-*
+!*boldFont: -*-dina-bold-r-*-*-10-*-*-*-*-*-iso8859-*
+
+*font: xft:Inconsolata:size=9:antialias=false
+*boldFont: xft:Inconsolata:size=11:antialias=false
+
+!*font: xft:Dina:size=8:antialias=false
+!*boldFont: xft:Dina:size=8:antialias=false
+
+!*font: -*-profont-medium-r-*-*-*-120-*-*-*-*-iso8859-*
+!*boldFont: -*-profont-medium-r-*-*-*-120-*-*-*-*-iso8859-*
 
 !!Urxvt specifics
 !Plugins..

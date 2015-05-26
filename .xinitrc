@@ -6,6 +6,10 @@
 
 export EDITOR="nano"
 export DRI_PRIME=1
+# Makes fonts darker and thicker
+export INFINALITY_FT_BRIGHTNESS="-10"
+# Not too sharp, not too smooth
+export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
 
 #load nvidia settings for x
 nvidia-settings -l &

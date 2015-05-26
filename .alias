@@ -36,9 +36,9 @@ alias ll6="tree --dirsfirst -ChFupDaL 3"
 
 alias powertop='sudo powertop'
 alias toilet='toilet -f term'
-alias feh='feh --scale-down -B black'
+alias feh='feh --scale-down -Z -B black -.'
 alias view_webcam='mpv av://video4linux2:/dev/video0'
-alias restart_bar='killall bar-aint-recursive && ( ~/bin/bar.sh & )'
+alias restart_bar='pkill lemonbar && ( ~/bin/bar.sh & )'
 alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
 alias more='less'
