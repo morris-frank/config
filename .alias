@@ -1,11 +1,13 @@
 #Various aliases for Bash
 
+alias sudo='sudo '
+
 #That's matlab isn't it? bawwhh :D
 alias clc='reset'
 alias cls='reset; ls'
 
 alias c='reset'
-alias s='sudo'
+alias s='sudo '
 alias q='exit'
 alias x='exit'
 alias h="history|grep "
