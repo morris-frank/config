@@ -80,7 +80,7 @@ URxvt*.externalBorder:0
 
 !!Transparency
 URxvt*.depth: 32
-URxvt*.background: rgba:1111/1111/1111/eeee
+URxvt*.background: [90]#101010
 URxvt*.fading:           30
 
 

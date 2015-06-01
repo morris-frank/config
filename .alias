@@ -14,6 +14,7 @@ alias h="history|grep "
 alias f="find . |grep "
 alias p="ps aux |grep "
 alias ncm="ncmpcpp"
+alias g="grep -A 3 -B 3 "
 
 #such colors *.*
 if [ -x /usr/bin/vendor_perl/ls++ ]; then
