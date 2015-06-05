@@ -46,6 +46,18 @@ alias restart_bar='pkill lemonbar && ( ~/bin/bar.sh & )'
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
 
 #git
+function current_branch() {
+	ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+	ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+	echo ${ref#refs/heads/}
+}
+      
+function current_repository() {
+	ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+	ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+	echo $(git remote -v | cut -d':' -f 2)
+}
+
 alias g='git'
 alias gstat='git status'
 alias gd='git diff'
@@ -54,5 +66,5 @@ alias gcmsg='git commit -m'
 alias ga="git add"
 alias gpull='git pull'
 alias gpush='git push'
-alias ggpull='git pull origin $(current_branch'
-alias ggpush='git push origin $(current_branch'
+alias ggpull='git pull origin $(current_branch)'
+alias ggpush='git push origin $(current_branch)'
