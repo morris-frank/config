@@ -36,8 +36,11 @@ alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
 #Substitute programs
 alias more='less'
 if [ -x /usr/bin/vendor_perl/ls++ ]; then
-	alias ls='ls++ --potsf'
-	alias l='ls++ --ptsf'
+	alias ls='ls++ --potsf -p'
+	alias l='ls++ --ptsf -p'
+else
+	alias ls='ls --color=force -phl'
+	alias l='ls --color=force -phlgo'
 fi
 
 #Script-Like aliases
