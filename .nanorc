@@ -11,7 +11,7 @@ set backupdir "~/var/cache"
 # set boldtext
 # set brackets ""')>]}"
 # set casesensitive
-# set const
+set const
 # set cut
 # set fill -8
 # set historylog

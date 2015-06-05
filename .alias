@@ -1,62 +1,58 @@
 #Various aliases for Bash
 
+#To use alias after sudo
 alias sudo='sudo '
 
-#That's matlab isn't it? bawwhh :D
+#To use aliases after man
+alias man='man '
+
+#REALLY SHORT
+alias c='reset'
+alias f="find . |grep "
+alias h="history|grep "
+alias n='nano'
+alias p="ps aux |grep "
+alias q='exit'
+alias s='sudo '
+alias x='exit'
+
+#Shorter
 alias clc='reset'
 alias cls='reset; ls'
-
-alias c='reset'
-alias s='sudo '
-alias q='exit'
-alias x='exit'
-alias h="history|grep "
-alias f="find . |grep "
-alias p="ps aux |grep "
+alias sgrep="grep -A 3 -B 3 "
 alias ncm="ncmpcpp"
-alias g="grep -A 3 -B 3 "
-
-#such colors *.*
-if [ -x /usr/bin/vendor_perl/ls++ ]; then
-	alias ls='ls++'
-	alias l='ls++ --pf'
-fi
-
-#i luv cursors
-alias n='nano -c'
-alias nano='nano -c'
+alias pac="pacman "
 
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-alias ll1="tree --dirsfirst -ChFL 1"
-alias ll2="tree --dirsfirst -ChFL 2"
-alias ll3="tree --dirsfirst -ChFL 3"
-alias ll4="tree --dirsfirst -ChFupDaL 1"
-alias ll5="tree --dirsfirst -ChFupDaL 2"
-alias ll6="tree --dirsfirst -ChFupDaL 3"
-
+#Default options
+alias feh='feh --scale-down -Z -B black -.'
 alias powertop='sudo powertop'
 alias toilet='toilet -f term'
-alias feh='feh --scale-down -Z -B black -.'
+alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
+
+#Substitute programs
+alias more='less'
+if [ -x /usr/bin/vendor_perl/ls++ ]; then
+	alias ls='ls++ --potsf'
+	alias l='ls++ --ptsf'
+fi
+
+#Script-Like aliases
 alias view_webcam='mpv av://video4linux2:/dev/video0'
 alias restart_bar='pkill lemonbar && ( ~/bin/bar.sh & )'
-alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
-alias more='less'
 
-#####
-##GIT Abbr.
-alias gpom="git push origin master"
-alias gcm="git commit -m "
-alias gadd="git add"
-
-#####
-##Backup stuff
-alias backup_music='rsync -avW --delete --info=progress2 ~/var/music  -e ssh pi@192.168.0.105:/hdd/var/'
-alias backup_videos='rsync -avW --delete --info=progress2 ~/var/videos  -e ssh pi@192.168.0.105:/hdd/var/'
-alias backup_picutes='rsync -avW --delete --info=progress2 ~/var/pictures  -e ssh pi@192.168.0.105:/hdd/var/'
-alias backup_docs='rsync -avW --delete --info=progress2 ~/docs  -e ssh pi@192.168.0.105:/hdd/'
-alias backup_src='rsync -avW --delete --info=progress2 ~/src  -e ssh pi@192.168.0.105:/hdd/'
-alias backup_bin='rsync -avW --delete --info=progress2 ~/bin  -e ssh pi@192.168.0.105:/hdd/'
+#git
+alias g='git'
+alias gstat='git status'
+alias gd='git diff'
+alias gc='git commit -v'
+alias gcmsg='git commit -m'
+alias ga="git add"
+alias gpull='git pull'
+alias gpush='git push'
+alias ggpull='git pull origin $(current_branch'
+alias ggpush='git push origin $(current_branch'
