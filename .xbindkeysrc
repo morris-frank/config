@@ -3,7 +3,7 @@
 # xbindkeys configuration #
 ###########################
 
-#keystate_numlock = enable
+keystate_numlock = enable
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
@@ -11,6 +11,11 @@
 "xboomx"
  m:0x40 + c:53
 	#Mod4 + x
+	
+# projector mode :P
+"xrandr --auto"
+ m:0x40 + c:33
+ 	#Mod4 + p
 
 # Desktop sperren
 "/usr/local/bin/slimlock_wrapper"

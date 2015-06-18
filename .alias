@@ -7,7 +7,7 @@ alias sudo='sudo '
 alias man='man '
 
 #REALLY SHORT
-alias c='reset'
+alias c='cd'
 alias f="find . |grep "
 alias h="history|grep "
 alias n='nano'
@@ -28,6 +28,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 #Default options
+alias gcc='gcc -fdiagnostics-color=always'
 alias feh='feh --scale-down -Z -B black -.'
 alias powertop='sudo powertop'
 alias toilet='toilet -f term'
