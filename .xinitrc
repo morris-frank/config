@@ -5,7 +5,6 @@
 
 #Initalizes the first time a Window Manager is started
 function init_common() {
-	date >> ~/init_common_dates.txt
 	export WM_STARTED='1'
 
 	export EDITOR="nano"
