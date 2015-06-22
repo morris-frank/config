@@ -9,6 +9,9 @@ keystate_numlock = enable
 
 # xboomx, Wrapper für dmrun
 "xboomx"
+ m:0x50 + c:53
+	#Mod2 + Mod4 + x
+"xboomx"
  m:0x40 + c:53
 	#Mod4 + x
 	
@@ -19,15 +22,24 @@ keystate_numlock = enable
 
 # Desktop sperren
 "/usr/local/bin/slimlock_wrapper"
- m:0x0 + c:225
+ m:0x10 + c:225
+	#Mod2 + XF86Search
+"/usr/local/bin/slimlock_wrapper"
+ c:225
 	#XF86Search
 
 # Helligkeit verringern:
+"xbacklight -dec 20"
+ m:0x10 + c:232
+	#Mod2 + XF86MonBrightnessDown
 "xbacklight -dec 20"
  c:232
 	#XF86MonBrightnessDown
 
 # Helligkeit erhöhen:
+"xbacklight -inc 20"
+ m:0x10 + c:233
+ 	#Mod2 + XF86MonBrightnessUp
 "xbacklight -inc 20"
  c:233
  	#XF86MonBrightnessUp
@@ -35,42 +47,65 @@ keystate_numlock = enable
 # Lautstärke verringern:
 "amixer -D pulse sset Master 5%-"
  m:0x10 + c:122
+ 	#Mod2 + XF86AudioLowerVolume
+"amixer -D pulse sset Master 5%-"
+ c:122
  	#XF86AudioLowerVolume
 
 # Lautstärke erhöhen:
 "amixer -D pulse sset Master 5%+"
  m:0x10 + c:123
+ 	#Mod2 + XF86AudioRaiseVolume
+"amixer -D pulse sset Master 5%+"
+ c:123
  	#XF86AudioRaiseVolume
 
 # Lautstärke toggle:
 "amixer -D pulse sset Master toggle"
  m:0x10 + c:121
+ 	#Mod2 + XF86AudioMute
+"amixer -D pulse sset Master toggle"
+ c:121
  	#XF86AudioMute
  	
 # MPC - nächster Song
 "mpc next"
  m:0x10 + c:171
+  #Mod2 + XF86AudioNext
+"mpc next"
+ c:171
   #XF86AudioNext
   
 # MPC - Song davor
 "mpc prev"
  m:0x10 + c:173
+  #Mod2 + XF86AudioPrev
+"mpc prev"
+ c:173
   #XF86AudioPrev
   
 # MPC - Start/Stop Musik
 "mpc toggle"
  m:0x10 + c:172
+  #Mod2 + XF86AudioPlay
+"mpc toggle"
+ c:172
   #XF86AudioPlay
 
 # xF86MyComputer
-"thunar ~"
+"pcmanfm ~"
  m:0x10 + c:165
+ 	#Mod2 + XF86MyComputer
+"pcmanfm ~"
+ c:165
  	#XF86MyComputer
 
 # xF86Calculator
 #"speedcrunch"
 "urxvt -e calc"
- m:0x10 + c:148
+ m0x10 + c:148
+"urxvt -e calc"
+ c:148
 
 # HAHA WINDOWS USER AM ARSCH
 "xeyes"

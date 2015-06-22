@@ -1,66 +1,67 @@
+
 #!/bin/sh
 #
 # ~/.xinitrc
 #
-# Executed by startx (run your window manager from here)
 
-export EDITOR="nano"
-export DRI_PRIME=1
-# Makes fonts darker and thicker
-export INFINALITY_FT_BRIGHTNESS="-10"
-# Not too sharp, not too smooth
-export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
+#Initalizes the first time a Window Manager is started
+function init_common() {
+	date >> ~/init_common_dates.txt
+	export WM_STARTED='1'
 
-#load nvidia settings for x
-nvidia-settings -l &
-
-#load background image
-sh ~/etc/.fehbg &
-
-#something something cursor
-xsetroot -cursor_name left_ptr &
-
-#Deactivate sounds in terminal
-xset -b &
-
-#Load X resources
-xrdb -load ~/.Xresources &
-
-#personal bindings
-xbindkeys &
-
-#Start pcmanfm in daemon mode
-pcmanfm -d --no-desktop &
-
-function wm() {
-	#set WM name
-	xsetroot -name $1 &
-
-	#fix for matlab & co
-	wmname LG3D &
-
+	export EDITOR="nano"
+	export DRI_PRIME=1
+	# Makes fonts darker and thicker
+	export INFINALITY_FT_BRIGHTNESS="-10"
+	# Not too sharp, not too smooth
+	export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
 	#enable RGBA module for GTK
-	export GTK_MODULES=rgba &
+	export GTK_MODULES=rgba
 
-	#compton -cCb -t-5 -l-5 -r4.2 -o.4
-	compton --config ~/etc/.compton.conf &
+	test -d ~/bin/ && export PATH=~/bin/:$PATH
+	test -f ~/.Xresources && xrdb -load ~/.Xresources
 
-	#auto hide mouse
+	xsetroot -cursor_name left_ptr
+
+	xset -b
+	xset s off
+
+	xbindkeys
+
+	wmname LG3D
+
 	unclutter &
 
-	#audio
-	pulseaudio &
+	type pulseaudio &> /dev/null && pulseaudio &
 
-	#bar ain't na
-	/home/morris/bin/bar.sh &
+	disown
+}
+
+
+#Initalizes the enviroment for a Window Manager
+function init_wm() {
+	xsetroot -name $1 &
+
+	nvidia-settings --load-config-only
+
+	if test -f ~/etc/.compton.conf; then
+		compton --config ~/etc/.compton.conf &
+	else
+		compton &
+	fi
+
+	type bar.sh &> /dev/null && bar.sh &> /dev/null &
+
+	if type .fehbg; then
+		.fehbg
+	elif test -f ~/.fehbg; then
+		sh ~/.fehbg
+	fi
 
 	#spawn window manager
 	exec $1
-
 }
 
-[[ -z $1 ]] && wm spectrwm
+[[ -z "$WM_STARTED" ]] && init_common
 
-wm $1
-
-
+type $1 &> /dev/null && init_wm $1 || init_wm $(cat /usr/share/xsessions/*.desktop | awk -F'=' '/Exec/ {print $2;exit;}')
