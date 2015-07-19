@@ -1,12 +1,3 @@
-#Alias definitions
-source ~/etc/.alias
-if [ -e ~/etc/.alias_private ]; then
-	source ~/etc/.alias_private
-fi
-
-#Extra Function defintions
-#source ~/etc/.function
-
 #Various Stuff
 ###
 setopt NOTIFY
@@ -78,3 +69,14 @@ zstyle ':completion:*:default' list-prompt '%S%M matches%s'
 zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
+
+
+#Alias definitions
+source ~/etc/.alias
+if [ -e ~/etc/.alias_private ]; then
+	source ~/etc/.alias_private
+fi
+
+#Extra Function defintions
+#source ~/etc/.function
+

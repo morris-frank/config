@@ -16,7 +16,7 @@ function init_common() {
 	#enable RGBA module for GTK
 	export GTK_MODULES=rgba
 
-	test -d ~/bin/ && export PATH=~/bin/:$PATH
+	test -d ~/bin/ && export PATH=~/bin:$PATH
 	test -f ~/.Xresources && xrdb -load ~/.Xresources
 
 	xsetroot -cursor_name left_ptr
@@ -48,7 +48,8 @@ function init_wm() {
 		compton &
 	fi
 
-	type bar.sh &> /dev/null && bar.sh &> /dev/null &
+	#If there is a bar wait 5 seconds and start it in own term
+	type bar &> /dev/null && (sleep 5 && bar)
 
 	if type .fehbg; then
 		.fehbg

@@ -31,7 +31,7 @@ alias ......="cd ../../../../.."
 
 #Default options
 alias gcc='gcc -fdiagnostics-color=always'
-alias feh='feh --scale-down -Z -B black -.'
+alias feh='feh --scale-down -d -Z -B black -.'
 alias powertop='sudo powertop'
 alias toilet='toilet -f term'
 alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
@@ -48,7 +48,7 @@ fi
 
 #Script-Like aliases
 alias view_webcam='mpv av://video4linux2:/dev/video0'
-alias restart_bar='pkill lemonbar && ( ~/bin/bar.sh & )'
+alias restart_bar='pkill lemonbar; bar'
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
 
 #git
@@ -74,3 +74,17 @@ alias gpull='git pull'
 alias gpush='git push'
 alias ggpull='git pull origin $(current_branch)'
 alias ggpush='git push origin $(current_branch)'
+
+#Include compdef for the aliases, when shell is zsh
+if ps -p $$ | grep zsh &>/dev/null; then
+	compdef s=sudo
+	compdef pac=pacman
+	compdef g=git
+	compdef _git gstat=git-status
+	compdef _git gd=git-diff
+	compdef _git gc=git-commit
+	compdef _git gcmsg=git-commit
+	compdef _git ga="git-add"
+	compdef _git gpull=git-pull
+	compdef _git gpush=git-push
+fi
