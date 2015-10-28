@@ -26,6 +26,8 @@ function init_common() {
 
 	xbindkeys
 
+	urxvtd -f
+
 	wmname LG3D
 
 	unclutter &
