@@ -1,0 +1,42 @@
+[general]
+ui				= ttyui
+accounts		= posteo
+#pythonfile	= ~/etc/mutt/offlineimap.py
+fsync			= False
+
+[Account posteo]
+localrepository	= posteo-local
+remoterepository	= posteo-remote
+status_backend		= sqlite
+postsynchook		= notmuch new
+
+[Repository posteo-local]
+type 				= Maildir
+localfolders	= ~/var/mail/posteo
+#nametrans = lambda folder: {'drafts': 'Drafts',
+#									 'sent': 'Sent',
+#									 'trash': 'Trash',
+#									 'amnesty': '[Ai1369]',
+#									 'bank': 'Bank',
+#									 'ca': 'CA',
+#									 'commerce': 'Kommerz',
+#									 'stud': 'Stud-UniHD'
+#									}.get(folder, folder)
+									
+[Repository posteo-remote]
+maxconnections	= 1
+type				= IMAP
+remoteuser		= maurice.frank@posteo.de
+remotehost		= posteo.de
+realdelete		= no
+#nametrans 		= lambda folder: {'Drafts': 'drafts',
+#									 		'Sent': 'sent',
+#									 		'Trash': 'trash',
+#									 		'[Ai1369]': 'amnesty',
+#									 		'Bank': 'bank',
+#									 		'CA': 'ca',
+#									 		'Kommerz': 'commerce',
+#									 		'Stud-UniHD': 'stud'
+#										  }.get(folder, folder)
+folderfilter	= lambda folder: folder not in ['Trash']
+

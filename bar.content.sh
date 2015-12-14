@@ -1,6 +1,6 @@
 #/bin/sh
 # this script fetches all "usefull" information from the system
-# it can be used to pipe the output to <bar ain't recursive>
+# it can be used to pipe the output to lemonbar
 
 interval=0.25 #Refresh in seconds!
 
@@ -93,7 +93,7 @@ while :; do
 	if [[ $(xprop -id $(xdotool getactivewindow)) == *"_NET_WM_STATE_FULLSCREEN"* ]]
 	then
 		#echo "%{l}%{F#22B8926E}${wrk}%{c}%{F#221ba740}${mon} %{F#22DF3A24}${net} %{F#22df8124}${mus} %{F#221793d1}${arc}%{r}%{F#22B8926E}${clk}"
-		echo "%{l}%{F#22B8926E}${wrk}%{c}%{F#221ba740}${mon} %{F#22DF3A24}${net} %{F#221793d1}${arc}%{r}%{F#22B8926E}${clk}"
+		echo "%{l}%{F#FF000000}${wrk}%{c}%{F#FF000000}${mon} %{F#FF000000}${net} %{F#FF000000}${arc}%{r}%{F#FF000000}${clk}"
 	else
 		#echo "%{l}%{F#FFB8926E}${wrk}%{c}%{F#ff1ba740}${mon} %{F#FFDF3A24}${net} %{F#ffdf8124}${mus} %{F#FF1793d1}${arc}%{r}%{F#FFB8926E}${clk}"
 		echo "%{l}%{F#FFB8926E}${wrk}%{c}%{F#ff1ba740}${mon} %{F#FFDF3A24}${net} %{F#FF1793d1}${arc}%{r}%{F#FFB8926E}${clk}"

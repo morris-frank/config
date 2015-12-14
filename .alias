@@ -15,6 +15,7 @@ alias p=" ps aux |grep "
 alias q='exit'
 alias s='sudo '
 alias x='exit'
+alias t='todo.sh '
 
 #Shorter
 alias clc=' reset'
@@ -22,34 +23,41 @@ alias cls=' reset; ls'
 alias sgrep="grep -A 3 -B 3 "
 alias ncm="ncmpcpp"
 alias pac="pacman "
-
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
+alias ev="evince "
 
 #Default options
 alias gcc='gcc -fdiagnostics-color=always'
-alias feh='feh --scale-down -d -Z -B black -.'
 alias powertop='sudo powertop'
 alias toilet='toilet -f term'
 alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+# make less accept color codes and re-output them
+alias less="less -R"
 
 #Substitute programs
 alias more='less'
 if [ -x /usr/bin/vendor_perl/ls++ ]; then
-	alias ls=' ls++ --potsf -p'
-	alias l=' ls++ --ptsf -p'
+	alias ls='ls++ --potsf -p'
+	alias l='ls++ --ptsf -p'
 else
-	alias ls=' ls --color=force -phl'
-	alias l=' ls --color=force -phlgo'
+	alias ls='ls --color=force -phl'
+	alias l='ls --color=force -phlgo'
 fi
 
 #Script-Like aliases
-alias view_webcam='mpv av://video4linux2:/dev/video0'
+alias view_webcam='mpv av://video4linux2:/dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
 alias restart_bar='pkill lemonbar; bar'
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
+alias loop='while :; do !!; sleep 1; done;'
+
+function pdflatex() {
+	/usr/bin/pdflatex "$@"
+	rm -f ./*aux
+	rm -f ./*log
+	rm -f ./*toc
+}
 
 #git
 function current_branch() {
@@ -57,7 +65,7 @@ function current_branch() {
 	ref=$(git rev-parse --short HEAD 2> /dev/null) || return
 	echo ${ref#refs/heads/}
 }
-      
+
 function current_repository() {
 	ref=$(git symbolic-ref HEAD 2> /dev/null) || \
 	ref=$(git rev-parse --short HEAD 2> /dev/null) || return
@@ -78,8 +86,10 @@ alias ggpush='git push origin $(current_branch)'
 #Include compdef for the aliases, when shell is zsh
 if ps -p $$ | grep zsh &>/dev/null; then
 	compdef s=sudo
+	compdef c=cd
 	compdef pac=pacman
 	compdef g=git
+	compdef ev=evince
 	compdef _git gstat=git-status
 	compdef _git gd=git-diff
 	compdef _git gc=git-commit

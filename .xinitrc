@@ -7,7 +7,7 @@
 function init_common() {
 	export WM_STARTED='1'
 
-	export EDITOR="nano"
+	export EDITOR="emacs"
 	export DRI_PRIME=1
 	# Makes fonts darker and thicker
 	export INFINALITY_FT_BRIGHTNESS="-10"
@@ -27,6 +27,7 @@ function init_common() {
 	xbindkeys
 
 	urxvtd -f
+	emacs --daemon
 
 	wmname LG3D
 
