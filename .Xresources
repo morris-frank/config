@@ -57,19 +57,11 @@ Emacs.font:Source Code Pro:size=11:style=Regular
 
 !!Urxvt specifics
 !Plugins..
-URxvt*.perl-ext-common:default,matcher,font-size
-URxvt*.url-launcher:   /usr/bin/google-chrome-stable
-URxvt*.matcher.button: 1
-URxvt*.scrollBar:      false
+*.scrollBar:      false
 
 URxvt*.saveLines:       12000
 URxvt*.cursorBlink:     true
 URxvt*.cursorUnderline: true
-
-URxvt.keysym.C-Up:     perl:font-size:increase
-URxvt.keysym.C-Down:   perl:font-size:decrease
-URxvt.keysym.C-S-Up:   perl:font-size:incglobal
-URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 ! Padding
 URxvt*.internalBorder:5
