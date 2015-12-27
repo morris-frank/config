@@ -17,8 +17,9 @@ function init_common() {
 	export GTK_MODULES=rgba
 
 	test -d ~/bin/ && export PATH=~/bin:$PATH
-	test -f ~/.Xresources && xrdb -load ~/.Xresources
+	test -f ~/.Xresources && xrdb -merge ~/.Xresources
 
+	xsetroot -solid \#3e4853
 	xsetroot -cursor_name left_ptr
 
 	xset -b
@@ -31,9 +32,9 @@ function init_common() {
 
 	wmname LG3D
 
-	unclutter &
+	ds unclutter
 
-	type pulseaudio &> /dev/null && pulseaudio &
+	type pulseaudio &> /dev/null && ds pulseaudio
 
 	disown
 }
@@ -52,7 +53,7 @@ function init_wm() {
 	fi
 
 	#If there is a bar wait 5 seconds and start it in own term
-	type bar &> /dev/null && (sleep 5 && bar)
+	type bar &> /dev/null && ds sh -c 'sleep 5 && bar'
 
 	if type .fehbg; then
 		.fehbg

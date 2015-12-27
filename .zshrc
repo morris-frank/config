@@ -5,6 +5,8 @@ setopt NOTIFY
 setopt AUTO_CD
 unsetopt beep
 #setopt NO_CLOBBER
+setopt no_hup
+setopt no_check_jobs
 
 #HISTORY
 ###
@@ -112,7 +114,7 @@ unsetopt beep
 
     # match uppercase from lowercase
     #zstyle ':completion:*'                 matcher-list 'm:{a-z}={A-Z}'
-		zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+    zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
     # separate matches into groups
     zstyle ':completion:*:matches'         group 'yes'

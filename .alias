@@ -26,10 +26,11 @@ alias pac="pacman "
 alias ev="evince "
 
 #Default options
-alias gcc='gcc -fdiagnostics-color=always'
+alias gcc='gcc -fdiagnostics-color=always -Wall'
+alias g++='g++ -fdiagnostics-color=always -Wall'
 alias powertop='sudo powertop'
 alias toilet='toilet -f term'
-alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
+#alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
@@ -57,6 +58,10 @@ function pdflatex() {
 	rm -f ./*aux
 	rm -f ./*log
 	rm -f ./*toc
+}
+
+function za() {
+	exec zathura "$@" &!
 }
 
 #git
@@ -90,6 +95,7 @@ if ps -p $$ | grep zsh &>/dev/null; then
 	compdef pac=pacman
 	compdef g=git
 	compdef ev=evince
+	compdef za=evince
 	compdef _git gstat=git-status
 	compdef _git gd=git-diff
 	compdef _git gc=git-commit
