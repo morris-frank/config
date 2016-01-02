@@ -6,6 +6,9 @@
 	     '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+;; Remove overview screen ;;
+(setq inhibit-startup-message t)
+
 ;; Remove distractions ;;
 (tool-bar-mode -1)
 (menu-bar-mode -1)
