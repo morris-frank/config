@@ -3,6 +3,9 @@
 cd $(dirname "$0")
 PWD=$(pwd)
 
+###
+#CONFIG FILES
+###
 #XRESOURCES
 ln -svf "$PWD/Xresources"  "$HOME/.Xresources"
 
@@ -49,3 +52,11 @@ ln -svf "$PWD/todorc" "$HOME/.todo/config"
 
 #COMPTON
 ln -svf "$PWD/comptonrc" "$HOME/.compton.conf"
+
+
+###
+#SCRIPTS
+###
+mkdir "$HOME/bin" 2> /dev/null
+ln -svf "$PWD/bar" "$HOME/bin/bar"
+ln -svf "$PWD/bar.content.sh" "$HOME/bin/bar.content.sh"
