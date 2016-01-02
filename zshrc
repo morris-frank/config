@@ -169,9 +169,11 @@ setopt no_check_jobs
 
 #Alias definitions
 ###
-	source ~/etc/.alias
-	if [ -e ~/etc/.alias_private ]; then
-		source ~/etc/.alias_private
+	if [ -e ~/etc/alias ]; then
+		source ~/etc/alias
+	fi
+	if [ -e ~/etc/alias_private ]; then
+		source ~/etc/alias_private
 	fi
 ###
 

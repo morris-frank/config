@@ -22,15 +22,14 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
 
 #Alias definitions
-source ~/etc/.alias
-if [ -e ~/etc/.alias_private ]; then
-	source ~/etc/.alias_private
+if [ -e ~/etc/alias ]; then
+	source ~/etc/alias
+fi
+
+if [ -e ~/etc/alias_private ]; then
+	source ~/etc/alias_private
 fi
 
 if [ -e /usr/share/doc/pkgfile/command-not-found.bash ]; then
 	source /usr/share/doc/pkgfile/command-not-found.bash
-fi
-
-if [ -e ~/etc/.bashrc_private ]; then
-	source ~/etc/.bashrc_private
 fi

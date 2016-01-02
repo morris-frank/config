@@ -46,8 +46,8 @@ function init_wm() {
 
 	nvidia-settings --load-config-only
 
-	if test -f ~/etc/.compton.conf; then
-		compton --config ~/etc/.compton.conf &
+	if test -f ~/.compton.conf; then
+		compton --config ~/.compton.conf &
 	else
 		compton &
 	fi
