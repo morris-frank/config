@@ -78,8 +78,8 @@ setopt no_check_jobs
 
 	#completion system
 	###
-		zstyle ':completion::complete:*'       use-cache on
-		zstyle ':completion::complete:*'       cache-path "$HOME/.zcache"
+	 	zstyle ':completion::complete:*'       use-cache on
+	 zstyle ':completion::complete:*'       cache-path "$HOME/.zcache"
 
     # allow one error for every three characters typed in approximate completer
     zstyle ':completion:*:approximate:'    max-errors 'reply=( $((($#PREFIX+$#SUFFIX)/3 )) numeric )'
@@ -122,7 +122,7 @@ setopt no_check_jobs
 
     # if there are more than 2 options allow selecting from a menu
     zstyle ':completion:*'                 menu select=2
-		zstyle ":completion:*"                 menu select=long
+	 zstyle ":completion:*"                 menu select=long
 
     zstyle ':completion:*:messages'        format '%d'
     zstyle ':completion:*:options'         auto-description '%d'

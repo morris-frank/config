@@ -7,11 +7,11 @@ alias sudo='sudo '
 alias man='man '
 
 #REALLY SHORT
-alias c='cd'
-alias f="find . |grep "
-alias h="history|grep "
-alias n='nano'
-alias p=" ps aux |grep "
+alias c='cd '
+alias f='find . |grep '
+alias h='history|grep '
+alias n='nano '
+alias p='ps aux |grep '
 alias q='exit'
 alias s='sudo '
 alias x='exit'
@@ -20,25 +20,24 @@ alias t='todo.sh '
 #Shorter
 alias clc=' reset'
 alias cls=' reset; ls'
-alias sgrep="grep -A 3 -B 3 "
-alias ncm="ncmpcpp"
-alias pac="pacman "
-alias ev="evince "
+alias sgrep='grep -A 3 -B 3 '
+alias ncm='ncmpcpp'
+alias pac='pacman '
+alias ev='evince '
 
 #Default options
-alias gcc='gcc -fdiagnostics-color=always -Wall'
-alias g++='g++ -fdiagnostics-color=always -Wall'
-alias powertop='sudo powertop'
-alias toilet='toilet -f term'
-#alias head='head -n $((${LINES:-`tput lines 2>/dev/null||echo -n 12`} - 2))'
-alias grep="grep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias egrep="egrep --color=auto"
+alias gcc='gcc -fdiagnostics-color=always -Wall '
+alias g++='g++ -fdiagnostics-color=always -Wall '
+alias powertop='sudo powertop '
+alias toilet='toilet -f term '
+alias grep='grep --color=auto '
+alias fgrep='fgrep --color=auto '
+alias egrep='egrep --color=auto '
 # make less accept color codes and re-output them
-alias less="less -R"
+alias less='less -R'
 
 #Substitute programs
-alias more='less'
+alias more='less -R'
 if [ -x /usr/bin/vendor_perl/ls++ ]; then
 	alias ls='ls++ --potsf -p'
 	alias l='ls++ --ptsf -p'
@@ -61,7 +60,11 @@ function pdflatex() {
 }
 
 function za() {
-	exec zathura "$@" &!
+	exec zathura "$@" &> /dev/null & disown
+}
+
+function o() {
+	exec xdg-open "$@" &> /dev/null & disown
 }
 
 #git
@@ -82,7 +85,7 @@ alias gstat='git status'
 alias gd='git diff'
 alias gc='git commit -v'
 alias gcmsg='git commit -m'
-alias ga="git add"
+alias ga='git add'
 alias gpull='git pull'
 alias gpush='git push'
 alias ggpull='git pull origin $(current_branch)'
@@ -100,7 +103,7 @@ if ps -p $$ | grep zsh &>/dev/null; then
 	compdef _git gd=git-diff
 	compdef _git gc=git-commit
 	compdef _git gcmsg=git-commit
-	compdef _git ga="git-add"
+	compdef _git ga='git-add'
 	compdef _git gpull=git-pull
 	compdef _git gpush=git-push
 fi

@@ -27,12 +27,6 @@ if [ -e ~/etc/.alias_private ]; then
 	source ~/etc/.alias_private
 fi
 
-#Variable definitons for colors
-source ~/etc/.color
-
-#Extra Function defintions
-source ~/etc/.function
-
 if [ -e /usr/share/doc/pkgfile/command-not-found.bash ]; then
 	source /usr/share/doc/pkgfile/command-not-found.bash
 fi
