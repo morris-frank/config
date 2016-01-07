@@ -42,9 +42,17 @@ workspaces(){
 	((tot--))
 	for i in `seq 0 "$tot"`; do
 		if xdotool search --limit 1 --desktop "$i" --name ".*" &> /dev/null; then
-			wrk="${wrk}×"
+			if [ "$i" == "$cur" ]; then
+				wrk="${wrk}¤"
+			else
+				wrk="${wrk}×"
+			fi
 		else
-			wrk="${wrk} "
+			if [ "$i" == "$cur" ]; then
+				wrk="${wrk}↓"
+			else
+				wrk="${wrk} "
+			fi
 		fi
 		if [ "$i" != "$tot" ]; then
 			wrk="${wrk}¦"

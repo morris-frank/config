@@ -16,6 +16,7 @@ alias q='exit'
 alias s='sudo '
 alias x='exit'
 alias t='todo.sh '
+alias d='drive'
 
 #Shorter
 alias clc=' reset'
