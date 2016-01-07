@@ -96,10 +96,10 @@ alias ggpush='git push origin $(current_branch)'
 if ps -p $$ | grep zsh &>/dev/null; then
 	compdef s=sudo
 	compdef c=cd
-	compdef pac=pacman
+	type pacman &> /dev/null && compdef pac=pacman
 	compdef g=git
-	compdef ev=evince
-	compdef za=evince
+	type evince &> /dev/null && compdef ev=evince
+	type evince &> /dev/null && compdef za=evince
 	compdef _git gstat=git-status
 	compdef _git gd=git-diff
 	compdef _git gc=git-commit
