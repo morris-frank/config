@@ -65,7 +65,9 @@ function za() {
 }
 
 function o() {
-	exec xdg-open "$@" &> /dev/null & disown
+	for file in "$@"; do
+		exec xdg-open "$file" &> /dev/null & disown
+	done
 }
 
 #git

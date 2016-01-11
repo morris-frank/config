@@ -53,6 +53,8 @@ ln -svf "$PWD/todorc" "$HOME/.todo/config"
 #COMPTON
 ln -svf "$PWD/comptonrc" "$HOME/.compton.conf"
 
+#IRSSI
+ln -svf "$PWD/irssirc" "$HOME/.irssi/config"
 
 ###
 #SCRIPTS
