@@ -17,7 +17,11 @@ function init_common() {
 	export GTK_MODULES=rgba
 
 	test -d ~/bin/ && export PATH=~/bin:$PATH
+	test -d ~/bin/go  && export PATH=~/bin/go:$PATH
+
 	test -f ~/.Xresources && xrdb -merge ~/.Xresources
+
+	test -d ~/src/go  && export GOPATH=~/src/go
 
 	xsetroot -solid \#3e4853
 	xsetroot -cursor_name left_ptr
