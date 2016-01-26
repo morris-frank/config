@@ -16,7 +16,6 @@ alias q='exit'
 alias s='sudo '
 alias x='exit'
 alias t='todo.sh '
-alias d='drive'
 
 #Shorter
 alias clc=' reset'
@@ -69,6 +68,10 @@ function o() {
 		exec xdg-open "$file" &> /dev/null & disown
 	done
 }
+
+#drive
+alias d='drive'
+alias dpush='drive push --ignore-name-clashes .'
 
 #git
 function current_branch() {
