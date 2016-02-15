@@ -7,7 +7,7 @@
 function init_common() {
 	export WM_STARTED='1'
 
-	export EDITOR="emacs"
+	export EDITOR="nano"
 	export DRI_PRIME=1
 	# Makes fonts darker and thicker
 	export INFINALITY_FT_BRIGHTNESS="-10"
@@ -32,7 +32,6 @@ function init_common() {
 	xbindkeys
 
 	urxvtd -f
-	emacs --daemon
 
 	wmname LG3D
 
@@ -48,12 +47,14 @@ function init_common() {
 function init_wm() {
 	xsetroot -name $1 &
 
-	nvidia-settings --load-config-only
+	type nvidia-settings &> /dev/null && nvidia-settings --load-config-only
 
-	if test -f ~/.compton.conf; then
-		compton --config ~/.compton.conf &
-	else
-		compton &
+	if type compton &>/dev/null; then
+		if test -f ~/.compton.conf; then
+			compton --config ~/.compton.conf &
+		else
+			compton &
+		fi
 	fi
 
 	#If there is a bar wait 5 seconds and start it in own term

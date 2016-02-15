@@ -19,7 +19,7 @@ program[term] = urxvtc
 
 # QUIRKS
 #MATLAB-QUIRKS
-quirk[sun-awt-X11-XFramePeer]		= FLOAT
+quirk[sun-awt-X11-XFramePeer]		= FLOAT + ANYWHERE + FOCUSPREV
 quirk[MATLAB]							= FLOAT
 quirk[sun-awt-X11-XDialogPeer]	= FLOAT
 quirk[sun-awt-X11-XWindowPeer]	= FLOAT
