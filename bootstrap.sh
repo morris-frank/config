@@ -8,6 +8,7 @@ PWD=$(pwd)
 ###
 #XRESOURCES
 ln -svf "$PWD/Xresources"  "$HOME/.Xresources"
+type -f "$PWD/Xresources_extra" &> /dev/null && ln -svf "$PWD/Xresources_extra"  "$HOME/.Xresources_extra"
 
 #BASHRC
 ln -svf "$PWD/bashrc"  "$HOME/.bashrc"

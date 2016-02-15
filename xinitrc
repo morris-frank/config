@@ -20,6 +20,7 @@ function init_common() {
 	test -d ~/bin/go  && export PATH=~/bin/go:$PATH
 
 	test -f ~/.Xresources && xrdb -merge ~/.Xresources
+	test -f ~/.Xresources_extra && xrdb -merge ~/.Xresources_extra
 
 	test -d ~/src/go  && export GOPATH=~/src/go
 
