@@ -45,26 +45,26 @@ keystate_numlock = enable
  	#XF86MonBrightnessUp
 
 # Lautstärke verringern:
-"amixer -D pulse sset Master 5%-"
+"amixer -c 0 sset Master 5%-"
  m:0x10 + c:122
  	#Mod2 + XF86AudioLowerVolume
-"amixer -D pulse sset Master 5%-"
+"amixer -c 0 sset Master 5%-"
  c:122
  	#XF86AudioLowerVolume
 
 # Lautstärke erhöhen:
-"amixer -D pulse sset Master 5%+"
+"amixer -c 0 sset Master 5%+"
  m:0x10 + c:123
  	#Mod2 + XF86AudioRaiseVolume
-"amixer -D pulse sset Master 5%+"
+"amixer -c 0 sset Master 5%+"
  c:123
  	#XF86AudioRaiseVolume
 
 # Lautstärke toggle:
-"amixer -D pulse sset Master toggle"
+"amixer -c 0 sset Master toggle"
  m:0x10 + c:121
  	#Mod2 + XF86AudioMute
-"amixer -D pulse sset Master toggle"
+"amixer -c 0 sset Master toggle"
  c:121
  	#XF86AudioMute
  	
