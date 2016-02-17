@@ -27,6 +27,9 @@ keystate_numlock = enable
 "/usr/local/bin/slimlock_wrapper"
  c:225
 	#XF86Search
+"slimlock"
+ m:0x0 + c:156
+	#XF86Launch1
 
 # Helligkeit verringern:
 "xbacklight -dec 20"

@@ -59,7 +59,7 @@ function init_wm() {
 	fi
 
 	#If there is a bar wait 5 seconds and start it in own term
-	type bar &> /dev/null && ds sh -c 'sleep 5 && bar'
+	type bar &> /dev/null && ds sh -c 'sleep 2 && bar'
 
 	if type .fehbg; then
 		.fehbg

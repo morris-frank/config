@@ -8,6 +8,12 @@ unsetopt beep
 setopt no_hup
 setopt no_check_jobs
 
+#Color Hightlightning for less
+###
+	export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
+	export LESS='-R '
+###
+
 #HISTORY
 ###
 	HISTFILE=~/.histfile

@@ -51,9 +51,11 @@ Xft.rgba:      rgb
 *colorBD: #f8bb39
 *colorUL: #95cc5e
 
-Emacs.font:Source Code Pro:size=11:style=Regular
-*font:xft:Source Code Pro:pixelsize=11:style=Regular
-*boldFont:xft:Source Code Pro:pixelsize=11:style=Regular
+!*font:*font:xft:GohuFont:style=Regular       
+!*boldFont:xft:Gohu
+
+*font:	-*-gohufont-medium-r-*-*-14-*-*-*-*-*-iso8859-*
+*boldFont:	-*-gohufont-medium-r-*-*-14-*-*-*-*-*-iso8859-*
 
 !!Urxvt specifics
 !Plugins..
