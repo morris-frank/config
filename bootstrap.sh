@@ -54,6 +54,10 @@ ln -svf "$PWD/todorc" "$HOME/.todo/config"
 #COMPTON
 ln -svf "$PWD/comptonrc" "$HOME/.compton.conf"
 
+#SUBLIME TEST 3
+mkdir -p "$HOME/.config/sublime-text-3/Packages/User" 2> /dev/null
+ln -svf "$PWD/Preferences.sublime-settings" "$HOME/.config/sublime-text-3/Packages/User/"
+
 ###
 #SCRIPTS
 ###
