@@ -1,0 +1,11 @@
+#!/bin/bash
+
+next=`xprop -root _NET_CURRENT_DESKTOP | awk '{print ++$3}'`
+tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
+
+for i in `seq "$next" "$tot"; seq 0 "$next"`; do
+	if xdotool search --limit 1 --desktop "$i" --name ".*" &> /dev/null; then
+		wmctrl -s "$i"
+		exit
+	fi
+done

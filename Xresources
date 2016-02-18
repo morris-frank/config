@@ -51,9 +51,6 @@ Xft.rgba:      rgb
 *colorBD: #f8bb39
 *colorUL: #95cc5e
 
-!*font:*font:xft:GohuFont:style=Regular       
-!*boldFont:xft:Gohu
-
 *font:	-*-gohufont-medium-r-*-*-14-*-*-*-*-*-iso8859-*
 *boldFont:	-*-gohufont-medium-r-*-*-14-*-*-*-*-*-iso8859-*
 

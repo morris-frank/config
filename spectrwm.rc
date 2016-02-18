@@ -10,7 +10,7 @@ disable_border		= 0
 bar_enabled		= 0
 bar_border_width	= -5
 
-region			= screen[1]:1366x755+0+13
+region			= screen[1]:1366x768+0+0
 
 modkey = Mod4
 keyboard_mapping = ~/.spectrwm_de.conf

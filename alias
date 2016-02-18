@@ -40,7 +40,6 @@ alias egrep='egrep --color=auto '
 alias less='less -R'
 
 #Substitute programs
-alias more='less -R'
 if [ -x /usr/bin/vendor_perl/ls++ ]; then
 	alias ls='ls++ --potsf -p'
 	alias l='ls++ --ptsf -p'
@@ -51,9 +50,8 @@ fi
 
 #Script-Like aliases
 alias view_webcam='mpv av://video4linux2:/dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
-alias restart_bar='pkill lemonbar; bar'
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
-alias loop='while :; do !!; sleep 1; done;'
+alias robustirc='$GOPATH/bin/robustirc-bridge -network=robustirc.net &!'
 
 function pdflatex() {
 	/usr/bin/pdflatex "$@"
