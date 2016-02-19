@@ -75,6 +75,9 @@ PWD=$(pwd)
 	#COMPTON
 	ln -sf "$PWD/compton.rc" "$HOME/.compton.conf"
 	
+	#GIT
+	ln -sf "$PWD/git.rc" "$HOME/.gitconfig"
+	
 	#SUBLIME TEST 3
 	mkdir -p "$HOME/.config/sublime-text-3/Packages/User" 2> /dev/null
 	ln -sf "$PWD/Preferences.sublime-settings" "$HOME/.config/sublime-text-3/Packages/User/"
