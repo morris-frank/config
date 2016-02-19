@@ -22,6 +22,10 @@ PWD=$(pwd)
 			echo "$p is missing... That will break stuff"
 		fi
 	done
+
+	if ! fc-list | fgrep -q gohufont; then
+		echo "gohufont is missing... That will break the ReqSpec O.O"
+	fi
 ###
 
 ###
