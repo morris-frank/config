@@ -26,9 +26,7 @@ alias pac='pacman '
 alias ev='evince '
 
 #Default options
-alias rm=' timeout 3 rm -Iv --one-file-system'
 alias mkdir='mkdir -p -v'
-alias mv=' timeout 8 mv -iv'
 alias gcc='gcc -fdiagnostics-color=always -Wall '
 alias g++='g++ -fdiagnostics-color=always -Wall '
 alias powertop='sudo powertop '
