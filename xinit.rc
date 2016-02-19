@@ -30,9 +30,14 @@ function init_common() {
 	xset -b
 	xset s off
 
+	#Load the bindings from xbindkeys.rc and add some xkb options
 	xbindkeys
+	#Make the Print/Druck key the Super_R key
+	setxkbmap -option "altwin:prtsc_rwin"
+	#Deactivate capslock
+	setxkbmap -option "caps:none"
 
-	urxvtd -f
+	type urxvtd &> /dev/null && urxvtd -f
 
 	wmname LG3D
 

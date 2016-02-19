@@ -1,4 +1,4 @@
-workspace_limit	= 9
+workspace_limit	= 99
 border_width 		= 1
 color_focus		= rgb:F8/BB/39
 color_focus_maximized	= rgba:00/00/00/00

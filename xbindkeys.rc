@@ -9,8 +9,8 @@ keystate_numlock = enable
 
 # xboomx, Wrapper für dmrun
 "xboomx"
- m:0x40 + c:53
-	#Mod4 + x
+ m:0x0 + c:66
+	#VoidSymbol
 	
 # projector mode :P
 "xrandr --auto"

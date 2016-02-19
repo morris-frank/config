@@ -56,8 +56,8 @@ setopt no_check_jobs
 	# bindkey "$terminfo[kpp]" # PageUp
 	# bindkey "$terminfo[knp]" # PageDown
 	# Bind ctrl-left / ctrl-right
-	bindkey "\e[1;5D" backward-word
-	bindkey "\e[1;5C" forward-word
+	bindkey "^s" backward-word
+	bindkey "^d" forward-word
 ###
 
 #Completition
