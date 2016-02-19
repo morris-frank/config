@@ -1,0 +1,14 @@
+Gocode pkg: "github.com/mrtukkin/hammock-lights"
+Gocode env: gocode.margoEnv{LibPath:"/usr/lib/go/pkg/linux_amd64:/home/morris/src/go/pkg/linux_amd64", GOOS:"linux", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/lib/go", GOPATH:"/home/morris/src/go", InstallSuffix:""}
+Gocode pkg: "github.com/mrtukkin/hammock-lights"
+Gocode env: gocode.margoEnv{LibPath:"/usr/lib/go/pkg/linux_amd64:/home/morris/src/go/pkg/linux_amd64", GOOS:"linux", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/lib/go", GOPATH:"/home/morris/src/go", InstallSuffix:""}
+Gocode pkg: "github.com/mrtukkin/go-pigpio"
+Gocode pkg: "github.com/mrtukkin/hammock-lights"
+Gocode pkg: "github.com/mrtukkin/hammock-lights"
+Gocode env: gocode.margoEnv{LibPath:"/usr/lib/go/pkg/linux_amd64:/home/morris/src/go/pkg/linux_amd64", GOOS:"linux", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/lib/go", GOPATH:"/home/morris/src/go", InstallSuffix:""}
+Gocode pkg: "github.com/mrtukkin/hammock-lights"
+Gocode env: gocode.margoEnv{LibPath:"/usr/lib/go/pkg/linux_amd64:/home/morris/src/go/pkg/linux_amd64", GOOS:"linux", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/lib/go", GOPATH:"/home/morris/src/go", InstallSuffix:""}
+Gocode pkg: "github.com/mrtukkin/go-pigpio"
+Gocode env: gocode.margoEnv{LibPath:"/usr/lib/go/pkg/linux_amd64:/home/morris/src/go/pkg/linux_amd64", GOOS:"linux", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/lib/go", GOPATH:"/home/morris/src/go", InstallSuffix:""}
+Gocode pkg: "github.com/mrtukkin/go-pigpio"
+Gocode env: gocode.margoEnv{LibPath:"/usr/lib/go/pkg/linux_amd64:/home/morris/src/go/pkg/linux_amd64", GOOS:"linux", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/lib/go", GOPATH:"/home/morris/src/go", InstallSuffix:""}
