@@ -62,6 +62,8 @@ function init_wm() {
 			compton &
 		fi
 	fi
+	
+	type pulse.sh &> /dev/null && pulse.sh &
 
 	#If there is a bar wait 5 seconds and start it in own term
 	type bar &> /dev/null && ds sh -c 'sleep 2 && bar'
