@@ -91,6 +91,4 @@ PWD=$(pwd)
 #SCRIPTS
 ###
 	mkdir "$HOME/bin" 2> /dev/null
-	ln -sf "$PWD/commands/ws_next_used" "$HOME/bin/"
-	ln -sf "$PWD/commands/ws_prev_used" "$HOME/bin/"
 ###

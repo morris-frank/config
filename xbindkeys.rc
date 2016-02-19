@@ -100,27 +100,6 @@ keystate_numlock = enable
  c:165
  	#XF86MyComputer
 
-# xF86Calculator
-"urxvt -e calc"
- m:0x10 + c:148
-"urxvt -e calc"
- c:148
-
-# HAHA WINDOWS USER AM ARSCH
-"xeyes"
- m:0x1c + c:119
- 	#Control+Alt + Delete
- 	
-# go to next workspace
-"ws_next_used"
- m:0x40 + c:26
-   #Mod4 + e
-
-# go to next workspace
-"ws_prev_used"
- m:0x40 + c:25
-   #Mod4 + w
-
 ##################################
 # End of xbindkeys configuration #
 ##################################
