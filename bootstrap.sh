@@ -17,7 +17,7 @@ PWD=$(pwd)
 ###
 #CHECK FOR MISSING COMMANDS
 ###
-	for p in wmctrl xprop xdotool ls++ zathura xboomx xbacklight amixer; do
+	for p in wmctrl xprop xdotool ls++ zathura xboomx xbacklight amixer gm; do
 		if ! type "$p" &> /dev/null; then
 			echo "$p is missing... That will break stuff"
 		fi
@@ -91,4 +91,5 @@ PWD=$(pwd)
 #SCRIPTS
 ###
 	mkdir "$HOME/bin" 2> /dev/null
+	ln -sf "$PWD/commands/slimlock_wrapper" "$HOME/bin"
 ###

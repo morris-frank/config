@@ -1,0 +1,11 @@
+#!/bin/sh -
+if ! ps cax | grep slimlock; then
+	scrot /tmp/background.adapt.png
+	#For blur use this line:
+	#gm convert /tmp/background.adapt.png -modulate 150,70 -blur 0x2 /tmp/background.adapt.png
+	#For pixelizing use this line:
+	gm convert /tmp/background.adapt.png -scale 10% -scale 1000% /tmp/background.adapt.png
+	cp /tmp/background.adapt.png /usr/share/slim/themes/ACID-SLiM/background.png
+	amixer -D pulse sset Master off
+	/usr/bin/slimlock
+fi

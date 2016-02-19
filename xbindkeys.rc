@@ -18,10 +18,10 @@ keystate_numlock = enable
  	#Mod4 + p
 
 # Desktop sperren
-"/usr/local/bin/slimlock_wrapper"
+"slimlock_wrapper"
  m:0x10 + c:225
 	#Mod2 + XF86Search
-"/usr/local/bin/slimlock_wrapper"
+"slimlock_wrapper"
  c:225
 	#XF86Search
 "slimlock"
