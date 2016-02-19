@@ -17,7 +17,7 @@ PWD=$(pwd)
 ###
 #CHECK FOR MISSING COMMANDS
 ###
-	for p in wmctrl xprop xdotool ls++ zathura xboomx xbacklight amixer gm; do
+	for p in wmctrl xprop xdotool ls++ zathura xboomx xbacklight amixer gm scrot; do
 		if ! type "$p" &> /dev/null; then
 			echo "$p is missing... That will break stuff"
 		fi
