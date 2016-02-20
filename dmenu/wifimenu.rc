@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+dmenucmd="dmenu -dim 0.4 -x 10 -y 10 -w 666 -l 13 -i -nb '#111' -nf '#f8f8f0' -sb '#f8bb39' -sf '#111' -p '[$(xprop -root _NET_CURRENT_DESKTOP | awk '{print ++$3}')]$(acpi -b | awk -F',' '{print $2}')'"
+
+echo "$dmenucmd"
+
+switchTo=`ls | $dmenucmd $*`
+
+echo "$switchTo"

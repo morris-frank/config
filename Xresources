@@ -8,7 +8,6 @@ Xft.antialias: 1
 Xft.rgba:      rgb
 
 ! --- special colors ---
-!*background: #36312C
 *background: #272822
 *foreground: #EBD1B7
 
@@ -69,5 +68,5 @@ URxvt*.externalBorder:0
 
 !!Transparency
 URxvt*.depth:      32
-URxvt*.background: [97]#101010
+URxvt*.background: [99]#101010
 URxvt*.fading:     30

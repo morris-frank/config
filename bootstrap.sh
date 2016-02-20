@@ -70,7 +70,7 @@ PWD=$(pwd)
 	
 	#XBOOMX
 	mkdir "$HOME/.xboomx" 2> /dev/null
-	ln -sf "$PWD/xboomx.rc" "$HOME/.xboomx/config"
+	ln -sf "$PWD/dmenu/xboomx.rc" "$HOME/.xboomx/config"
 	
 	#TODO.SH
 	mkdir "$HOME/.todo" 2> /dev/null
