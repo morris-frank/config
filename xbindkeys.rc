@@ -14,6 +14,9 @@ keystate_numlock = enable
 "rofi_run"
  m:0x0 + c:66
 	#VoidSymbol
+"rofi_run"
+ m:0x10 + c:66
+	#VoidSymbol
 	
 # projector mode :P
 "xrandr --auto"
