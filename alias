@@ -47,10 +47,11 @@ else
 fi
 
 #Script-Like aliases
-alias view_webcam='mpv av://video4linux2:/dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
+alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
 alias robustirc='$GOPATH/bin/robustirc-bridge -network=robustirc.net &!'
-alias uber='ssh uber@atria.uberspace.de'
+alias ubert='ssh mrtukkin@atria.uberspace.de'
+alias uberl='ssh mrtukkin@atria.uberspace.de'
 
 function pdflatex() {
 	/usr/bin/pdflatex "$@"

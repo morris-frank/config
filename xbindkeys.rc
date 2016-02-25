@@ -8,7 +8,10 @@ keystate_numlock = enable
 #keystate_scrolllock= enable
 
 # xboomx, Wrapper für dmrun
-"xboomx"
+#"xboomx"
+ m:0x0 + c:66
+	#VoidSymbol
+"rofi_run"
  m:0x0 + c:66
 	#VoidSymbol
 	
