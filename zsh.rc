@@ -29,8 +29,8 @@ setopt no_check_jobs
 	setopt hist_no_store
 	#Save more information in histfile
 	setopt extended_history
-	[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
-	[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
+	bindkey  "^[[A"  history-beginning-search-backward
+	bindkey  "^[[B"  history-beginning-search-forward-end
 ###
 
 

@@ -71,14 +71,14 @@ URxvt*.depth:      32
 URxvt*.background: [99]#101010
 URxvt*.fading:     30
 
-!!Rofi specifics
+!!rofi specifics
 !rofi.
 rofi.kb-cancel: Escape,VoidSymbol
 rofi.hide-scrollbar: true
 rofi.opacity: 95
 rofi.glob: true
 rofi.location: 1
-rofi.sidebar-mode: true
+rofi.sidebar-mode: false
 rofi.auto-select: true
 rofi.m: -1
 rofi.color-enabled:                  true
