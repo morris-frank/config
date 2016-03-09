@@ -38,8 +38,8 @@ PWD=$(pwd)
 	#BASHRC
 	ln -sf "$PWD/bash.rc"  "$HOME/.bashrc"
 	
-	#BASH_PROFILE
-	ln -sf "$PWD/bash_profile"  "$HOME/.bash_profile"
+	#PROFILE
+	ln -sf "$PWD/profile"  "$HOME/.profile"
 	
  	#INPUTRC
 	ln -sf "$PWD/input.rc"  "$HOME/.inputrc"
