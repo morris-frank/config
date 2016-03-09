@@ -72,7 +72,8 @@ function o() {
 
 #drive
 alias d='drive'
-alias dpush='drive push --ignore-name-clashes .'
+alias dpush='drive push --ignore-name-clashes --exclude-ops "delete" .'
+alias dpull='drive push --ignore-name-clashes --exclude-ops "delete" .'
 
 #git
 function current_branch() {
