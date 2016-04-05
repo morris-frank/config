@@ -16,6 +16,7 @@ alias q='exit'
 alias s='sudo '
 alias x='exit'
 alias t='todo.sh '
+alias pi='sxiv * &>/dev/null &!' 
 
 #Shorter
 alias clc=' reset'
@@ -36,6 +37,7 @@ alias fgrep='fgrep --color=auto '
 alias egrep='egrep --color=auto '
 # make less accept color codes and re-output them
 alias less='less -R'
+alias cp='cp --reflink=auto '
 
 #Substitute programs
 if [ -x /usr/bin/vendor_perl/ls++ ]; then
