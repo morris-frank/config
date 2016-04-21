@@ -52,8 +52,10 @@ fi
 alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
 alias robustirc='$GOPATH/bin/robustirc-bridge -network=robustirc.net &!'
-alias ubert='ssh mrtukkin@atria.uberspace.de'
-alias uberl='ssh mrtukkin@atria.uberspace.de'
+alias metro='ssh metropol@hadar.uberspace.de'
+alias mercurius=' ssh 192.168.0.110'
+alias pu+='/usr/bin/pulseaudio-ctl up'
+alias pu-='/usr/bin/pulseaudio-ctl down'
 
 function pdflatex() {
 	/usr/bin/pdflatex "$@"
