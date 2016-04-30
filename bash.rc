@@ -20,6 +20,7 @@ shopt -s histappend
 shopt -s cmdhist
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
+export TERM="linux"
 
 #Alias definitions
 if [ -e ~/etc/alias ]; then
