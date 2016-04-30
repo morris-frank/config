@@ -28,8 +28,8 @@ alias ev='evince '
 
 #Default options
 alias mkdir='mkdir -p -v'
-alias gcc='gcc -fdiagnostics-color=always -Wall '
-alias g++='g++ -fdiagnostics-color=always -Wall '
+#alias gcc='gcc -fdiagnostics-color=always -Wall '
+#alias g++='g++ -fdiagnostics-color=always -Wall '
 alias powertop='sudo powertop '
 alias toilet='toilet -f term '
 alias grep='grep --color=auto '
@@ -53,7 +53,7 @@ alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1
 alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
 alias robustirc='$GOPATH/bin/robustirc-bridge -network=robustirc.net &!'
 alias metro='ssh metropol@hadar.uberspace.de'
-alias mercurius=' ssh 192.168.0.110'
+alias mercurius=' ssh 192.168.0.114'
 alias pu+='/usr/bin/pulseaudio-ctl up'
 alias pu-='/usr/bin/pulseaudio-ctl down'
 
