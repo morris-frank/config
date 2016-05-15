@@ -71,7 +71,7 @@ function o() {
 
 #drive
 alias d='drive'
-alias dpush='drive push --ignore-name-clashes --exclude-ops "delete" .'
+alias dpush='drive push --ignore-name-clashes --ignore-conflict --exclude-ops "delete" .'
 alias dpull='drive pull --ignore-name-clashes --exclude-ops "delete" .'
 alias dget='drive pull --ignore-name-clashes --exclude-ops "delete, update" .'
 

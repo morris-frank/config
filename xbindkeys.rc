@@ -30,7 +30,7 @@ keystate_numlock = enable
 "slimlock_wrapper"
  c:225
 	#XF86Search
-"slimlock_wrapper"
+"nmgui"
  m:0x0 + c:156
 	#XF86Launch1
 
@@ -67,10 +67,10 @@ keystate_numlock = enable
  	#XF86AudioRaiseVolume
 
 # Lautstärke toggle:
-"amixer -c 0 sset Master toggle"
+"amixer -c 0 sset Master toggle; pactl set-sink-mute 0 toggle"
  m:0x10 + c:121
  	#Mod2 + XF86AudioMute
-"amixer -c 0 sset Master toggle"
+"amixer -c 0 sset Master toggle; pactl set-sink-mute 0 toggle"
  c:121
  	#XF86AudioMute
  	

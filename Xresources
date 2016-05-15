@@ -69,7 +69,7 @@ URxvt*.externalBorder:0
 !!Transparency
 URxvt*.depth:      32
 URxvt*.background: [90]#101010
-URxvt*.fading:     30
+URxvt*.fading:     10
 
 !!rofi specifics
 !rofi.
