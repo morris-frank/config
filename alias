@@ -16,7 +16,7 @@ alias q='exit'
 alias s='sudo '
 alias x='exit'
 alias t='todo.sh '
-alias pi='sxiv * &>/dev/null &!' 
+alias pi='sxiv * &>/dev/null &!'
 
 #Shorter
 alias clc=' reset'
@@ -57,6 +57,11 @@ function pdflatex() {
 	rm -f ./*aux
 	rm -f ./*log
 	rm -f ./*toc
+}
+
+function xelatex() {
+	/usr/bin	/xelatex "$@"
+	rm -f ./*log
 }
 
 function za() {
@@ -103,10 +108,10 @@ alias ggpush='git push origin $(current_branch)'
 if ps -p $$ | grep zsh &>/dev/null; then
 	compdef s=sudo
 	compdef c=cd
-	type pacman &> /dev/null && compdef pac=pacman
+	compdef za=zathura
+	compdef ev=evince
 	compdef g=git
-	type evince &> /dev/null && compdef ev=evince
-	type evince &> /dev/null && compdef za=evince
+	compdef pac=pacman
 	compdef _git gstat=git-status
 	compdef _git gd=git-diff
 	compdef _git gc=git-commit

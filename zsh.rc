@@ -171,7 +171,11 @@ export TERM="linux"
 
     # provide .. as a completion
     zstyle ':completion:*' special-dirs ..
-	###
+
+    # Add own completion definitions
+    fpath=( "$HOME/etc/compl_zsh" $fpath )
+
+
 ###
 
 #Alias definitions
