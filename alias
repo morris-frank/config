@@ -25,6 +25,8 @@ alias sgrep='grep -A 3 -B 3 '
 alias ncm='ncmpcpp'
 alias pac='pacman '
 alias ev='evince '
+alias ..='cd ..'
+alias ...='cd ../..'
 
 #Default options
 alias mkdir='mkdir -p -v'
@@ -60,7 +62,7 @@ function pdflatex() {
 }
 
 function xelatex() {
-	/usr/bin	/xelatex "$@"
+	/usr/bin/xelatex "$@"
 	rm -f ./*log
 }
 
@@ -73,6 +75,8 @@ function o() {
 		exec xdg-open "$file" &> /dev/null & disown
 	done
 }
+
+zssh() ssh "$@" -t zsh
 
 #drive
 alias d='drive'
@@ -119,4 +123,5 @@ if ps -p $$ | grep zsh &>/dev/null; then
 	compdef _git ga='git-add'
 	compdef _git gpull=git-pull
 	compdef _git gpush=git-push
+	compdef zssh=ssh
 fi
