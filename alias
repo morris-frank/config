@@ -47,10 +47,7 @@ alias l='ls --color=force -phlgo'
 
 #Script-Like aliases
 alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
-alias urz='ssh mb410@lts02.urz.uni-heidelberg.de'
 alias robustirc='$GOPATH/bin/robustirc-bridge -network=robustirc.net &!'
-alias metro='ssh metropol@hadar.uberspace.de'
-alias mercurius=' ssh 192.168.0.114'
 alias pu+='/usr/bin/pulseaudio-ctl up'
 alias pu-='/usr/bin/pulseaudio-ctl down'
 
@@ -76,7 +73,7 @@ function o() {
 	done
 }
 
-zssh() ssh "$@" -t zsh
+function zssh() ssh "$@" -t zsh
 
 #drive
 alias d='drive'
