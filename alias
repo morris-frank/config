@@ -73,6 +73,21 @@ function o() {
 	done
 }
 
+function graypdf() {
+	for file in "$@"; do
+		gs \
+		 -sOutputFile="gray_$file" \
+		 -sDEVICE=pdfwrite \
+		 -sColorConversionStrategy=Gray \
+		 -dProcessColorModel=/DeviceGray \
+		 -dCompatibilityLevel=1.4 \
+		 -dNOPAUSE \
+		 -dBATCH \
+		 -dAutoRotatePages=/None \
+		 "$file"
+	done
+}
+
 function zssh() ssh "$@" -t zsh
 
 #drive

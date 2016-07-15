@@ -20,6 +20,8 @@ function init_common() {
 	test -d ~/bin/ && export PATH=~/bin:$PATH
 	test -d ~/bin/go  && export PATH=~/bin/go:$PATH
 
+	test -d /usr/local/MATLAB/R2016a/bin/glnxa64  && export PATH=~/usr/local/MATLAB/R2016a/bin/glnxa64:$PATH
+
 	test -f ~/.Xresources && xrdb -merge ~/.Xresources
 	test -f ~/.Xresources_extra && xrdb -merge ~/.Xresources_extra
 
