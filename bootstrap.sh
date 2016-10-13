@@ -93,4 +93,5 @@ PWD=$(pwd)
 	mkdir "$HOME/bin" 2> /dev/null
 	ln -sf "$PWD/commands/slimlock_wrapper" "$HOME/bin"
 	ln -sf "$PWD/commands/rofi_run" "$HOME/bin"
+	ln -sf "$PWD/commands/rofi_ssh" "$HOME/bin"
 ###

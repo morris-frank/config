@@ -68,8 +68,8 @@ URxvt*.externalBorder:0
 
 !!Transparency
 URxvt*.depth:      32
-URxvt*.background: [90]#101010
-URxvt*.fading:     10
+URxvt*.background: [100]#101010
+URxvt*.fading:     0
 
 !!rofi specifics
 !rofi.
@@ -87,3 +87,4 @@ rofi.color-urgent:                   argb:00000000,  #F99157 , argb:00000000,  #
 rofi.color-active:                   argb:00000000,  #6699CC , argb:00000000,  #6699CC ,  #1B2B34
 rofi.color-window:                   argb:ee222222,  #FAC863 ,  #FAC863
 rofi.separator-style:                solid
+rofi.lines: 20
