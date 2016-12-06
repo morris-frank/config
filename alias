@@ -27,6 +27,7 @@ alias pac='pacman '
 alias ev='evince '
 alias ..='cd ..'
 alias ...='cd ../..'
+alias py='python '
 
 #Default options
 alias mkdir='mkdir -p -v'
@@ -50,6 +51,7 @@ alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1
 alias robustirc='$GOPATH/bin/robustirc-bridge -network=robustirc.net &!'
 alias pu+='/usr/bin/pulseaudio-ctl up'
 alias pu-='/usr/bin/pulseaudio-ctl down'
+alias reclan='sudo pkill dhcpcd; sudo dhcpcd enp0s25'
 
 function pdflatex() {
 	/usr/bin/pdflatex "$@"
@@ -136,4 +138,5 @@ if ps -p $$ | grep zsh &>/dev/null; then
 	compdef _git gpull=git-pull
 	compdef _git gpush=git-push
 	compdef zssh=ssh
+	compdef py=python
 fi
