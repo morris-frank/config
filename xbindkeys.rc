@@ -11,10 +11,10 @@ keystate_numlock = enable
 #"xboomx"
  m:0x0 + c:66
 	#VoidSymbol
-"rofi_run"
+"rofi -show run"
  m:0x0 + c:66
 	#VoidSymbol
-"rofi_run"
+"rofi -show run"
  m:0x10 + c:66
 	#VoidSymbol
 	
@@ -32,7 +32,7 @@ keystate_numlock = enable
  c:225
 
 	#XF86Search
-"rofi_ssh"
+"rofi -run ssh"
  m:0x0 + c:156
 	#XF86Launch1
 
@@ -107,6 +107,16 @@ keystate_numlock = enable
 "xdg-open ~"
  c:165
  	#XF86MyComputer
+
+# Function keys
+#f1
+"urxvt -e nano /home/morris/etc/spectrwm_de.rc"
+ m:0x0 + c:67
+	#F1
+
+# Insert
+"clipmenu"
+m:0x0 + c:118
 
 ##################################
 # End of xbindkeys configuration #

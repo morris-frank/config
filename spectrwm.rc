@@ -1,9 +1,11 @@
-workspace_limit	= 99
-border_width 		= 1
-color_focus		= rgb:F8/BB/39
+workspace_limit	= 22
+border_width 		= 2
+color_focus		= rgb:3B/42/52
 color_focus_maximized	= rgba:00/00/00/00
-color_unfocus		= rgb:rgb:F8/BB/39
+color_unfocus		= rgb:rgb:8F/BC/BB
 color_unfocus_maximized	= rgba:00/00/00/00
+
+
 region_padding		= 0
 tile_gap		= 0
 disable_border		= 0
@@ -18,16 +20,16 @@ keyboard_mapping = ~/.spectrwm_de.conf
 program[term] = urxvtc
 
 # QUIRKS
-#MATLAB-QUIRKS
-quirk[sun-awt-X11-XFramePeer]		= FLOAT + ANYWHERE + FOCUSPREV
-quirk[MATLAB]							= FLOAT
-quirk[sun-awt-X11-XDialogPeer]	= FLOAT
-quirk[sun-awt-X11-XWindowPeer]	= FLOAT
-
 quirk[Steam:Steam]					= FLOAT
-quirk[XMathematica:]					= FLOAT
-
-quirk[bar-aint-recursive]			= FLOAT + ANYWHERE
 quirk[mpv:gl]							= FLOAT + FOCUSPREV
-
 quirk[Google-chrome-stable:]		= FLOAT + ANYWHERE
+
+
+# Workspace naming
+name = ws[1]:Browser
+name = ws[4]:Zotero
+name = ws[18]:Mail
+name = ws[17]:Spotify
+name = ws[16]:Prod
+name = ws[13]:Chats
+name = ws[14]:Twitter

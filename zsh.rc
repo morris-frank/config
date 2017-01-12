@@ -37,9 +37,11 @@ export TERM="linux"
 
 #Prompt
 ###
-	fpath=( "$HOME/etc/pure_zsh" $fpath )
-	autoload -U promptinit && promptinit
-	prompt pure
+	fpath=( "$HOME/etc/pure_zsh" $fpath ) && autoload -U promptinit && promptinit &&prompt pure
+###
+
+#Plugins
+    test -f /usr/share/zsh/scripts/zplug/init.zsh && source /usr/share/zsh/scripts/zplug/init.zsh 
 ###
 
 #Keybindings

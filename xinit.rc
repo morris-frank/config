@@ -18,7 +18,7 @@ function init_common() {
 	export GTK_MODULES=rgba
 
 	test -d ~/bin/ && export PATH=~/bin:$PATH
-	test -d ~/bin/web  && export PATH=~/bin/web:$PATH
+	test -d ~/bin/internet-apps  && export PATH=~/bin/internet-apps:$PATH
 	test -d ~/bin/go  && export PATH=~/bin/go:$PATH
 
 	test -d /usr/local/MATLAB/R2016a/bin/glnxa64  && export PATH=~/usr/local/MATLAB/R2016a/bin/glnxa64:$PATH
@@ -40,6 +40,15 @@ function init_common() {
 	setxkbmap -option "altwin:prtsc_rwin"
 	#Deactivate capslock
 	setxkbmap -option "caps:none"
+
+  #Set variables with named workspaces
+	export WS_MAIL="17"
+	export WS_SPOTIFY="16"
+	export WS_BROWSER="0"
+	export WS_PROD="15"
+	export WS_SOCIAL="13"
+	export WS_TWITTER="14"
+	export WS_ZOTERO="3"
 
 	type urxvtd &> /dev/null && urxvtd -f
 

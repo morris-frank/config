@@ -7,48 +7,54 @@ Xft.hinting:   1
 Xft.antialias: 1
 Xft.rgba:      rgb
 
-! --- special colors ---
-*background: #272822
-*foreground: #EBD1B7
-
 ! --- standard colors ---
-! black
-*color0: #36312C
-! bright_black
-*color8: #12100e
-! red
-*color1: #9d550f
-! bright_red
-*color9: #db784d
-! green
-*color2: #95cc5e
-! bright_green
-*color10: #a7da1e
-! yellow
-*color3: #f8bb39
-! bright_yellow
-*color11: #ffe792
-! blue
-*color4: #8fbe00
-! bright_blue
-*color12: #a6e22e
-! magenta
-*color5: #e6654e
-! bright_magenta
-*color13: #e61f44
-! cyan
-*color6: #60a365
-! bright_cyan
-*color14: #00a8c6
-! white
-*color7: #f8f8f0
-! bright_white
-*color15: #ffffff
+! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+! repository https://github.com/arcticicestudio/nord-xresources +
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
+
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
 
 !!Man - Pages
-*colorIT: #9d550f
-*colorBD: #f8bb39
-*colorUL: #95cc5e
+*colorIT: nord12
+*colorBD: nord13
+*colorUL: nord14
 
 *font:	-*-gohufont-medium-r-*-*-14-*-*-*-*-*-iso8859-*
 *boldFont:	-*-gohufont-medium-r-*-*-14-*-*-*-*-*-iso8859-*
@@ -68,23 +74,22 @@ URxvt*.externalBorder:0
 
 !!Transparency
 URxvt*.depth:      32
-URxvt*.background: [100]#101010
+URxvt*.background: [100]nord0
 URxvt*.fading:     0
 
 !!rofi specifics
 !rofi.
+rofi.font: GohuFont 11
 rofi.kb-cancel: Escape,VoidSymbol
 rofi.hide-scrollbar: true
 rofi.opacity: 95
-rofi.glob: true
+rofi.glob: false
 rofi.location: 1
 rofi.sidebar-mode: false
 rofi.auto-select: true
 rofi.m: -1
 rofi.color-enabled:                  true
-rofi.color-normal:                   argb:00000000,  #D8DEE9 , argb:00000000,  #FAC863 ,  #1B2B34
-rofi.color-urgent:                   argb:00000000,  #F99157 , argb:00000000,  #F99157 ,  #1B2B34
-rofi.color-active:                   argb:00000000,  #6699CC , argb:00000000,  #6699CC ,  #1B2B34
-rofi.color-window:                   argb:ee222222,  #FAC863 ,  #FAC863
+rofi.color-normal:                   nord0,  nord4 , nord1,  nord7,  nord6
+rofi.color-window:                   nord0,  nord5, nord5
 rofi.separator-style:                solid
-rofi.lines: 20
+rofi.lines: 22

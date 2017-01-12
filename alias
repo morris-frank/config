@@ -28,6 +28,7 @@ alias ev='evince '
 alias ..='cd ..'
 alias ...='cd ../..'
 alias py='python '
+alias ipy='ipython '
 
 #Default options
 alias mkdir='mkdir -p -v'
@@ -52,6 +53,8 @@ alias robustirc='$GOPATH/bin/robustirc-bridge -network=robustirc.net &!'
 alias pu+='/usr/bin/pulseaudio-ctl up'
 alias pu-='/usr/bin/pulseaudio-ctl down'
 alias reclan='sudo pkill dhcpcd; sudo dhcpcd enp0s25'
+alias fullxela='xelatex report && biber report && xelatex report && xelatex report'
+alias fulllatex='/usr/bin/pdflatex Proseminar_WS201617 && bibtex Proseminar_WS201617; bibtex MF && /usr/bin/pdflatex Proseminar_WS201617 && /usr/bin/pdflatex Proseminar_WS201617'
 
 function pdflatex() {
 	/usr/bin/pdflatex "$@"

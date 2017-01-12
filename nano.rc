@@ -122,7 +122,7 @@ include "/usr/share/nano/man.nanorc"
 include "/usr/share/nano/python.nanorc"
 
 ## Ruby
-# include "/usr/share/nano/ruby.nanorc"
+include "/usr/share/nano/ruby.nanorc"
 
 ## Java
 # include "/usr/share/nano/java.nanorc"
@@ -151,8 +151,3 @@ include "/usr/share/nano/sh.nanorc"
 ## XML-type files
 include "/usr/share/nano/xml.nanorc"
 
-## Conf Files
-include "~/etc/nano/conf.nanorc"
-
-## PKGBUILD Files for arch
-include "~/etc/nano/pkgbuild.nanorc"
