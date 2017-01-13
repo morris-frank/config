@@ -55,7 +55,6 @@ bind[swap_next]		= MOD+Shift+j
 bind[swap_prev]		= MOD+Shift+k
 bind[focus_main]	= MOD+m
 
-
 bind[focus_next]	= MOD+Tab
 bind[focus_prev]	= MOD+Shift+Tab
 bind[wind_del]		= MOD+q

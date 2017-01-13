@@ -32,7 +32,7 @@ keystate_numlock = enable
  c:225
 
 	#XF86Search
-"rofi -run ssh"
+"rofi -show ssh"
  m:0x0 + c:156
 	#XF86Launch1
 

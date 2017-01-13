@@ -1,94 +1,50 @@
 #!/bin/sh
-#
-# ~/.xinitrc
-#
 
-#Initalizes the first time a Window Manager is started
-function init_common() {
-	export WM_STARTED='1'
+# config
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
 
-	export EDITOR="nano"
-	export TERM="linux"
-	export DRI_PRIME=1
-	# Makes fonts darker and thicker
-	export INFINALITY_FT_BRIGHTNESS="-10"
-	# Not too sharp, not too smooth
-	export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
-	#enable RGBA module for GTK
-	export GTK_MODULES=rgba
+# set session-wide constants
+export EDITOR="nano"
+export TERM="linux"
+export DRI_PRIME=1
+export GTK_MODULES=rgba
 
-	test -d ~/bin/ && export PATH=~/bin:$PATH
-	test -d ~/bin/internet-apps  && export PATH=~/bin/internet-apps:$PATH
-	test -d ~/bin/go  && export PATH=~/bin/go:$PATH
+# append path
+[ -d ~/bin/ ] && export PATH=~/bin:$PATH
+[ -d ~/bin/internet-apps ] && export PATH=~/bin/internet-apps:$PATH
+[ -d ~/bin/go ] && export PATH=~/bin/go:$PATH
+#test -d ~/src/go  && export GOPATH=~/src/go
 
-	test -d /usr/local/MATLAB/R2016a/bin/glnxa64  && export PATH=~/usr/local/MATLAB/R2016a/bin/glnxa64:$PATH
+# merge in defaults and keymaps
+[ -f "$userresources" ] && xrdb -merge "$userresources"
+[ -f "$usermodmap" ] && xmodmap "$usermodmap"
 
-	test -f ~/.Xresources && xrdb -merge ~/.Xresources
-	test -f ~/.Xresources_extra && xrdb -merge ~/.Xresources_extra
+# start some nice programs
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
 
-	test -d ~/src/go  && export GOPATH=~/src/go
+# Set Energy Features off
+xset -dpms
+# Set screensaver off
+xset s off
+# Set bell off
+xset b off
 
-	xsetroot -solid \#3e4853
-	xsetroot -cursor_name left_ptr
+# Key Options
+xbindkeys
+# Make the Print/Druck key the Super_R key
+setxkbmap -option "altwin:prtsc_rwin"
+# Deactivate capslock
+setxkbmap -option "caps:none"
 
-	xset -b
-	xset s off
+# Load the Background
+[ -f ~/.fehbg ] && sh ~/.fehbg &
+# Load the Compton Compositor
+#[ -f ~/.compton.conf ] && compton --config ~/.compton.conf &
 
-	#Load the bindings from xbindkeys.rc and add some xkb options
-	xbindkeys
-	#Make the Print/Druck key the Super_R key
-	setxkbmap -option "altwin:prtsc_rwin"
-	#Deactivate capslock
-	setxkbmap -option "caps:none"
-
-  #Set variables with named workspaces
-	export WS_MAIL="17"
-	export WS_SPOTIFY="16"
-	export WS_BROWSER="0"
-	export WS_PROD="15"
-	export WS_SOCIAL="13"
-	export WS_TWITTER="14"
-	export WS_ZOTERO="3"
-
-	type urxvtd &> /dev/null && urxvtd -f
-
-	wmname LG3D
-
-	ds unclutter
-
-	type pulseaudio &> /dev/null && ds pulseaudio
-
-	disown
-}
-
-
-#Initalizes the enviroment for a Window Manager
-function init_wm() {
-	xsetroot -name $1 &
-
-	type nvidia-settings &> /dev/null && nvidia-settings --load-config-only
-
-	if type compton &>/dev/null; then
-		if test -f ~/.compton.conf; then
-			compton --config ~/.compton.conf &
-		else
-			compton &
-		fi
-	fi
-
-	#If there is a bar wait 5 seconds and start it in own term
-	type bar &> /dev/null && ds sh -c 'sleep 2 && bar'
-
-	if type .fehbg; then
-		.fehbg
-	elif test -f ~/.fehbg; then
-		sh ~/.fehbg
-	fi
-
-	#spawn window manager
-	exec $1
-}
-
-[[ -z "$WM_STARTED" ]] && init_common
-
-type $1 &> /dev/null && init_wm $1 || init_wm $(cat /usr/share/xsessions/*.desktop | awk -F'=' '/Exec/ {print $2;exit;}')
+exec spectrwm

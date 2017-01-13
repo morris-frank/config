@@ -7,7 +7,8 @@ Xft.hinting:   1
 Xft.antialias: 1
 Xft.rgba:      rgb
 
-! --- standard colors ---
+! --- variables ---
+#define myfont Source Code Pro
 ! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ! repository https://github.com/arcticicestudio/nord-xresources +
 #define nord0 #2E3440
@@ -56,40 +57,40 @@ Xft.rgba:      rgb
 *colorBD: nord13
 *colorUL: nord14
 
-*font:	-*-gohufont-medium-r-*-*-14-*-*-*-*-*-iso8859-*
-*boldFont:	-*-gohufont-medium-r-*-*-14-*-*-*-*-*-iso8859-*
-
 !!Urxvt specifics
-!Plugins..
-*.scrollBar:      false
+URxvt*.font:            xft:myfont:pixelsize=12
+URxvt*.italicFont:      xft:myfont:pixelsize=12
+URxvt*.boldFont:        xft:myfont:style=Bold:pixelsize=12
+URxvt*.boldItalicFont:  xft:myfont:style=Bold:pixelsize=12
 
+URxvt*.scrollBar:       false
 URxvt*.saveLines:       12000
 URxvt*.cursorBlink:     true
 URxvt*.cursorUnderline: true
+URxvt*.letterSpace:     -2
+URxvt*skipBuiltinGlyphs:true
 
-! Padding
-URxvt*.internalBorder:5
-URxvt*.borderless:    true
-URxvt*.externalBorder:0
+!Padding
+URxvt*.internalBorder:  15
+URxvt*.borderless:      true
+URxvt*.externalBorder:  0
 
-!!Transparency
-URxvt*.depth:      32
-URxvt*.background: [100]nord0
-URxvt*.fading:     0
+!Transparency
+!URxvt*.depth:           32
+URxvt*.background:      [100]nord0
 
 !!rofi specifics
-!rofi.
-rofi.font: GohuFont 11
-rofi.kb-cancel: Escape,VoidSymbol
-rofi.hide-scrollbar: true
-rofi.opacity: 95
-rofi.glob: false
-rofi.location: 1
-rofi.sidebar-mode: false
-rofi.auto-select: true
-rofi.m: -1
-rofi.color-enabled:                  true
-rofi.color-normal:                   nord0,  nord4 , nord1,  nord7,  nord6
-rofi.color-window:                   nord0,  nord5, nord5
-rofi.separator-style:                solid
-rofi.lines: 22
+rofi.dpi:				 70
+rofi.kb-cancel:       Escape,VoidSymbol
+rofi.hide-scrollbar:  true
+rofi.opacity:         95
+rofi.glob:            true
+rofi.location:        6
+rofi.sidebar-mode:    false
+rofi.auto-select:     true
+rofi.monitor:         0
+rofi.color-enabled:   true
+rofi.color-normal:    nord0,  nord4 , nord0,  nord7,  nord6
+rofi.color-window:    nord0,  nord5, nord5
+rofi.separator-style: solid
+rofi.lines:           22
