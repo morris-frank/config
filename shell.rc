@@ -1,0 +1,21 @@
+#History
+export TERM="linux"
+export HISTFILESIZE=20000
+export HISTSIZE=10000
+export HISTFILE=~/.histfile
+export HISTSIZE=5000
+export SAVEHIST=50000
+export ETC_ENV='~/etc/'
+
+#Alias definitions
+if [ -e "${ETC_ENV}/alias" ]; then
+	source "${ETC_ENV}/alias"
+fi
+
+if [ -e "${ETC_ENV}/alias_private" ]; then
+	source "${ETC_ENV}/alias_private"
+fi
+
+if [ -e "${ETC_ENV}/shell_private.rc" ]; then
+	source "${ETC_ENV}/shell_private.rc"
+fi

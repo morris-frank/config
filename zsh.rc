@@ -1,5 +1,8 @@
 #Various Stuff
 ###
+
+source ~/.shellrc
+
 setopt NOTIFY
 #cd without the command
 setopt AUTO_CD
@@ -7,7 +10,6 @@ unsetopt beep
 #setopt NO_CLOBBER
 setopt no_hup
 setopt no_check_jobs
-export TERM="linux"
 
 #Color Hightlightning for less
 ###
@@ -17,9 +19,6 @@ export TERM="linux"
 
 #HISTORY
 ###
-	HISTFILE=~/.histfile
-	HISTSIZE=5000
-	SAVEHIST=50000
 	#Immediatly append to histfile
 	setopt inc_append_history
 	#Ignore commands with leading space
@@ -37,11 +36,11 @@ export TERM="linux"
 
 #Prompt
 ###
-	fpath=( "$HOME/etc/pure_zsh" $fpath ) && autoload -U promptinit && promptinit &&prompt pure
+	fpath=( "$HOME/etc/zshfuncs" $fpath ) && autoload -U promptinit && promptinit && prompt pure
 ###
 
 #Plugins
-    test -f /usr/share/zsh/scripts/zplug/init.zsh && source /usr/share/zsh/scripts/zplug/init.zsh 
+    test -f /usr/share/zsh/scripts/zplug/init.zsh && source /usr/share/zsh/scripts/zplug/init.zsh
 ###
 
 #Keybindings
@@ -218,9 +217,4 @@ bindkey -M isearch . self-insert # history search fix
 	zstyle ":vcs_info:git*" formats "$_branch:$_revision - $_repo"
 	zstyle ":vcs_info:git*" actionformats "$_branch:$_revision:$_action - $_repo"
 	zstyle ':vcs_info:git*+set-message:*' hooks git-stash
-###
-
-#Startup Stuff
-###
-	  #while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-8));echo -e "\e[33m`date +%r`\e[39m";tput rc;done &!
 ###

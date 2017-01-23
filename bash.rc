@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+source ~/.shellrc
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -14,39 +16,7 @@ else
 fi
 
 #History
-export HISTFILESIZE=20000
-export HISTSIZE=10000
 shopt -s histappend
 shopt -s cmdhist
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
-export TERM="linux"
-
-
-#Alias definitions
-if [ -e /net/hciserver03/storage/mfrank/etc/alias ]; then
-	source /net/hciserver03/storage/mfrank/etc/alias
-fi
-
-if [ -e /net/hciserver03/storage/mfrank/etc/alias_private ]; then
-	source /net/hciserver03/storage/mfrank/etc/alias_private
-fi
-
-if [ -e /usr/share/doc/pkgfile/command-not-found.bash ]; then
-	source /usr/share/doc/pkgfile/command-not-found.bash
-fi
-
-
-export PATH=/net/hciserver03/storage/mfrank/lib/crfasrnn/caffe/build/tools:$PATH
-export PATH=/net/hciserver03/storage/mfrank/lib/anaconda2/bin:$PATH
-
-export PYTHONPATH=/net/hciserver03/storage/mfrank/lib/caffe/python:$PYTHONPATH
-export PYTHONPATH=/net/hciserver03/storage/mfrank/src/ifp/olympic_layer/:$PYTHONPATH
-#
-export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/net/hciserver03/storage/mfrank/var/lib/anaconda2/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64
-
-source /net/hciserver03/storage/mfrank/lib/venv/bin/activate
-export PYTHONSTARTUP=/net/hciserver03/storage/mfrank/lib/venv/pythonstartup
-

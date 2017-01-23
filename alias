@@ -17,6 +17,7 @@ alias s='sudo '
 alias x='exit'
 alias t='todo.sh '
 alias pi='sxiv * &>/dev/null &!'
+alias l='less -R '
 
 #Shorter
 alias clc=' reset'
@@ -93,8 +94,6 @@ function graypdf() {
 	done
 }
 
-function zssh() ssh "$@" -t zsh
-
 #drive
 alias d='drive'
 alias dpush='drive push --ignore-name-clashes --ignore-conflict --exclude-ops "delete" .'
@@ -142,4 +141,5 @@ if ps -p $$ | grep zsh &>/dev/null; then
 	compdef _git gpush=git-push
 	compdef zssh=ssh
 	compdef py=python
+	compdef sshfs=scp
 fi
