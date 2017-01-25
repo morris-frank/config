@@ -1,7 +1,6 @@
 #Various Stuff
 ###
 
-source ~/.shellrc
 
 setopt NOTIFY
 #cd without the command
@@ -173,20 +172,6 @@ setopt no_check_jobs
     # provide .. as a completion
     zstyle ':completion:*' special-dirs ..
 
-    # Add own completion definitions
-    fpath=( "$HOME/etc/compl_zsh" $fpath )
-
-
-###
-
-#Alias definitions
-###
-	if [ -e ~/etc/alias ]; then
-		source ~/etc/alias
-	fi
-	if [ -e ~/etc/alias_private ]; then
-		source ~/etc/alias_private
-	fi
 ###
 
 # typing ... expands to ../.., .... to ../../.., etc.
@@ -218,3 +203,5 @@ bindkey -M isearch . self-insert # history search fix
 	zstyle ":vcs_info:git*" actionformats "$_branch:$_revision:$_action - $_repo"
 	zstyle ':vcs_info:git*+set-message:*' hooks git-stash
 ###
+
+source ~/.shellrc

@@ -63,12 +63,17 @@ URxvt*.italicFont:      xft:myfont:pixelsize=12
 URxvt*.boldFont:        xft:myfont:style=Bold:pixelsize=12
 URxvt*.boldItalicFont:  xft:myfont:style=Bold:pixelsize=12
 
-URxvt*.scrollBar:       false
 URxvt*.saveLines:       12000
 URxvt*.cursorBlink:     true
 URxvt*.cursorUnderline: true
 URxvt*.letterSpace:     -2
 URxvt*skipBuiltinGlyphs:true
+
+!Scrolling
+URxvt*.scrollBar:       false
+URxvt*.secondaryScreen: 1
+URxvt*.secondaryScroll: 0
+URxvt*.secondaryWheel:  1
 
 !Padding
 URxvt*.internalBorder:  15
@@ -76,8 +81,11 @@ URxvt*.borderless:      true
 URxvt*.externalBorder:  0
 
 !Transparency
-!URxvt*.depth:           32
-URxvt*.background:      [100]nord0
+URxvt*.depth:           32
+URxvt*.background:      [95]nord0
+
+!Extensions
+URxvt*.perl-ext-common: digital-clock,background
 
 !!rofi specifics
 rofi.dpi:				 70

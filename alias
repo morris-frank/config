@@ -43,6 +43,7 @@ alias egrep='egrep --color=auto '
 # make less accept color codes and re-output them
 alias less='less -R'
 alias cp='cp --reflink=auto '
+alias watch='watch -t -d '
 
 #Substitute programs
 alias ls='ls --color=force -phl'
@@ -128,10 +129,10 @@ alias ggpush='git push origin $(current_branch)'
 if ps -p $$ | grep zsh &>/dev/null; then
 	compdef s=sudo
 	compdef c=cd
-	compdef za=zathura
-	compdef ev=evince
+	which zathura 2> && compdef za=zathura
+	which evince 2> && compdef ev=evince
 	compdef g=git
-	compdef pac=pacman
+	which pacman 2>0 && compdef pac=pacman
 	compdef _git gstat=git-status
 	compdef _git gd=git-diff
 	compdef _git gc=git-commit
