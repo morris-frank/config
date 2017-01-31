@@ -1,0 +1,110 @@
+function pdflatex() {
+	/usr/bin/pdflatex "$@"
+	rm -f ./*aux
+	rm -f ./*log
+	rm -f ./*toc
+}
+
+function xelatex() {
+	/usr/bin/xelatex "$@"
+	rm -f ./*log
+}
+
+function za() {
+	exec zathura "$@" &> /dev/null & disown
+}
+
+function o() {
+	for file in "$@"; do
+		exec xdg-open "$file" &> /dev/null & disown
+	done
+}
+
+function graypdf() {
+	for file in "$@"; do
+		gs \
+		 -sOutputFile="gray_$file" \
+		 -sDEVICE=pdfwrite \
+		 -sColorConversionStrategy=Gray \
+		 -dProcessColorModel=/DeviceGray \
+		 -dCompatibilityLevel=1.4 \
+		 -dNOPAUSE \
+		 -dBATCH \
+		 -dAutoRotatePages=/None \
+		 "$file"
+	done
+}
+
+function current_branch() {
+	ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+	ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+	echo ${ref#refs/heads/}
+}
+
+function current_repository() {
+	ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+	ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+	echo $(git remote -v | cut -d':' -f 2)
+}
+
+function dns_reset() {
+	sudo chattr -i /etc/resolv.conf
+	sudo rm /etc/resolv.conf
+	sudo touch /etc/resolv.conf
+	sudo sh -c 'echo nameserver 8.8.8.8 >  /etc/resolv.conf'
+	sudo sh -c 'echo nameserver 4.4.4.4 >> /etc/resolv.conf'
+	sudo chattr +i /etc/resolv.conf
+}
+
+function eduroam() {
+	wlp=$(ip link | awk '/: wl/ {print $2}' | cut -d: -f1)
+	! ( systemctl status NetworkManager | grep -q inactive ) && sudo systemctl stop NetworkManager && echo 'Stopped NetworkManager Service'
+	sudo pkill wpa_supplicant && echo 'Killed at least one wpa_supplicant'
+	sudo pkill dhcpcd && echo 'Killed at least one dchpcd client'
+	sleep 2
+	test -f /etc/resolv.conf && sudo chattr -i /etc/resolv.conf && sudo rm -f /etc/resolv.conf
+	echo 'Removed resolv.conf'
+	sudo rfkill unblock wifi
+	sudo wpa_supplicant -B -i ${wlp} -c ~/.wifi/eduroam.1.conf
+	sleep 5
+	echo 'Start dhcpcd'
+	sudo dhcpcd ${wlp}
+	echo 'Started dhcpcd'
+}
+
+function eduroam_stop() {
+	sudo pkill wpa_supplicant && echo 'Killed at least one wpa_supplicant'
+	sudo pkill dhcpcd && echo 'Killed at least one dchpcd client'
+	dns_reset && echo 'Resetted DNS settings'
+	sleep 1
+	sudo systemctl restart NetworkManager && echo 'Started networkmanager'
+	sudo pkill wpa_supplicant && echo 'Killed at least one wpa_supplicant'
+	sudo pkill dhcpcd && echo 'Killed at least one dchpcd client'
+	dns_reset && echo 'Resetted DNS settings'
+	sleep 1
+	sudo systemctl restart NetworkManager
+	echo 'Started networkmanager'
+}
+
+function hci() {
+	xrandr --output VGA-1 --auto && xrandr --output VGA-1 --right-of LVDS-1
+	hci_eth
+	sshfs hcigpu01:src/ba ~/var/hci_ba
+}
+
+function hci_eth() {
+  pid=$(ps ax -U root -o pid,command | awk '/dhcpcd enp/{print $1}' | head -1)
+  eth=$(ip link | awk '/: en/ {print $2}' | cut -d: -f1)
+  sudo kill ${pid}
+  sudo rfkill block wifi
+  echo 'Killed dhcpcd'
+  sleep 1
+  sudo dhcpcd ${eth}
+  echo 'Started dhcpcd'
+}
+
+function hci_stop() {
+  xrandr --auto
+  eduroam_stop
+  fusermount -u ~/var/hci_ba
+}

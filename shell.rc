@@ -8,8 +8,10 @@ export SAVEHIST=50000
 export ETC_ENV='/home/morris/etc/'
 
 #Alias definitions
-[ -f "$ETC_ENV/alias" ] && source "${ETC_ENV}/alias"
+[ -f "$ETC_ENV/functions.rc" ] && source "${ETC_ENV}/functions.rc"
 
-[ -f "$ETC_ENV/alias_private" ] && source "${ETC_ENV}/alias_private"
+[ -f "$ETC_ENV/alias.rc" ] && source "${ETC_ENV}/alias.rc"
+
+[ -f "$ETC_ENV/alias_private.rc" ] && source "${ETC_ENV}/alias_private.rc"
 
 [ -f "$ETC_ENV/shell_private.rc" ] && source "${ETC_ENV}/shell_private.rc"
