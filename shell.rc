@@ -5,7 +5,7 @@ export HISTSIZE=10000
 export HISTFILE=~/.histfile
 export HISTSIZE=5000
 export SAVEHIST=50000
-export ETC_ENV='/home/morris/etc/'
+export ETC_ENV='~/etc/'
 
 #Alias definitions
 [ -f "$ETC_ENV/functions.rc" ] && source "${ETC_ENV}/functions.rc"
