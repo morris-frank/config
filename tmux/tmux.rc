@@ -1,13 +1,3 @@
-# ------------------------------------------------------
-# file:     $HOME/.tmux.conf
-# author:   Ramon Solis - http://cyb3rpunk.wordpress.com
-# modified: June 2011
-# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=tmux:
-# ------------------------------------------------------
-
-# ---------------
-# Binds / Unbinds
-# ---------------
 set -g prefix C-s
 unbind C-b
 set -g base-index 1
