@@ -23,8 +23,8 @@ setopt no_check_jobs
 
 #Prompt
 ###
-  if [ -f "$HOME/etc/zshfuncs/prompt_pure_setup" ]; then
-	   fpath=( "$HOME/etc/zshfuncs" $fpath ) && autoload -U promptinit && promptinit && prompt pure
+  if [ -f "${ETC_ENV}zshfuncs/prompt_pure_setup" ]; then
+	   fpath=( "${ETC_ENV}zshfuncs" $fpath ) && autoload -U promptinit && promptinit && prompt pure
   fi
 ###
 

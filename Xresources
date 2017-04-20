@@ -85,7 +85,7 @@ URxvt*.depth:           32
 URxvt*.background:      [95]nord0
 
 !Extensions
-URxvt*.perl-ext-common: digital-clock,background
+!URxvt*.perl-ext-common: digital-clock
 
 !!rofi specifics
 rofi.dpi:				      70
