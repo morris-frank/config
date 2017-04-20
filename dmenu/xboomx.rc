@@ -1,4 +1,0 @@
-{
-        #"dmenu_params": "-dim 0.4 -x 15 -y 15 -w 450 -l 45 -i -nb '#111' -nf '#f8f8f0' -sb '#f8bb39' -sf '#111' -p \"[$(xprop -root _NET_CURRENT_DESKTOP | awk '{print ++$3}')] $(date +'%H:%M')$(acpi -b | awk -F',' '{print $2}')\""
-        "dmenu_params": "-l 15 -nb '#111' -nf '#f8f8f0' -sb '#f8bb39' -sf '#111' -p \"[$(xprop -root _NET_CURRENT_DESKTOP | awk '{print ++$3}')] $(date +'%H:%M')$(acpi -b | awk -F',' '{print $2}')\"	"
-}

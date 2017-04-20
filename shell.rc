@@ -1,17 +1,28 @@
-#History
 export TERM="linux"
-export HISTFILESIZE=20000
-export HISTSIZE=10000
+export ETC_ENV='/home/morris/etc/'
+
+#History
+export HISTCONTROL=ignoredups
 export HISTFILE=~/.histfile
+export HISTFILESIZE=20000
+export HISTIGNORE="&:ls:[bf]g:exit"
+export HISTSIZE=10000
 export HISTSIZE=5000
 export SAVEHIST=50000
-export ETC_ENV='~/etc/'
+
+# Colors
+export RES='\e[0m'
+export RED='\e[0;31m'
+export GRE='\e[0;32m'
+export BLU='\e[0;34m'
 
 #Alias definitions
-[ -f "$ETC_ENV/functions.rc" ] && source "${ETC_ENV}/functions.rc"
+[ -f "$ETC_ENV/shell_private.rc" ] && source "${ETC_ENV}/shell_private.rc"
 
 [ -f "$ETC_ENV/alias.rc" ] && source "${ETC_ENV}/alias.rc"
 
 [ -f "$ETC_ENV/alias_private.rc" ] && source "${ETC_ENV}/alias_private.rc"
 
-[ -f "$ETC_ENV/shell_private.rc" ] && source "${ETC_ENV}/shell_private.rc"
+[ -f "$ETC_ENV/functions.rc" ] && source "${ETC_ENV}/functions.rc"
+
+[ -f "$ETC_ENV/functions_private.rc" ] && source "${ETC_ENV}/functions_private.rc"

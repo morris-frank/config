@@ -88,7 +88,7 @@ URxvt*.background:      [95]nord0
 URxvt*.perl-ext-common: digital-clock,background
 
 !!rofi specifics
-rofi.dpi:				 70
+rofi.dpi:				      70
 rofi.kb-cancel:       Escape,VoidSymbol
 rofi.hide-scrollbar:  true
 rofi.opacity:         95

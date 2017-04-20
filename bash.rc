@@ -1,13 +1,7 @@
-#
-# ~/.bashrc
-#
-
-source ~/.shellrc
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#export PS1="\h# \e[34;1m\w\e[0m\n\$ "
+source ~/.shellrc
 
 if [[ ${EUID} == 0 ]] ; then
 	PS1='\[\033[01m\][ \[\033[01;31m\]\u ¦ \h \[\033[00m\]\[\033[01m\]] \[\033[1;97m\]\w\[\033[00m\]\n\[\033[01;33m\][\[\033[01;31m\]$?\[\033[01;33m\][\[\033[01;31m\]$\[\033[00m\]> '
@@ -15,8 +9,5 @@ else
 	PS1='\[\033[01m\][ \[\033[01;34m\]\u ¦ \h \[\033[00m\]\[\033[01m\]] \[\033[1;97m\]\w\[\033[00m\]\n\[\033[01;33m\][\[\033[01;31m\]$?\[\033[01;33m\][\[\033[01;34m\]$\[\033[00m\]> '
 fi
 
-#History
 shopt -s histappend
 shopt -s cmdhist
-export HISTCONTROL=ignoredups
-export HISTIGNORE="&:ls:[bf]g:exit"

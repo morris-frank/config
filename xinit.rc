@@ -13,8 +13,6 @@ export GTK_MODULES=rgba
 # append path
 [ -d ~/bin/ ] && export PATH=~/bin:$PATH
 [ -d ~/bin/internet-apps ] && export PATH=~/bin/internet-apps:$PATH
-[ -d ~/bin/go ] && export PATH=~/bin/go:$PATH
-#test -d ~/src/go  && export GOPATH=~/src/go
 
 # merge in defaults and keymaps
 [ -f "$userresources" ] && xrdb -merge "$userresources"
@@ -44,7 +42,6 @@ setxkbmap -option "caps:none"
 
 # Load the Background
 [ -f ~/.fehbg ] && sh ~/.fehbg &
-# Load the Compton Compositor
-#[ -f ~/.compton.conf ] && compton --config ~/.compton.conf &
 
 exec spectrwm
+# exec way-cooler

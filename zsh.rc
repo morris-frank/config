@@ -1,20 +1,10 @@
-#Various Stuff
-###
-
+source ~/.shellrc
 
 setopt NOTIFY
-#cd without the command
 setopt AUTO_CD
 unsetopt beep
-#setopt NO_CLOBBER
 setopt no_hup
 setopt no_check_jobs
-
-#Color Hightlightning for less
-###
-	export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
-	export LESS='-R '
-###
 
 #HISTORY
 ###
@@ -32,10 +22,11 @@ setopt no_check_jobs
 	#bindkey  "^[[B"  history-beginning-search-forward-end
 ###
 
-
 #Prompt
 ###
-	fpath=( "$HOME/etc/zshfuncs" $fpath ) && autoload -U promptinit && promptinit && prompt pure
+  if [ -f "$HOME/etc/zshfuncs/prompt_pure_setup" ]; then
+	   fpath=( "$HOME/etc/zshfuncs" $fpath ) && autoload -U promptinit && promptinit && prompt pure
+  fi
 ###
 
 #Plugins
@@ -204,4 +195,22 @@ bindkey -M isearch . self-insert # history search fix
 	zstyle ':vcs_info:git*+set-message:*' hooks git-stash
 ###
 
-source ~/.shellrc
+# ZSH Compdefs
+##############
+if ps -p $$ | grep zsh &>/dev/null; then
+	compdef s=sudo
+	compdef c=cd
+	which zathura &>/dev/null && compdef za=zathura
+	which evince &>/dev/null && compdef ev=evince
+	compdef g=git
+	which pacman &>/dev/null && compdef pac=pacman
+	compdef _git gstat=git-status
+	compdef _git gd=git-diff
+	compdef _git gc=git-commit
+	compdef _git gcmsg=git-commit
+	compdef _git ga='git-add'
+	compdef _git gpull=git-pull
+	compdef _git gpush=git-push
+	compdef py=python
+	compdef sshfs=scp
+fi

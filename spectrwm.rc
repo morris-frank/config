@@ -8,11 +8,10 @@ tile_gap          = 2
 border_width      = 3
 disable_border    = 0
 boundary_width    = 0
-# Bar Settings
 bar_enabled		= 0
 
 modkey = Mod4
-keyboard_mapping = ~/etc/spectrwm_de.rc
+keyboard_mapping = ~/.spectrwm.bindings.rc
 
 #Set to maximum:
 workspace_limit = 22

@@ -1,153 +1,21 @@
-## Use auto-indentation.
-#set autoindent
-
-## Backup files to filename~.
 set backup
 set backupdir "~/var/cache"
-
-## Do backwards searches by default.
-# set backwards
-
-# set boldtext
-# set brackets ""')>]}"
-# set casesensitive
 set const
-# set cut
-# set fill -8
-# set historylog
 set matchbrackets "(<[{)>]}"
-# set morespace
-# set mouse
-# set multibuffer
-# set noconvert
-# set nofollow
-# set nohelp
-# set nonewlines
 set nowrap
-# set operatingdir ""
-# set preserve
-# set punct "!.?"
-# set quickblank
-# set quotestr "^([ 	]*[#:>\|}])+"
-# set quotestr "> "
-# set rebinddelete
-# set rebindkeypad
-# set regexp
-# set smarthome
 set smooth
-# set softwrap
-# set speller "aspell -x -c"
-
-## Allow nano to be suspended.
-# set suspend
-
-## Use this tab size instead of the default; it must be greater than 0.
 set tabsize 3
 
-## Convert typed tabs to spaces.
-# set tabstospaces
-
-## Save automatically on exit, don't prompt.
-# set tempfile
-
-## Enable the new (EXPERIMENTAL) generic undo code, not just for line
-## cuts.
-# set undo
-
-## Disallow file modification.  Why would you want this in an rcfile? ;)
-# set view
-
-## The two single-column characters used to display the first characters
-## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
-## ISO-8859-1 (0000B7 in Unicode) seem to be good values for these.
-# set whitespace "  "
-
-## Detect word boundaries more accurately by treating punctuation
-## characters as parts of words.
-# set wordbounds
-
-
-# bind M-W nowrap main
-# bind M-A casesens search
-# bind ^S research main
-# bind kdel backspace all
-
-
-## Nanorc files
 include "/usr/share/nano/nanorc.nanorc"
-
-## C/C++
 include "/usr/share/nano/c.nanorc"
-
-## Makefiles
 include "/usr/share/nano/makefile.nanorc"
-
-## Cascading Style Sheets
 include "/usr/share/nano/css.nanorc"
-
-## Debian files
-# include "/usr/share/nano/debian.nanorc"
-
-## Gentoo files
-# include "/usr/share/nano/gentoo.nanorc"
-
-## HTML
 include "/usr/share/nano/html.nanorc"
-
-## PHP
-# include "/usr/share/nano/php.nanorc"
-
-## TCL
-# include "/usr/share/nano/tcl.nanorc"
-
-## TeX
+include "/usr/share/nano/php.nanorc"
 include "/usr/share/nano/tex.nanorc"
-
-## Quoted emails (under e.g. mutt)
-# include "/usr/share/nano/mutt.nanorc"
-
-## Patch files
-# include "/usr/share/nano/patch.nanorc"
-
-## Manpages
 include "/usr/share/nano/man.nanorc"
-
-## Groff
-# include "/usr/share/nano/groff.nanorc"
-
-## Perl
-# include "/usr/share/nano/perl.nanorc"
-
-## Python
+include "/usr/share/nano/perl.nanorc"
 include "/usr/share/nano/python.nanorc"
-
-## Ruby
 include "/usr/share/nano/ruby.nanorc"
-
-## Java
-# include "/usr/share/nano/java.nanorc"
-
-## Fortran
-# include "/usr/share/nano/fortran.nanorc"
-
-## Objective-C
-# include "/usr/share/nano/objc.nanorc"
-
-## OCaml
-# include "/usr/share/nano/ocaml.nanorc"
-
-## AWK
-# include "/usr/share/nano/awk.nanorc"
-
-## Assembler
-# include "/usr/share/nano/asm.nanorc"
-
-## Bourne shell scripts
 include "/usr/share/nano/sh.nanorc"
-
-## POV-Ray
-# include "/usr/share/nano/pov.nanorc"
-
-## XML-type files
 include "/usr/share/nano/xml.nanorc"
-

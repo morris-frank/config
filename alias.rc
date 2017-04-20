@@ -10,22 +10,19 @@
 	alias c='cd '
 	alias clc=' reset'
 	alias cls=' reset; ls'
-	alias ev='evince '
 	alias f='find . |grep '
 	alias h='history|grep '
 	alias ipy='ipython '
 	alias l='less -R '
 	alias n='nano '
-	alias ncm='ncmpcpp'
 	alias p='ps aux |grep '
 	alias pac='pacman '
 	alias pi='sxiv * &>/dev/null &!'
 	alias py='python '
 	alias q='exit'
 	alias s='sudo '
-	alias sgrep='grep -A 3 -B 3 '
-	alias t='todo.sh '
-	alias x='exit'
+	alias v='source venv/bin/activate'
+	alias x='atool -x '
 
 # Default options
 #################
@@ -44,47 +41,16 @@
 # Script-Like aliases
 #####################
 	alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
+  alias wetter='curl wttr.in/Heidelberg?lang=de'
 	alias pu+='/usr/bin/pulseaudio-ctl up'
 	alias pu-='/usr/bin/pulseaudio-ctl down'
-	alias fullxela='xelatex report && biber report && xelatex report && xelatex report'
-	alias fulllatex='/usr/bin/pdflatex Proseminar_WS201617 && bibtex Proseminar_WS201617; bibtex MF && /usr/bin/pdflatex Proseminar_WS201617 && /usr/bin/pdflatex Proseminar_WS201617'
-
-# Google Drive
-##############
-	alias d='drive'
-	alias dpush='drive push --ignore-name-clashes --ignore-conflict --exclude-ops "delete" .'
-	alias dpull='drive pull --ignore-name-clashes --exclude-ops "delete" .'
-	alias dget='drive pull --ignore-name-clashes --exclude-ops "delete, update" .'
 
 # GIT
 #####
 	alias g='git'
-	alias gstat='git status'
+	alias gs='git status'
 	alias gd='git diff'
-	alias gc='git commit -v'
-	alias gcmsg='git commit -m'
+	alias gc='git commit -m'
 	alias ga='git add'
-	alias gpull='git pull'
-	alias gpush='git push'
-	alias ggpull='git pull origin $(current_branch)'
-	alias ggpush='git push origin $(current_branch)'
-
-#Include compdef for the aliases, when shell is zsh
-if ps -p $$ | grep zsh &>/dev/null; then
-	compdef s=sudo
-	compdef c=cd
-	which zathura &>/dev/null && compdef za=zathura
-	which evince &>/dev/null && compdef ev=evince
-	compdef g=git
-	which pacman &>/dev/null && compdef pac=pacman
-	compdef _git gstat=git-status
-	compdef _git gd=git-diff
-	compdef _git gc=git-commit
-	compdef _git gcmsg=git-commit
-	compdef _git ga='git-add'
-	compdef _git gpull=git-pull
-	compdef _git gpush=git-push
-	compdef zssh=ssh
-	compdef py=python
-	compdef sshfs=scp
-fi
+	alias gpull='git pull origin $(current_branch)'
+	alias gpush='git push origin $(current_branch)'
