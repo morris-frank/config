@@ -27,6 +27,7 @@
 # Default options
 #################
 	alias cp='cp --reflink=auto '
+  alias echo='echo -e '
 	alias egrep='egrep --color=auto '
 	alias fgrep='fgrep --color=auto '
 	alias g++='g++ -fdiagnostics-color=always '

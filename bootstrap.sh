@@ -3,9 +3,12 @@
 cd $(dirname "$0")
 PWD=$(pwd)
 
+source "$PWD/shell.rc"
+
 ###
 #CREATE DIRECTORY ENVIROMENT
 ###
+	echo "${GRE}[bootstrap] Make the home directory structure${RES}"
 	mkdir -p "$HOME"
 	mkdir -p "$HOME/tmp"
 	mkdir -p "$HOME/docs"
@@ -17,6 +20,7 @@ PWD=$(pwd)
 ###
 #CONFIG FILES
 ###
+	echo "${GRE}[bootstrap] Link all config files to their correct positions${RES}"
 	#Xresources
 	ln -sf "$PWD/Xresources"  "$HOME/.Xresources"
 
@@ -53,4 +57,7 @@ PWD=$(pwd)
 
 	#tmux
 	ln -sf "$PWD/tmux.rc" "$HOME/.tmux.conf"
+
+	#user-dirs
+	ln -sf "$PWD/user-dirs.rc" "$HOME/.config/user-dirs.dirs"
 ###
