@@ -1,4 +1,3 @@
-source ~/.shellrc
 
 setopt NOTIFY
 setopt AUTO_CD
@@ -28,6 +27,8 @@ setopt no_check_jobs
 	   fpath=( "$HOME/etc/zshfuncs" $fpath ) && autoload -U promptinit && promptinit && prompt pure
   fi
 ###
+
+source ~/.shellrc
 
 #Plugins
     test -f /usr/share/zsh/scripts/zplug/init.zsh && source /usr/share/zsh/scripts/zplug/init.zsh
