@@ -5,10 +5,9 @@ PWD=$(pwd)
 
 source "$PWD/shell.rc"
 
-###
 #CREATE DIRECTORY ENVIROMENT
 ###
-	echo "${GRE}[bootstrap] Make the home directory structure${RES}"
+	echo "${GRE}[bootstrap.sh] Make the home directory structure${RES}"
 	mkdir -p "$HOME"
 	mkdir -p "$HOME/tmp"
 	mkdir -p "$HOME/docs"
@@ -17,10 +16,9 @@ source "$PWD/shell.rc"
 	mkdir -p "$HOME/var/videos"
 ###
 
-###
 #CONFIG FILES
 ###
-	echo "${GRE}[bootstrap] Link all config files to their correct positions${RES}"
+	echo "${GRE}[bootstrap.sh] Link all config files to their correct positions${RES}"
 	#Xresources
 	ln -sf "$PWD/Xresources"  "$HOME/.Xresources"
 
@@ -49,9 +47,6 @@ source "$PWD/shell.rc"
 	#Xinit
 	ln -sf "$PWD/xinit.rc"  "$HOME/.xinitrc"
 
-	#zsh
-	ln -sf "$PWD/zsh.rc"  "$HOME/.zshrc"
-
 	#git
 	ln -sf "$PWD/git.rc" "$HOME/.gitconfig"
 
@@ -60,4 +55,14 @@ source "$PWD/shell.rc"
 
 	#user-dirs
 	ln -sf "$PWD/user-dirs.rc" "$HOME/.config/user-dirs.dirs"
+###
+
+# Setting up ZSH
+###
+  if type zsh &> /dev/null; then
+		echo "${GRE}[bootstrap.sh] Setting up ZSH${RES}"
+		ln -sf "$PWD/zsh.rc"  "$HOME/.zshrc"
+		rm -rf $HOME/.zplug
+		curl -sL --proto-redir -all,https https://zplug.sh/installer | zsh
+  fi
 ###
