@@ -20,6 +20,8 @@
 	alias pi='sxiv * &>/dev/null &!'
 	alias py='python '
 	alias q='exit'
+  alias t='tmux '
+  alias ta='tmux attach '
 	alias s='sudo '
 	alias v='source venv/bin/activate'
 	alias x='atool -x '
