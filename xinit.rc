@@ -40,8 +40,7 @@ setxkbmap -option "altwin:prtsc_rwin"
 # Deactivate capslock
 setxkbmap -option "caps:none"
 
-# Load the Background
-[ -f ~/.fehbg ] && sh ~/.fehbg &
-
-exec spectrwm
+#export KDEWM=spectrwm
+exec startkde
+#exec spectrwm
 # exec way-cooler

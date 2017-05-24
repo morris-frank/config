@@ -101,7 +101,6 @@ function eduroam_stop() {
 function hci() {
 	xrandr --output VGA-1 --auto && xrandr --output VGA-1 --right-of LVDS-1
 	hci_eth
-	sshfs hcigpu01:src/ba ~/var/hci_ba
 }
 
 function hci_eth() {

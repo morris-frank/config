@@ -2,12 +2,12 @@ keystate_numlock = enable
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-"rofi -show run"
- m:0x0 + c:66
+#"rofi -show run"
+# m:0x0 + c:66
 	#VoidSymbol
 
-"rofi -show run"
- m:0x10 + c:66
+#"rofi -show run"
+# m:0x10 + c:66
 	#VoidSymbol
 
 # projector mode :P
@@ -64,14 +64,10 @@ keystate_numlock = enable
  c:165
  	#XF86MyComputer
 
-"urxvt -e nano ~/.spectrwm.bindings.rc"
- m:0x0 + c:67
-	#F1
-
-"clipmenu"
- m:0x0 + c:118
- # Insert
-
 "lock"
 m:0x4 + c:9
 	#Control + Escape
+
+"urxvt"
+ m:0x40 + c:28
+    #Mod4 + t

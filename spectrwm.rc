@@ -24,6 +24,9 @@ quirk[Steam:Steam] = FLOAT
 quirk[mpv:gl] = FLOAT + FOCUSPREV
 quirk[Google-chrome-stable:] = FLOAT + ANYWHERE
 quirk[Google-chrome-beta:] = FLOAT + ANYWHERE
+quirk[Zotero:Toplevel] = FLOAT
+quirk[plasmashell:plasmashell] = MINIMALBORDER + NOFOCUSCYCLE + FLOAT + ANYWHERE
+
 
 program[term] = urxvt
 

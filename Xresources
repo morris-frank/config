@@ -76,7 +76,7 @@ URxvt*.secondaryScroll: 0
 URxvt*.secondaryWheel:  1
 
 !Padding
-URxvt*.internalBorder:  15
+URxvt*.internalBorder:  0
 URxvt*.borderless:      true
 URxvt*.externalBorder:  0
 
