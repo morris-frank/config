@@ -15,7 +15,7 @@ export GTK_MODULES=rgba
 [ -d ~/bin/internet-apps ] && export PATH=~/bin/internet-apps:$PATH
 
 # merge in defaults and keymaps
-[ -f "$userresources" ] && xrdb -merge "$userresources"
+[ -f "$userresources" ] && xrdb -load "$userresources"
 [ -f "$usermodmap" ] && xmodmap "$usermodmap"
 
 # start some nice programs

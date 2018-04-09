@@ -17,3 +17,4 @@ compdef py=python
 compdef t=tmux
 compdef ta=tmux
 compdef sshfs=scp
+compdef rcp=rsync

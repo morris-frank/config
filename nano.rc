@@ -1,5 +1,5 @@
 set backup
-set backupdir "~/var/cache"
+set backupdir "~/.cache/nano"
 set const
 set matchbrackets "(<[{)>]}"
 set nowrap

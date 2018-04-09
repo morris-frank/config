@@ -7,55 +7,67 @@ Xft.hinting:   1
 Xft.antialias: 1
 Xft.rgba:      rgb
 
+
 ! --- variables ---
 #define myfont Source Code Pro
-! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-! repository https://github.com/arcticicestudio/nord-xresources +
-#define nord0 #2E3440
-#define nord1 #3B4252
-#define nord2 #434C5E
-#define nord3 #4C566A
-#define nord4 #D8DEE9
-#define nord5 #E5E9F0
-#define nord6 #ECEFF4
-#define nord7 #8FBCBB
-#define nord8 #88C0D0
-#define nord9 #81A1C1
-#define nord10 #5E81AC
-#define nord11 #BF616A
-#define nord12 #D08770
-#define nord13 #EBCB8B
-#define nord14 #A3BE8C
-#define nord15 #B48EAD
-! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#define t_bg_floor     #010000
+#define t_bg_dip       #2B2B28
+#define t_background   #32312E
+#define t_bg_bump      #3F3E3B
+#define t_fg_comment   #7F7F83
+#define t_foreground   #A6A7AA
+#define t_fg_highlight #B6B7BB
+#define t_fg_ceiling   #FEFFFF
 
-*.foreground:   nord4
-*.background:   nord0
-*.cursorColor:  nord4
-*fading: 35
-*fadeColor: nord3
+URxvt.background: t_background
+URxvt.foreground: t_foreground
 
-*.color0: nord1
-*.color1: nord11
-*.color2: nord14
-*.color3: nord13
-*.color4: nord9
-*.color5: nord15
-*.color6: nord8
-*.color7: nord5
-*.color8: nord3
-*.color9: nord11
-*.color10: nord14
-*.color11: nord13
-*.color12: nord9
-*.color13: nord15
-*.color14: nord7
-*.color15: nord6
+URxvt.colorBD: t_fg_highlight
+URxvt.colorIT: t_fg_highlight
+URxvt.colorUL: t_fg_highlight
 
-!!Man - Pages
-*colorIT: nord12
-*colorBD: nord13
-*colorUL: nord14
+URxvt.cursorColor: #CE94C6
+
+! BLK
+URxvt.color0: t_bg_bump
+URxvt.color8: t_fg_comment
+
+! WHT
+URxvt.color7: t_fg_highlight
+URxvt.color15: t_fg_ceiling
+
+! RED
+URxvt.color1: #B36B65
+URxvt.color9: #EFA29B
+
+! YEL
+URxvt.color3: #8D7E45
+URxvt.color11: #C7B679
+
+! GRN
+URxvt.color2: #4F8C61
+URxvt.color10: #86C596
+
+! CYN
+URxvt.color6: #0E8E9A
+URxvt.color14: #5EC7D4
+
+! BLU
+URxvt.color4: #6181B8
+URxvt.color12: #9AB9F3
+
+! MAG
+URxvt.color5: #A46D9D
+URxvt.color13: #DFA4D7
+
+URxvt.color16: t_bg_floor
+URxvt.color17: t_bg_dip
+URxvt.color18: t_background
+URxvt.color19: t_bg_bump
+URxvt.color20: t_fg_comment
+URxvt.color21: t_foreground
+URxvt.color22: t_fg_highlight
+URxvt.color23: t_fg_ceiling
 
 !!Urxvt specifics
 URxvt*.font:            xft:myfont:pixelsize=12
@@ -79,26 +91,3 @@ URxvt*.secondaryWheel:  1
 URxvt*.internalBorder:  0
 URxvt*.borderless:      true
 URxvt*.externalBorder:  0
-
-!Transparency
-URxvt*.depth:           32
-URxvt*.background:      [95]nord0
-
-!Extensions
-!URxvt*.perl-ext-common: digital-clock
-
-!!rofi specifics
-rofi.dpi:				      70
-rofi.kb-cancel:       Escape,VoidSymbol
-rofi.hide-scrollbar:  true
-rofi.opacity:         95
-rofi.glob:            true
-rofi.location:        0
-rofi.sidebar-mode:    false
-rofi.auto-select:     true
-rofi.monitor:         0
-rofi.color-enabled:   true
-rofi.color-normal:    nord0,  nord4 , nord0,  nord7,  nord6
-rofi.color-window:    nord0,  nord5, nord5
-rofi.separator-style: solid
-rofi.lines:           22

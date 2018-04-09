@@ -69,5 +69,5 @@ m:0x4 + c:9
 	#Control + Escape
 
 "urxvt"
- m:0x40 + c:28
-    #Mod4 + t
+ m:0x40 + c:40
+    #super + d

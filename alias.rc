@@ -8,6 +8,7 @@
 	alias ...='cd ../..'
 	alias ..='cd ..'
 	alias c='cd '
+	alias rcp='rsync -a --progress --stats '
 	alias clc=' reset'
 	alias cls=' reset; ls'
 	alias f='find . |grep '
@@ -20,8 +21,8 @@
 	alias pi='sxiv * &>/dev/null &!'
 	alias py='python '
 	alias q='exit'
-  alias t='tmux '
-  alias ta='tmux attach '
+ 	alias t='tmux '
+ 	alias ta='tmux attach '
 	alias s='sudo '
 	alias v='source venv/bin/activate'
 	alias x='atool -x '
@@ -29,7 +30,7 @@
 # Default options
 #################
 	alias cp='cp --reflink=auto '
-  alias echo='echo -e '
+	alias echo='echo -e '
 	alias egrep='egrep --color=auto '
 	alias fgrep='fgrep --color=auto '
 	alias g++='g++ -fdiagnostics-color=always '
@@ -44,7 +45,7 @@
 # Script-Like aliases
 #####################
 	alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
-  alias wetter='curl wttr.in/Heidelberg?lang=de'
+	alias wetter='curl wttr.in/Heidelberg?lang=de'
 	alias pu+='/usr/bin/pulseaudio-ctl up'
 	alias pu-='/usr/bin/pulseaudio-ctl down'
 
