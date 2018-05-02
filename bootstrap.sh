@@ -37,10 +37,6 @@ source "$PWD/shell.rc"
 	#nano
 	ln -sf "$PWD/nano.rc"  "$HOME/.nanorc"
 
-	#SpectrWM
-	ln -sf "$PWD/spectrwm.rc"  "$HOME/.spectrwm.conf"
-	ln -sf "$PWD/spectrwm.bindings.rc"  "$HOME/.spectrwm.bindings.rc"
-
 	#Xbindkeys
 	ln -sf "$PWD/xbindkeys.rc"  "$HOME/.xbindkeysrc"
 

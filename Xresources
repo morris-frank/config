@@ -19,75 +19,75 @@ Xft.rgba:      rgb
 #define t_fg_highlight #B6B7BB
 #define t_fg_ceiling   #FEFFFF
 
-URxvt.background: t_background
-URxvt.foreground: t_foreground
+*.background: t_background
+*.foreground: t_foreground
 
-URxvt.colorBD: t_fg_highlight
-URxvt.colorIT: t_fg_highlight
-URxvt.colorUL: t_fg_highlight
+*.colorBD: t_fg_highlight
+*.colorIT: t_fg_highlight
+*.colorUL: t_fg_highlight
 
-URxvt.cursorColor: #CE94C6
+*.cursorColor: #CE94C6
 
 ! BLK
-URxvt.color0: t_bg_bump
-URxvt.color8: t_fg_comment
+*.color0: t_bg_bump
+*.color8: t_fg_comment
 
 ! WHT
-URxvt.color7: t_fg_highlight
-URxvt.color15: t_fg_ceiling
+*.color7: t_fg_highlight
+*.color15: t_fg_ceiling
 
 ! RED
-URxvt.color1: #B36B65
-URxvt.color9: #EFA29B
+*.color1: #B36B65
+*.color9: #EFA29B
 
 ! YEL
-URxvt.color3: #8D7E45
-URxvt.color11: #C7B679
+*.color3: #8D7E45
+*.color11: #C7B679
 
 ! GRN
-URxvt.color2: #4F8C61
-URxvt.color10: #86C596
+*.color2: #4F8C61
+*.color10: #86C596
 
 ! CYN
-URxvt.color6: #0E8E9A
-URxvt.color14: #5EC7D4
+*.color6: #0E8E9A
+*.color14: #5EC7D4
 
 ! BLU
-URxvt.color4: #6181B8
-URxvt.color12: #9AB9F3
+*.color4: #6181B8
+*.color12: #9AB9F3
 
 ! MAG
-URxvt.color5: #A46D9D
-URxvt.color13: #DFA4D7
+*.color5: #A46D9D
+*.color13: #DFA4D7
 
-URxvt.color16: t_bg_floor
-URxvt.color17: t_bg_dip
-URxvt.color18: t_background
-URxvt.color19: t_bg_bump
-URxvt.color20: t_fg_comment
-URxvt.color21: t_foreground
-URxvt.color22: t_fg_highlight
-URxvt.color23: t_fg_ceiling
+*.color16: t_bg_floor
+*.color17: t_bg_dip
+*.color18: t_background
+*.color19: t_bg_bump
+*.color20: t_fg_comment
+*.color21: t_foreground
+*.color22: t_fg_highlight
+*.color23: t_fg_ceiling
 
-!!Urxvt specifics
-URxvt*.font:            xft:myfont:pixelsize=12
-URxvt*.italicFont:      xft:myfont:pixelsize=12
-URxvt*.boldFont:        xft:myfont:style=Bold:pixelsize=12
-URxvt*.boldItalicFont:  xft:myfont:style=Bold:pixelsize=12
+!!URxvt specifics
+*.font:            xft:myfont:pixelsize=12
+*.italicFont:      xft:myfont:pixelsize=12
+*.boldFont:        xft:myfont:style=Bold:pixelsize=12
+*.boldItalicFont:  xft:myfont:style=Bold:pixelsize=12
 
-URxvt*.saveLines:       12000
-URxvt*.cursorBlink:     true
-URxvt*.cursorUnderline: true
-URxvt*.letterSpace:     -2
-URxvt*skipBuiltinGlyphs:true
+*.saveLines:       12000
+*.cursorBlink:     true
+*.cursorUnderline: true
+*.letterSpace:     -2
+*skipBuiltinGlyphs:true
 
 !Scrolling
-URxvt*.scrollBar:       false
-URxvt*.secondaryScreen: 1
-URxvt*.secondaryScroll: 0
-URxvt*.secondaryWheel:  1
+*.scrollBar:       false
+*.secondaryScreen: 1
+*.secondaryScroll: 0
+*.secondaryWheel:  1
 
 !Padding
-URxvt*.internalBorder:  0
-URxvt*.borderless:      true
-URxvt*.externalBorder:  0
+*.internalBorder:  0
+*.borderless:      true
+*.externalBorder:  0

@@ -24,7 +24,7 @@
  	alias t='tmux '
  	alias ta='tmux attach '
 	alias s='sudo '
-	alias v='source venv/bin/activate'
+	alias v='source .venv/bin/activate'
 	alias x='atool -x '
 
 # Default options
