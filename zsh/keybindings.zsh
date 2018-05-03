@@ -11,5 +11,5 @@ bindkey "$terminfo[kcuf1]" forward-char # Right
 # bindkey "$terminfo[kpp]" # PageUp
 # bindkey "$terminfo[knp]" # PageDown
 # Bind ctrl-left / ctrl-right
-bindkey "^s" backward-word
-bindkey "^d" forward-word
+bindkey "^F" backward-word
+bindkey "^B" forward-word

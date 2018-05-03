@@ -1,0 +1,37 @@
+{
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "'SauceCodePro Nerd Font', 'Source Code Pro'",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.sass-cache": true,
+        "**/.venv": true
+    },
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.renderWhitespace": "all",
+    "editor.fontSize": 10,
+    "window.menuBarVisibility": "toggle",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "jupyter.appendResults": false,
+    "git.confirmSync": false,
+    "files.associations": {
+        "*.rc": "shellscript"
+    }
+}

@@ -9,7 +9,7 @@ Xft.rgba:      rgb
 
 
 ! --- variables ---
-#define myfont Source Code Pro
+#define myfont SauceCodePro Nerd Font
 #define t_bg_floor     #010000
 #define t_bg_dip       #2B2B28
 #define t_background   #32312E
@@ -21,6 +21,8 @@ Xft.rgba:      rgb
 
 *.background: t_background
 *.foreground: t_foreground
+xterm*background: t_background
+xterm*foreground: t_foreground
 
 *.colorBD: t_fg_highlight
 *.colorIT: t_fg_highlight
@@ -70,16 +72,16 @@ Xft.rgba:      rgb
 *.color23: t_fg_ceiling
 
 !!URxvt specifics
-*.font:            xft:myfont:pixelsize=12
-*.italicFont:      xft:myfont:pixelsize=12
-*.boldFont:        xft:myfont:style=Bold:pixelsize=12
-*.boldItalicFont:  xft:myfont:style=Bold:pixelsize=12
+*.font:            xft:myfont:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+*.italicFont:      xft:myfont:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+*.boldFont:        xft:myfont:style=Bold:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+*.boldItalicFont:  xft:myfont:style=Bold:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
 
 *.saveLines:       12000
 *.cursorBlink:     true
 *.cursorUnderline: true
-*.letterSpace:     -2
-*skipBuiltinGlyphs:true
+!!URxvt.letterSpace: -1
+!!*skipBuiltinGlyphs:true
 
 !Scrolling
 *.scrollBar:       false
@@ -88,6 +90,6 @@ Xft.rgba:      rgb
 *.secondaryWheel:  1
 
 !Padding
-*.internalBorder:  0
+*.internalBorder:  10
 *.borderless:      true
 *.externalBorder:  0
