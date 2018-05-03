@@ -7,6 +7,8 @@ Xft.hinting:   1
 Xft.antialias: 1
 Xft.rgba:      rgb
 
+XTerm*utf8: 1
+
 
 ! --- variables ---
 #define myfont SauceCodePro Nerd Font

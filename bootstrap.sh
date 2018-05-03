@@ -51,6 +51,9 @@ source "$PWD/shell.rc"
 
 	#user-dirs
 	ln -sf "$PWD/user-dirs.rc" "$HOME/.config/user-dirs.dirs"
+
+	#alacritty
+	ln -sf "$PWD/alacritty.yml" "$HOME/.alacritty.yml" 
 ###
 
 # Setting up ZSH

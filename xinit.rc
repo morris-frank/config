@@ -6,7 +6,6 @@ usermodmap=$HOME/.Xmodmap
 
 # set session-wide constants
 export EDITOR="nano"
-export TERM="linux"
 export DRI_PRIME=1
 export GTK_MODULES=rgba
 
