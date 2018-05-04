@@ -8,7 +8,8 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/.sass-cache": true,
-        "**/.venv": true
+        "**/.venv": true,
+        "**/.ipynb_checkpoints": true
     },
     "editor.minimap.enabled": false,
     "workbench.activityBar.visible": true,

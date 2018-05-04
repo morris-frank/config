@@ -14,6 +14,7 @@
 	alias f='find . |grep '
 	alias h='history|grep '
 	alias ipy='ipython '
+	alias j='joe '
 	alias l='less -R '
 	alias n='nano '
 	alias p='ps aux |grep '

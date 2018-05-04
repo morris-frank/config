@@ -18,6 +18,8 @@ zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 # Then, source plugins and add commands to $PATH
 zplug load
 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 #Git plugin
 ###
 	autoload -Uz vcs_info
