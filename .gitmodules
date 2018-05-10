@@ -1,9 +1,9 @@
 [submodule "tmux/tpm"]
 	path = tmux/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "lain"]
-	path = awesome/lain
-	url = git://github.com/lcpz/lain.git
-[submodule "freedesktop"]
+[submodule "awesome/freedesktop"]
 	path = awesome/freedesktop
 	url = git://github.com/lcpz/awesome-freedesktop.git
+[submodule "awesome/lain"]
+	path = awesome/lain
+	url = git://github.com/lcpz/lain.git
