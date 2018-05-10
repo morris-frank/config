@@ -40,6 +40,7 @@ setxkbmap -option "altwin:prtsc_rwin"
 setxkbmap -option "caps:none"
 
 #export KDEWM=spectrwm
-exec startkde
+#exec startkde
 #exec gnome-session
 #exec sway
+exec  awesome
