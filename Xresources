@@ -14,7 +14,7 @@ XTerm*utf8: 1
 #define myfont SauceCodePro Nerd Font
 #define t_bg_floor     #010000
 #define t_bg_dip       #2B2B28
-#define t_background   #32312E
+#define t_background   #1E1E1E
 #define t_bg_bump      #3F3E3B
 #define t_fg_comment   #7F7F83
 #define t_foreground   #A6A7AA
@@ -73,11 +73,14 @@ xterm*foreground: t_foreground
 *.color22: t_fg_highlight
 *.color23: t_fg_ceiling
 
+rofi.color-normal: t_background,  t_foreground,  t_bg_dip,  t_foreground,  t_background
+rofi.color-window: t_background, t_background, t_background
+
 !!URxvt specifics
-*.font:            xft:myfont:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-*.italicFont:      xft:myfont:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-*.boldFont:        xft:myfont:style=Bold:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-*.boldItalicFont:  xft:myfont:style=Bold:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.font:            xft:myfont:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.italicFont:      xft:myfont:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.boldFont:        xft:myfont:style=Bold:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.boldItalicFont:  xft:myfont:style=Bold:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
 
 *.saveLines:       12000
 *.cursorBlink:     true
