@@ -8,6 +8,7 @@ usermodmap=$HOME/.Xmodmap
 export EDITOR="nano"
 export DRI_PRIME=1
 export GTK_MODULES=rgba
+export QT_QPA_PLATFORMTHEME=qgnomeplatform
 
 # append path
 [ -d ~/bin/ ] && export PATH=~/bin:$PATH
@@ -39,8 +40,4 @@ setxkbmap -option "altwin:prtsc_rwin"
 # Deactivate capslock
 setxkbmap -option "caps:none"
 
-#export KDEWM=spectrwm
-#exec startkde
-#exec gnome-session
-#exec sway
-exec  awesome
+[[ -z $1 ]] && exec awesome || exec $1
