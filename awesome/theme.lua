@@ -95,7 +95,7 @@ local markup = lain.util.markup
 -- Textclock
 os.setlocale(os.getenv("LANG")) -- to localize the clock
 local clockicon = wibox.widget.imagebox(theme.widget_clock)
-local mytextclock = wibox.widget.textclock(markup("#de5e1e", " %H:%M "))
+local mytextclock = wibox.widget.textclock(markup("#778baf", " %H:%M "))
 mytextclock.font = theme.font
 
 -- Calendar
@@ -121,14 +121,6 @@ theme.weather = lain.widget.weather({
     end
 })
 
--- / fs
--- local fsicon = wibox.widget.imagebox(theme.widget_fs)
--- theme.fs = lain.widget.fs({
---     notification_preset = { font = "SauceCodePro Nerd Font 10", fg = theme.fg_normal },
---     settings  = function()
---         widget:set_markup(markup.fontfg(theme.font, "#80d9d8", fs_now.used .. "% "))
---     end
--- })
 
 -- CPU
 local cpuicon = wibox.widget.imagebox(theme.widget_cpu)
@@ -137,14 +129,6 @@ local cpu = lain.widget.cpu({
         widget:set_markup(markup.fontfg(theme.font, "#e33a6e", cpu_now.usage .. "% "))
     end
 })
-
--- Coretemp
--- local tempicon = wibox.widget.imagebox(theme.widget_temp)
--- local temp = lain.widget.temp({
---     settings = function()
---         widget:set_markup(markup.fontfg(theme.font, "#f1af5f", coretemp_now .. "°C "))
---     end
--- })
 
 -- Battery
 local baticon = wibox.widget.imagebox(theme.widget_batt)
@@ -171,31 +155,6 @@ theme.volume = lain.widget.alsa({
         widget:set_markup(markup.fontfg(theme.font, "#7493d2", volume_now.level .. "% "))
     end
 })
-
--- Net
-local netdownicon = wibox.widget.imagebox(theme.widget_netdown)
-local netdowninfo = wibox.widget.textbox()
-local netupicon = wibox.widget.imagebox(theme.widget_netup)
-local netupinfo = lain.widget.net({
-    settings = function()
-        if iface ~= "network off" and
-           string.match(theme.weather.widget.text, "N/A")
-        then
-            theme.weather.update()
-        end
-
-        widget:set_markup(markup.fontfg(theme.font, "#e54c62", net_now.sent .. " "))
-        netdowninfo:set_markup(markup.fontfg(theme.font, "#87af5f", net_now.received .. " "))
-    end
-})
-
--- MEM
--- local memicon = wibox.widget.imagebox(theme.widget_mem)
--- local memory = lain.widget.mem({
---     settings = function()
---         widget:set_markup(markup.fontfg(theme.font, "#e0da37", mem_now.used .. "M "))
---     end
--- })
 
 function theme.at_screen_connect(s)
     -- Quake application
@@ -244,20 +203,10 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            netdownicon,
-            netdowninfo,
-            -- netupicon,
-            -- netupinfo.widget,
-            -- memicon,
-            -- memory.widget,
-            -- fsicon,
-            -- theme.fs.widget,
             weathericon,
             theme.weather.widget,
             cpuicon,
             cpu.widget,
-            -- tempicon,
-            -- temp.widget,
             baticon,
             bat.widget,
             volicon,

@@ -10,6 +10,7 @@ setw -g monitor-activity on
 setw -g aggressive-resize on
 setw -g clock-mode-colour green
 setw -g clock-mode-style 24
+set -g mouse on
 
 bind h split-window -h
 bind v split-window -v
@@ -62,7 +63,6 @@ set -g @right-bg-list "yellow, green, blue"
 set -g @right-fg-list "black, black, black"
 
 set -g status-left "#[bg=red]#{s/root//:client_key_table} | "
-set -g status-right "%a %h-%d %H:%M:%S | CPU: #{cpu_icon} #{cpu_percentage} | Online: #{online_status}"
 
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'

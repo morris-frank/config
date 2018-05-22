@@ -26,3 +26,5 @@ export BLU='\e[0;34m'
 [ -f "$CONFIG_DIR/functions.rc" ] && source "${CONFIG_DIR}/functions.rc"
 
 [ -f "$CONFIG_DIR/functions_private.rc" ] && source "${CONFIG_DIR}/functions_private.rc"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

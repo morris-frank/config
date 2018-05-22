@@ -34,3 +34,6 @@ source "${CONFIG_DIR}/zsh/completion.zsh"
 
 #Compdefs
 source "${CONFIG_DIR}/zsh/compdef.zsh"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

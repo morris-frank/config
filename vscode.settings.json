@@ -18,13 +18,7 @@
     "editor.fontSize": 10,
     "window.menuBarVisibility": "toggle",
     "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
+        "suppressFileNotUnderSourceControlWarning": true,
         "suppressShowKeyBindingsNotice": true
     },
     "explorer.confirmDelete": false,
@@ -34,5 +28,7 @@
     "git.confirmSync": false,
     "files.associations": {
         "*.rc": "shellscript"
-    }
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "html.format.wrapLineLength": 0
 }
