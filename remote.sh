@@ -27,7 +27,7 @@ source "$PWD/shell.rc"
 	ln -sf "$PWD/git.rc" "$HOME/.gitconfig"
 
 	#tmux
-	ln -sf "$PWD/tmux/tmux.rc" "$HOME/.tmux.conf"
+	ln -sf "$PWD/tmux.rc" "$HOME/.tmux.conf"
 ###
 
 # Setting up ZSH
