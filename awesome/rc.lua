@@ -64,7 +64,7 @@ run_once({"nm-applet"})
 
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "alacritty"
+local terminal     = "kitty"
 local editor       = os.getenv("EDITOR") or "joe"
 local gui_editor   = "code"
 local browser      = "firefox"

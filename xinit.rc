@@ -9,6 +9,7 @@ export EDITOR="nano"
 export DRI_PRIME=1
 export GTK_MODULES=rgba
 export QT_QPA_PLATFORMTHEME=qgnomeplatform
+#export Q_STYLE_OVERRIDE=adwaita
 
 # append path
 [ -d ~/bin/ ] && export PATH=~/bin:$PATH
@@ -17,6 +18,7 @@ export QT_QPA_PLATFORMTHEME=qgnomeplatform
 # merge in defaults and keymaps
 [ -f "$userresources" ] && xrdb -load "$userresources"
 [ -f "$usermodmap" ] && xmodmap "$usermodmap"
+setxkbmap de
 
 # start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then

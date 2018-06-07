@@ -68,6 +68,6 @@ keystate_numlock = enable
 m:0x4 + c:9
 	#Control + Escape
 
-"alacritty"
+"kitty"
  m:0x40 + c:40
     #super + d
