@@ -8,8 +8,8 @@ usermodmap=$HOME/.Xmodmap
 export EDITOR="nano"
 export DRI_PRIME=1
 export GTK_MODULES=rgba
-export QT_QPA_PLATFORMTHEME=qgnomeplatform
-#export Q_STYLE_OVERRIDE=adwaita
+#export QT_QPA_PLATFORMTHEME=qgnomeplatform
+#export QT_STYLE_OVERRIDE=adwaita
 
 # append path
 [ -d ~/bin/ ] && export PATH=~/bin:$PATH
