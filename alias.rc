@@ -19,7 +19,7 @@
 	alias n='nano '
 	alias p='ps aux |grep '
 	alias pac='pacman '
-	alias pi='sxiv * &>/dev/null &!'
+	alias pi='gpicview * &>/dev/null &!'
 	alias py='python '
 	alias q='exit'
  	alias t='tmux '

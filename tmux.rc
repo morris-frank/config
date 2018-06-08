@@ -12,10 +12,6 @@ setw -g clock-mode-colour green
 setw -g clock-mode-style 24
 set -g mouse on
 
-# utf8 is on
-set -g utf8 on
-set -g status-utf8 on
-
 # address vim mode switching delay (http://superuser.com/a/252717/65504)
 set -s escape-time 0
 
@@ -27,16 +23,6 @@ set -g display-time 4000
 
 # refresh 'status-left' and 'status-right' more often
 set -g status-interval 5
-
-# set only on OS X where it's required
-set -g default-command "reattach-to-user-namespace -l $SHELL"
-
-# upgrade $TERM
-set -g default-terminal "screen-256color"
-
-# emacs key bindings in tmux command prompt (prefix + :) are better than
-# vi keys, even for vim users
-set -g status-keys emacs
 
 # focus events enabled for terminals that support them
 set -g focus-events on
@@ -84,14 +70,3 @@ bind -n S-down \
 	bind -n S-C-right swap-window -t +1 \; \
 	bind -n C-t new-window -a -c "#{pane_current_path}" \; \
 	set -qg prefix C-a
-
-
-set -g @seperators "dithered"
-set -g @primary-color "yellow"
-set -g @secondary-color "red"
-set -g @left-bg-list "black"
-set -g @left-fg-list "white"
-set -g @right-bg-list "yellow, green, blue"
-set -g @right-fg-list "black, black, black"
-
-set -g status-left "#[bg=red]#{s/root//:client_key_table}"

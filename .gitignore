@@ -11,10 +11,13 @@ Code/
 dconf/
 enchant/
 flaska.net/
+fontconfig/
 gconf/
 geary/
 gtk*
 keepassxc/
+libreoffice/
+qt5ct/
 pulse/
 spotify/
 yay/
