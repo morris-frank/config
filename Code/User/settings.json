@@ -1,0 +1,35 @@
+{
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 12,
+    "files.associations": {
+        "*.rc": "shellscript"
+    },
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "editor.fontFamily": "SauceCodePro Nerd Font Mono",
+    "editor.cursorStyle": "line-thin",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*~": true
+    },
+    "editor.minimap.enabled": false,
+    "editor.dragAndDrop": false,
+    "editor.fontLigatures": false,
+    "editor.roundedSelection": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "window.menuBarVisibility": "toggle",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.fontSize": 11,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false
+}
