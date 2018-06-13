@@ -16,7 +16,8 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/*~": true
+        "**/*~": true,
+        "**/.sass-cache": true
     },
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
@@ -31,5 +32,8 @@
     "files.trimTrailingWhitespace": true,
     "terminal.integrated.fontSize": 11,
     "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "workbench.startupEditor": "newUntitledFile"
 }
