@@ -3,10 +3,21 @@ keystate_numlock = enable
 #keystate_scrolllock= enable
 
 "rofi -show run"
- VoidSymbol
+ m:0x0 + c:66
+ #VoidSymbol
 
-"rofi -show run"
- XF86Launch1
+# "rofi -show run"
+#  XF86Launch1
+
+# Spawning controls
+"kitty"
+ Mod4 + d
+
+"gnome-usage"
+ Control+Alt + Delete
+
+"xrandr --auto"
+ Mod4 + p
 
 "lock"
  XF86ScreenSaver
@@ -44,17 +55,3 @@ keystate_numlock = enable
 # xF86MyComputer
 "xdg-open ~"
  XF86MyComputer
-
-# Spawning controls
-"kitty"
- m:0x40 + c:40
-    #super + d
-
-"gnome-usage"
- m:0xc + c:119
-	#Control+Alt + Delete
-
-# projector mode :P
-"xrandr --auto"
- m:0x40 + c:33
- 	#Mod4 + p
