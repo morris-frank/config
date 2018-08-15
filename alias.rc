@@ -42,6 +42,7 @@
 	alias ls='ls --color=force -phl'
 	alias mkdir='mkdir -p -v'
 	alias watch='watch --no-title --differences '
+	alias jpegoptim='jpegoptim -s -m90 -f '
 
 # Script-Like aliases
 #####################
