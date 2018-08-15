@@ -6,10 +6,14 @@
 
 pavucontrol.ini
 
+autostart/
 caja/
+chromium/
 Code/
+darktable/
 dconf/
 enchant/
+evolution/
 filezilla/
 flaska.net/
 fontconfig/
@@ -20,9 +24,18 @@ gpick/
 gpicview/
 gtk*
 htop/
+inkscape/
+keepassx/
 keepassxc/
 libreoffice/
+nautilus/
+opera/
+pcloud/
 pulse/
 qt5ct/
+QtProject.conf
+scdl/
 spotify/
+totem/
+Trolltech.conf
 yay/
