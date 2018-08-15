@@ -25,7 +25,6 @@
     "editor.roundedSelection": false,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "Monokai Dimmed",
     "window.menuBarVisibility": "toggle",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -35,5 +34,12 @@
     "telemetry.enableTelemetry": false,
     "git.autofetch": true,
     "git.confirmSync": false,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "markdownlint.config": {
+        "MD013": false,
+        "MD033": false,
+        "MD002": false
+    }
 }
