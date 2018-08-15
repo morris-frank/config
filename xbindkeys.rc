@@ -13,7 +13,7 @@ keystate_numlock = enable
 "kitty"
  Mod4 + d
 
-"gnome-usage"
+"gnome-system-monitor"
  Control+Alt + Delete
 
 "xrandr --auto"
