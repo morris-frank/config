@@ -75,7 +75,6 @@ awful.util.terminal = terminal
 awful.util.tagnames = { "Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    awful.layout.suit.floating,
     --awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
@@ -93,6 +92,7 @@ awful.layout.layouts = {
     --lain.layout.cascade,
     --lain.layout.cascade.tile,
     lain.layout.centerwork,
+    awful.layout.suit.floating,
     --lain.layout.centerwork.horizontal,
     --lain.layout.termfair,
     --lain.layout.termfair.center,
@@ -370,79 +370,33 @@ globalkeys = my_table.join(
     awful.key({ altkey, }, "w", function () if beautiful.weather then beautiful.weather.show(7) end end,
               {description = "show weather", group = "widgets"}),
 
-    -- Brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight -inc 10") end,
-              {description = "+10%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -dec 10") end,
-              {description = "-10%", group = "hotkeys"}),
-
-    -- ALSA volume control
-    -- awful.key({ altkey }, "Up",
-    --     function ()
-    --         os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
-    --         beautiful.volume.update()
-    --     end,
-    --     {description = "volume up", group = "hotkeys"}),
-    -- awful.key({ altkey }, "Down",
-    --     function ()
-    --         os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
-    --         beautiful.volume.update()
-    --     end,
-    --     {description = "volume down", group = "hotkeys"}),
-    -- awful.key({ altkey }, "m",
-    --     function ()
-    --         os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-    --         beautiful.volume.update()
-    --     end,
-    --     {description = "toggle mute", group = "hotkeys"}),
-    -- awful.key({ altkey, "Control" }, "m",
-    --     function ()
-    --         os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
-    --         beautiful.volume.update()
-    --     end,
-    --     {description = "volume 100%", group = "hotkeys"}),
-    -- awful.key({ altkey, "Control" }, "0",
-    --     function ()
-    --         os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
-    --         beautiful.volume.update()
-    --     end,
-    --     {description = "volume 0%", group = "hotkeys"}),
-
     -- Copy primary to clipboard (terminals to gtk)
     awful.key({ modkey }, "c", function () awful.spawn("xsel | xsel -i -b") end,
               {description = "copy terminal to gtk", group = "hotkeys"}),
     -- Copy clipboard to primary (gtk to terminals)
     awful.key({ modkey }, "v", function () awful.spawn("xsel -b | xsel") end,
-              {description = "copy gtk to terminal", group = "hotkeys"}),
-
-    -- User programs
-    -- awful.key({ modkey }, "q", function () awful.spawn(browser) end,
-    --           {description = "run browser", group = "launcher"}),
-    -- awful.key({ modkey }, "a", function () awful.spawn(guieditor) end,
-            --   {description = "run gui editor", group = "launcher"}),
+              {description = "copy gtk to terminal", group = "hotkeys"})
 
     -- Default
-    --[[ Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
-    --]]
-    awful.key({ }, "VoidSymbol", function () awful.spawn("rofi -show run") end,
-              {description = "show dmenu", group = "launcher"}),
+    -- Menubar
+    -- awful.key({ modkey }, "p", function() menubar.show() end,
+            --   {description = "show the menubar", group = "launcher"})
+    -- awful.key({ }, "VoidSymbol", function () awful.spawn("rofi -show run") end,
+            --   {description = "show dmenu", group = "launcher"}),
     -- Prompt
-    awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    -- awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
+            --   {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey }, "x",
-              function ()
-                  awful.prompt.run {
-                    prompt       = "Run Lua code: ",
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = awful.util.eval,
-                    history_path = awful.util.get_cache_dir() .. "/history_eval"
-                  }
-              end,
-              {description = "lua execute prompt", group = "awesome"})
-    --]]
+    -- awful.key({ modkey }, "x",
+    --           function ()
+    --               awful.prompt.run {
+    --                 prompt       = "Run Lua code: ",
+    --                 textbox      = awful.screen.focused().mypromptbox.widget,
+    --                 exe_callback = awful.util.eval,
+    --                 history_path = awful.util.get_cache_dir() .. "/history_eval"
+    --               }
+    --           end,
+    --           {description = "lua execute prompt", group = "awesome"})
 )
 
 clientkeys = my_table.join(

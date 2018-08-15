@@ -2,72 +2,59 @@ keystate_numlock = enable
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-#"rofi -show run"
-# m:0x0 + c:66
-	#VoidSymbol
+"rofi -show run"
+ VoidSymbol
 
-#"rofi -show run"
-# m:0x10 + c:66
-	#VoidSymbol
+"rofi -show run"
+ XF86Launch1
+
+"lock"
+ XF86ScreenSaver
+
+# Display brightness
+"xbacklight -dec 20"
+ XF86MonBrightnessDown
+
+"xbacklight -inc 20"
+ XF86MonBrightnessUp
+
+# Sound Volume
+"amixer sset Master 5%-"
+ XF86AudioLowerVolume
+
+"amixer sset Master 5%+"
+ XF86AudioRaiseVolume
+
+"amixer sset Master toggle"
+ XF86AudioMute
+
+"amixer sset Capture toggle"
+ XF86AudioMicMute
+
+# Audio controls
+"playerctl next"
+ XF86AudioNext
+
+"playerctl previous"
+ XF86AudioPrec
+
+"playerctl play-pause"
+ XF86AudioPlay
+
+# xF86MyComputer
+"xdg-open ~"
+ XF86MyComputer
+
+# Spawning controls
+"kitty"
+ m:0x40 + c:40
+    #super + d
+
+"gnome-usage"
+ m:0xc + c:119
+	#Control+Alt + Delete
 
 # projector mode :P
 "xrandr --auto"
  m:0x40 + c:33
  	#Mod4 + p
-
-# "rofi -show ssh"
-#  m:0x0 + c:156
-	#XF86Launch1
-
-# Helligkeit verringern:
-"light -U 20"
- m:0x10 + c:232
-	#Mod2 + XF86MonBrightnessDown
-
-"light -U 20"
- c:232
-	#XF86MonBrightnessDown
-
-# Helligkeit erhöhen:
-"light -A 20"
- m:0x10 + c:233
- 	#Mod2 + XF86MonBrightnessUp
-
-"light -A 20"
- c:233
- 	#XF86MonBrightnessUp
-
-# Lautstärke verringern:
-"amixer -c 0 sset Master 5%-"
- m:0x10 + c:122
- 	#Mod2 + XF86AudioLowerVolume
-
-"amixer -c 0 sset Master 5%-"
- c:122
- 	#XF86AudioLowerVolume
-
-# Lautstärke erhöhen:
-"amixer -c 0 sset Master 5%+"
- m:0x10 + c:123
- 	#Mod2 + XF86AudioRaiseVolume
-
-"amixer -c 0 sset Master 5%+"
- c:123
- 	#XF86AudioRaiseVolume
-
-# xF86MyComputer
-"xdg-open ~"
- m:0x10 + c:165
- 	#Mod2 + XF86MyComputer
-
-"xdg-open ~"
- c:165
- 	#XF86MyComputer
-
-"lock"
-m:0x4 + c:9
-	#Control + Escape
-
-"kitty"
- m:0x40 + c:40
-    #super + d
