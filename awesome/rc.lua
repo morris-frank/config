@@ -55,10 +55,11 @@ local function run_once(cmd_arr)
     end
 end
 
+--- AUTOSTART
 run_once({"nm-applet"})
-
--- run_once({ "unclutter -root" }) -- entries must be comma-separated
--- }}}
+run_once({"unclutter"})
+run_once({"pcloud"})
+---
 
 -- {{{ Variable definitions
 

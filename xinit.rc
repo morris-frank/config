@@ -1,45 +1,51 @@
 #!/bin/sh
 
-# config
+### LOCAL ENV
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
+###
 
-# set session-wide constants
+### ENV
 export EDITOR="nano"
 export DRI_PRIME=1
 # export GTK_MODULES=rgba
 export QT_QPA_PLATFORMTHEME=qt5ct
 #export QT_STYLE_OVERRIDE=gtk2
+###
 
-# append path
+### PATH
 [ -d ~/bin/ ] && export PATH=~/bin:$PATH
-[ -d ~/bin/internet-apps ] && export PATH=~/bin/internet-apps:$PATH
+###
 
-# merge in defaults and keymaps
-[ -f "$userresources" ] && xrdb -load "$userresources"
+### KEYBOARD
 [ -f "$usermodmap" ] && xmodmap "$usermodmap"
+# Shortcuts
+xbindkeys
+# German keymanp
 setxkbmap de
+# Make the Print/Druck key the Super_R key
+setxkbmap -option "altwin:prtsc_rwin"
+# Deactivate capslock
+setxkbmap -option "caps:none"
+###
 
-# start some nice programs
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
-fi
-
+### OTHER CONFIG
+[ -f "$userresources" ] && xrdb -load "$userresources"
 # Set Energy Features off
 xset -dpms
 # Set screensaver off
 xset s off
 # Set bell off
 xset b off
+###
 
-# Key Options
-xbindkeys
-# Make the Print/Druck key the Super_R key
-setxkbmap -option "altwin:prtsc_rwin"
-# Deactivate capslock
-setxkbmap -option "caps:none"
+### GLOBAL X SCRIPTS
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+###
 
 [[ -z $1 ]] && exec awesome || exec $1
