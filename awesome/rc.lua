@@ -67,18 +67,12 @@ local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "kitty"
 local editor       = os.getenv("EDITOR") or "joe"
-local gui_editor   = "code"
-local browser      = "firefox"
-local guieditor    = "code"
-local scrlocker    = "lock"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1_net", "2_code", "3", "4", "5", "6", "7", "8", "9", "10", "F1", "F2", "F3", "F4", "F5", "F6", "F7_pass", "F8_todo", "F9_mail", "F10_music" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    --awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
-    --awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
@@ -169,26 +163,9 @@ naughty.config.defaults['icon_size'] = 100
 --- }}}
 
 -- {{{ Menu
-local myawesomemenu = {
-    { "hotkeys", function() return false, hotkeys_popup.show_help end },
-    { "manual", terminal .. " -e man awesome" },
-    { "edit config", string.format("%s -e %s %s", terminal, editor, awesome.conffile) },
-    { "restart", awesome.restart },
-    { "quit", function() awesome.quit() end }
-}
 awful.util.mymainmenu = freedesktop.menu.build({
-    icon_size = beautiful.menu_height or 16,
-    before = {
-        { "Awesome", myawesomemenu, beautiful.awesome_icon },
-        -- other triads can be put here
-    },
-    after = {
-        { "Open terminal", terminal },
-        -- other triads can be put here
-    }
+    icon_size = beautiful.menu_height or 16
 })
---menubar.utils.terminal = terminal -- Set the Menubar terminal for applications that require it
--- }}}
 
 -- {{{ Screen
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -217,10 +194,6 @@ root.buttons(my_table.join(
 
 -- {{{ Key bindings
 globalkeys = my_table.join(
-    -- X screen locker
-    awful.key({ modkey,           }, "Escape", function () os.execute(scrlocker) end,
-              {description = "lock screen", group = "hotkeys"}),
-
     -- Hotkeys
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description = "show help", group="awesome"}),
@@ -230,7 +203,29 @@ globalkeys = my_table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "a", awful.tag.history.restore,
-              {description = "go back", group = "tag"}),
+              {description = "toggle between the current and the last tag", group = "tag"}),
+    awful.key({ modkey, "Shift" }, "Left",
+        function ()
+            if client.focus then
+                local tag = client.focus.screen.tags[client.focus.first_tag.index - 1]
+                if tag then
+                    client.focus:move_to_tag(tag)
+                    awful.tag.viewprev()
+                end
+            end
+        end,
+        {description = "move client to the prev tag", group = "client"}),
+    awful.key({ modkey, "Shift" }, "Right",
+        function ()
+            if client.focus then
+                local tag = client.focus.screen.tags[client.focus.first_tag.index + 1]
+                if tag then
+                    client.focus:move_to_tag(tag)
+                    awful.tag.viewnext()
+                end
+            end
+        end,
+        {description = "move client to the next tag", group = "client"}),
 
     -- Default client focus
     awful.key({ altkey,           }, "j",
@@ -294,34 +289,11 @@ globalkeys = my_table.join(
         end,
         {description = "go back", group = "client"}),
 
-    -- Show/Hide Wibox
-    awful.key({ modkey }, "b", function ()
-            for s in screen do
-                s.mywibox.visible = not s.mywibox.visible
-                if s.mybottomwibox then
-                    s.mybottomwibox.visible = not s.mybottomwibox.visible
-                end
-            end
-        end,
-        {description = "toggle wibox", group = "awesome"}),
-
     -- On the fly useless gaps change
     awful.key({ altkey, "Control" }, "+", function () lain.util.useless_gaps_resize(1) end,
-              {description = "increment useless gaps", group = "tag"}),
+              {description = "increment useless gaps", group = "layout"}),
     awful.key({ altkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end,
-              {description = "decrement useless gaps", group = "tag"}),
-
-    -- Dynamic tagging
-    awful.key({ modkey, "Shift" }, "n", function () lain.util.add_tag() end,
-              {description = "add new tag", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end,
-              {description = "rename tag", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(-1) end,
-              {description = "move tag to the left", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(1) end,
-              {description = "move tag to the right", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end,
-              {description = "delete tag", group = "tag"}),
+              {description = "decrement useless gaps", group = "layout"}),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
@@ -347,21 +319,6 @@ globalkeys = my_table.join(
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
-
-    awful.key({ modkey, "Control" }, "n",
-              function ()
-                  local c = awful.client.restore()
-                  -- Focus restored client
-                  if c then
-                      client.focus = c
-                      c:raise()
-                  end
-              end,
-              {description = "restore minimized", group = "client"}),
-
-    -- Dropdown application
-    awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end,
-              {description = "dropdown application", group = "launcher"}),
 
     -- Widgets popups
     awful.key({ altkey, }, "c", function () lain.widget.calendar.show(7) end,
@@ -419,13 +376,6 @@ clientkeys = my_table.join(
               {description = "move to screen", group = "client"}),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
-    awful.key({ modkey,           }, "n",
-        function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end ,
-        {description = "minimize", group = "client"}),
     awful.key({ modkey,           }, "m",
         function (c)
             c.maximized = not c.maximized
@@ -444,7 +394,6 @@ for i = 1, 20 do
         descr_view = {description = "view tag #", group = "tag"}
         descr_toggle = {description = "toggle tag #", group = "tag"}
         descr_move = {description = "move focused client to tag #", group = "tag"}
-        descr_toggle_focus = {description = "toggle focused client on tag #", group = "tag"}
     end
     if i <= 10 then offset = 9 else offset = 56 end
     globalkeys = my_table.join(globalkeys,
@@ -478,18 +427,7 @@ for i = 1, 20 do
                           end
                      end
                   end,
-                  descr_move),
-        -- Toggle tag on focused client.
-        awful.key({ modkey, "Control", "Shift" }, "#" .. i + offset,
-                  function ()
-                      if client.focus then
-                          local tag = client.focus.screen.tags[i]
-                          if tag then
-                              client.focus:toggle_tag(tag)
-                          end
-                      end
-                  end,
-                  descr_toggle_focus)
+                  descr_move)
     )
 end
 
