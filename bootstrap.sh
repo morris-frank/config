@@ -3,7 +3,7 @@
 cd $(dirname "$0")
 PWD=$(pwd)
 
-source "$PWD/shell.rc"
+source "$PWD/profile.rc"
 
 #CREATE DIRECTORY ENVIROMENT
 ###

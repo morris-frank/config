@@ -10,4 +10,4 @@ fi
 shopt -s histappend
 shopt -s cmdhist
 
-source "${CONFIG_DIR}/shell.rc"
+source "${HOME}/.profile"

@@ -21,6 +21,8 @@ setopt no_check_jobs
 	#bindkey  "^[[B"  history-beginning-search-forward-end
 ###
 
+source "${HOME}/.profile"
+
 #Plugins
 source "${CONFIG_DIR}/zsh/plugins.zsh"
 
@@ -32,5 +34,3 @@ source "${CONFIG_DIR}/zsh/completion.zsh"
 
 #Compdefs
 source "${CONFIG_DIR}/zsh/compdef.zsh"
-
-source "${CONFIG_DIR}/shell.rc"

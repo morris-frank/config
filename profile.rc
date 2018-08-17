@@ -1,4 +1,3 @@
-export TERM="linux"
 export CONFIG_DIR='/home/morris/.config/'
 
 #History
@@ -18,3 +17,16 @@ export BLU='\e[0;34m'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [[ -d "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
+
+#Alias definitions
+[[ -s "$CONFIG_DIR/shell_private.rc" ]] && source "${CONFIG_DIR}/shell_private.rc"
+
+[[ -s "$CONFIG_DIR/alias.rc" ]] && source "${CONFIG_DIR}/alias.rc"
+
+[[ -s "$CONFIG_DIR/alias_private.rc" ]] && source "${CONFIG_DIR}/alias_private.rc"
+
+[[ -s "$CONFIG_DIR/functions.rc" ]] && source "${CONFIG_DIR}/functions.rc"
+
+[[ -s "$CONFIG_DIR/functions_private.rc" ]] && source "${CONFIG_DIR}/functions_private.rc"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
