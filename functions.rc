@@ -43,6 +43,14 @@ function current_repository() {
 	echo $(git remote -v | cut -d':' -f 2)
 }
 
-gclone() {
+function gclone() {
    git clone $1 ${${${${1}##*github.com}%.git}:1}
+}
+
+function run_once() {
+	echo "$@"
+	pgrep -u $USER -x "$@"
+    if ! pgrep -u $USER -x "$@" > /dev/null; then
+		exec "$@" &> /dev/null & disown
+	fi
 }
