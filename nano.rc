@@ -1,6 +1,5 @@
 set backup
 set backupdir "~/.cache/nano"
-set const
 set matchbrackets "(<[{)>]}"
 set nowrap
 set smooth
