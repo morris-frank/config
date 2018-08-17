@@ -14,7 +14,7 @@ local os = { getenv = os.getenv, setlocale = os.setlocale }
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
-theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/"
+theme.confdir                                   = os.getenv("CONFIG_DIR") .. "/awesome/"
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
 theme.font                                      = "SauceCodePro Nerd Font 10"
 theme.menu_bg_normal                            = "#1E1E1E"

@@ -154,7 +154,7 @@ lain.layout.cascade.tile.extra_padding = 5
 lain.layout.cascade.tile.nmaster       = 5
 lain.layout.cascade.tile.ncol          = 2
 
-local theme_path = string.format("%s/.config/awesome/theme.lua", os.getenv("HOME"))
+local theme_path = string.format("%s/awesome/theme.lua", os.getenv("CONFIG_DIR"))
 beautiful.init(theme_path)
 -- }}}
 
