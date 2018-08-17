@@ -48,8 +48,6 @@
 #####################
 	alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
 	alias wetter='curl wttr.in/Heidelberg?lang=de'
-	alias pu+='/usr/bin/pulseaudio-ctl up'
-	alias pu-='/usr/bin/pulseaudio-ctl down'
 
 # GIT
 #####
