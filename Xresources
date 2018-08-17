@@ -76,12 +76,6 @@ xterm*foreground: t_foreground
 rofi.color-normal: t_background,  t_foreground,  t_bg_dip,  t_foreground,  t_background
 rofi.color-window: t_background, t_background, t_background
 
-!!URxvt specifics
-URxvt.font:            xft:myfont:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt.italicFont:      xft:myfont:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt.boldFont:        xft:myfont:style=Bold:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt.boldItalicFont:  xft:myfont:style=Bold:pixelsize=11, -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
-
 *.saveLines:       12000
 *.cursorBlink:     true
 *.cursorUnderline: true
