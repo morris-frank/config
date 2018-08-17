@@ -73,7 +73,7 @@ local guieditor    = "code"
 local scrlocker    = "lock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun" }
+awful.util.tagnames = { "1_net", "2_code", "3", "4", "5", "6", "7", "8", "9", "10", "F1", "F2", "F3", "F4", "F5", "F6", "F7_pass", "F8_todo", "F9_mail", "F10_music" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
     --awful.layout.suit.tile.left,
@@ -376,7 +376,7 @@ globalkeys = my_table.join(
               {description = "copy terminal to gtk", group = "hotkeys"}),
     -- Copy clipboard to primary (gtk to terminals)
     awful.key({ modkey }, "v", function () awful.spawn("xsel -b | xsel") end,
-              {description = "copy gtk to terminal", group = "hotkeys"})
+              {description = "copy gtk to terminal", group = "hotkeys"}),
 
     -- Default
     -- Menubar
@@ -388,16 +388,16 @@ globalkeys = my_table.join(
     -- awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
             --   {description = "run prompt", group = "launcher"}),
 
-    -- awful.key({ modkey }, "x",
-    --           function ()
-    --               awful.prompt.run {
-    --                 prompt       = "Run Lua code: ",
-    --                 textbox      = awful.screen.focused().mypromptbox.widget,
-    --                 exe_callback = awful.util.eval,
-    --                 history_path = awful.util.get_cache_dir() .. "/history_eval"
-    --               }
-    --           end,
-    --           {description = "lua execute prompt", group = "awesome"})
+    awful.key({ modkey }, "x",
+              function ()
+                  awful.prompt.run {
+                    prompt       = "Run lua: ",
+                    textbox      = awful.screen.focused().mypromptbox.widget,
+                    exe_callback = awful.util.eval,
+                    history_path = awful.util.get_cache_dir() .. "/history_eval"
+                  }
+              end,
+              {description = "lua execute prompt", group = "awesome"})
 )
 
 clientkeys = my_table.join(
@@ -436,19 +436,20 @@ clientkeys = my_table.join(
 
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it works on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
-for i = 1, 9 do
-    -- Hack to only show tags 1 and 9 in the shortcut window (mod+s)
+-- This should map on the two top rows of the keyboard: 1 to 0 and F1 to F10
+for i = 1, 20 do
+    -- Hack to only show tags 1,10,F1 and F10 in the shortcut window (mod+s)
     local descr_view, descr_toggle, descr_move, descr_toggle_focus
-    if i == 1 or i == 9 then
+    if i == 1 or i == 10 or i == 11 or i == 20 then
         descr_view = {description = "view tag #", group = "tag"}
         descr_toggle = {description = "toggle tag #", group = "tag"}
         descr_move = {description = "move focused client to tag #", group = "tag"}
         descr_toggle_focus = {description = "toggle focused client on tag #", group = "tag"}
     end
+    if i <= 10 then offset = 9 else offset = 56 end
     globalkeys = my_table.join(globalkeys,
         -- View tag only.
-        awful.key({ modkey }, "#" .. i + 9,
+        awful.key({ modkey }, "#" .. i + offset,
                   function ()
                         local screen = awful.screen.focused()
                         local tag = screen.tags[i]
@@ -458,7 +459,7 @@ for i = 1, 9 do
                   end,
                   descr_view),
         -- Toggle tag display.
-        awful.key({ modkey, "Control" }, "#" .. i + 9,
+        awful.key({ modkey, "Control" }, "#" .. i + offset,
                   function ()
                       local screen = awful.screen.focused()
                       local tag = screen.tags[i]
@@ -468,7 +469,7 @@ for i = 1, 9 do
                   end,
                   descr_toggle),
         -- Move client to tag.
-        awful.key({ modkey, "Shift" }, "#" .. i + 9,
+        awful.key({ modkey, "Shift" }, "#" .. i + offset,
                   function ()
                       if client.focus then
                           local tag = client.focus.screen.tags[i]
@@ -479,7 +480,7 @@ for i = 1, 9 do
                   end,
                   descr_move),
         -- Toggle tag on focused client.
-        awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
+        awful.key({ modkey, "Control", "Shift" }, "#" .. i + offset,
                   function ()
                       if client.focus then
                           local tag = client.focus.screen.tags[i]
@@ -515,16 +516,26 @@ awful.rules.rules = {
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen,
                      size_hints_honor = false
-     }
+     },
     },
 
     -- Titlebars
     { rule_any = { type = { "dialog", "normal" } },
-      properties = { titlebars_enabled = false } },
+        properties = { titlebars_enabled = false } },
 
-    -- Set Firefox to always map on the first tag on screen 1.
-    { rule = { class = "Firefox" },
-      properties = { screen = 1, tag = awful.util.tagnames[1] } },
+
+    -- Set default tags for my standard programs.
+    { rule = { class = "keepassxc" },
+        properties = { tag = awful.util.tagnames[17] } },
+
+    { rule = { class = "Gnome-todo" },
+        properties = { tag = awful.util.tagnames[18] } },
+
+    { rule = { class = "Evolution" },
+        properties = { tag = awful.util.tagnames[19] } },
+
+    { rule = { class = "Spotify" },
+        properties = { tag = awful.util.tagnames[20] } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
