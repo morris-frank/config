@@ -22,14 +22,11 @@ source "$PWD/shell.rc"
 	#Xresources
 	ln -sf "$PWD/Xresources"  "$HOME/.Xresources"
 
-	#shells
-	ln -sf "$PWD/shell.rc"  "$HOME/.shellrc"
-
 	#bash
 	ln -sf "$PWD/bash.rc"  "$HOME/.bashrc"
 
 	#profile
-	ln -sf "$PWD/profile"  "$HOME/.profile"
+	ln -sf "$PWD/profile.rc"  "$HOME/.profile"
 
  	#input
 	ln -sf "$PWD/input.rc"  "$HOME/.inputrc"

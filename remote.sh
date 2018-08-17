@@ -8,14 +8,11 @@ source "$PWD/shell.rc"
 #CONFIG FILES
 ###
 	echo "${GRE}[bootstrap.sh] Link all config files to their correct positions${RES}"
-	#shells
-	ln -sf "$PWD/shell.rc"  "$HOME/.shellrc"
-
 	#bash
 	ln -sf "$PWD/bash.rc"  "$HOME/.bashrc"
 
 	#profile
-	ln -sf "$PWD/profile"  "$HOME/.profile"
+	ln -sf "$PWD/profile.rc"  "$HOME/.profile"
 
  	#input
 	ln -sf "$PWD/input.rc"  "$HOME/.inputrc"

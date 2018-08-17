@@ -21,8 +21,6 @@ setopt no_check_jobs
 	#bindkey  "^[[B"  history-beginning-search-forward-end
 ###
 
-source ~/.shellrc
-
 #Plugins
 source "${CONFIG_DIR}/zsh/plugins.zsh"
 
@@ -35,5 +33,4 @@ source "${CONFIG_DIR}/zsh/completion.zsh"
 #Compdefs
 source "${CONFIG_DIR}/zsh/compdef.zsh"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+source "${CONFIG_DIR}/shell.rc"

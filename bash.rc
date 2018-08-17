@@ -7,10 +7,7 @@ else
 	PS1='\[\033[01m\][ \[\033[01;34m\]\u ¦ \h \[\033[00m\]\[\033[01m\]] \[\033[1;97m\]\w\[\033[00m\]\n\[\033[01;33m\][\[\033[01;31m\]$?\[\033[01;33m\][\[\033[01;34m\]$\[\033[00m\]> '
 fi
 
-source ~/.shellrc
-
 shopt -s histappend
 shopt -s cmdhist
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+source "${CONFIG_DIR}/shell.rc"

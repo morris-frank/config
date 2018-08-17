@@ -1,30 +1,12 @@
-export TERM="linux"
-export CONFIG_DIR='/home/morris/.config/'
-
-#History
-export HISTCONTROL=ignoredups
-export HISTFILE=~/.histfile
-export HISTFILESIZE=20000
-export HISTIGNORE="&:ls:[bf]g:exit"
-export HISTSIZE=10000
-export HISTSIZE=5000
-export SAVEHIST=50000
-
-# Colors
-export RES='\e[0m'
-export RED='\e[0;31m'
-export GRE='\e[0;32m'
-export BLU='\e[0;34m'
-
 #Alias definitions
-[ -f "$CONFIG_DIR/shell_private.rc" ] && source "${CONFIG_DIR}/shell_private.rc"
+[[ -s "$CONFIG_DIR/shell_private.rc" ]] && source "${CONFIG_DIR}/shell_private.rc"
 
-[ -f "$CONFIG_DIR/alias.rc" ] && source "${CONFIG_DIR}/alias.rc"
+[[ -s "$CONFIG_DIR/alias.rc" ]] && source "${CONFIG_DIR}/alias.rc"
 
-[ -f "$CONFIG_DIR/alias_private.rc" ] && source "${CONFIG_DIR}/alias_private.rc"
+[[ -s "$CONFIG_DIR/alias_private.rc" ]] && source "${CONFIG_DIR}/alias_private.rc"
 
-[ -f "$CONFIG_DIR/functions.rc" ] && source "${CONFIG_DIR}/functions.rc"
+[[ -s "$CONFIG_DIR/functions.rc" ]] && source "${CONFIG_DIR}/functions.rc"
 
-[ -f "$CONFIG_DIR/functions_private.rc" ] && source "${CONFIG_DIR}/functions_private.rc"
+[[ -s "$CONFIG_DIR/functions_private.rc" ]] && source "${CONFIG_DIR}/functions_private.rc"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

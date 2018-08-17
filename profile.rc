@@ -1,0 +1,20 @@
+export TERM="linux"
+export CONFIG_DIR='/home/morris/.config/'
+
+#History
+export HISTCONTROL=ignoredups
+export HISTFILE=~/.histfile
+export HISTFILESIZE=20000
+export HISTIGNORE="&:ls:[bf]g:exit"
+export HISTSIZE=10000
+export HISTSIZE=5000
+export SAVEHIST=50000
+
+# Colors
+export RES='\e[0m'
+export RED='\e[0;31m'
+export GRE='\e[0;32m'
+export BLU='\e[0;34m'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+[[ -d "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"

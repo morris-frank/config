@@ -1,19 +1,19 @@
 # Dot Files
 
-## Packages to install (before bootstrap.sh)
+## Installation
 
-- `(aur) zsh-autosuggestions`
-- `(aur) nerd-fonts-source-code-pro`
-- `(aur) light`
-- `awesome`
-- `kitty`
-- `rofi`
-- `xdg-utils`
-- `xdg-user-dirs`
-- `xbindkeys`
-- `zplug`
+```bash
+sudo pacman -S awesome kitty rofi xdg-utils xdg-user-dirs xorg-backlight xbindkeys zplug
 
-## Install
+yay -S zsh-autosuggestions nerd-fonts-source-code-pro spotifywm
 
-- Run `./bootstrap.sh`
+git clone https://github.com/morris-frank/dot-files ~/.config/.
+
+cd ~/.config/
+
+./bootstrap.sh
+```
+
+## Post-installation
+
 - Once uncomment l11-16  in `zsh/plugins.zsh` and run zsh
