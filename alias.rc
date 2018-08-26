@@ -10,16 +10,13 @@
 	alias c='cd '
 	alias rcp='rsync -a --progress --stats '
 	alias clc=' reset'
-	alias cls=' reset; ls'
 	alias f='find . |grep '
 	alias h='history|grep '
 	alias ipy='ipython '
 	alias j='joe '
-	alias l='less -R '
 	alias n='nano '
 	alias p='ps aux |grep '
 	alias pac='pacman '
-	alias pi='gpicview * &>/dev/null &!'
 	alias py='python '
 	alias q='exit'
  	alias t='tmux '
@@ -47,7 +44,7 @@
 # Script-Like aliases
 #####################
 	alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
-	alias wetter='curl wttr.in/Heidelberg?lang=de'
+	alias wetter='curl wttr.in/Amsterdam?lang=de'
 
 # GIT
 #####
