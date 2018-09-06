@@ -8,7 +8,7 @@
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.historyExplorer.enabled": true,
-    "editor.fontFamily": "SauceCodePro Nerd Font Mono",
+    "editor.fontFamily": "Fira Code",
     "editor.cursorStyle": "line-thin",
     "files.exclude": {
         "**/.git": true,
@@ -17,7 +17,8 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/*~": true,
-        "**/.sass-cache": true
+        "**/.sass-cache": true,
+        "**/node_modules": false
     },
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
@@ -36,10 +37,13 @@
     "git.confirmSync": false,
     "workbench.startupEditor": "newUntitledFile",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "One Dark Pro",
     "markdownlint.config": {
         "MD013": false,
         "MD033": false,
         "MD002": false
-    }
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "update.channel": "none",
+    "workbench.statusBar.feedback.visible": false
 }
