@@ -37,7 +37,6 @@
     "git.confirmSync": false,
     "workbench.startupEditor": "newUntitledFile",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "One Dark Pro",
     "markdownlint.config": {
         "MD013": false,
         "MD033": false,
@@ -45,5 +44,7 @@
     },
     "workbench.iconTheme": "material-icon-theme",
     "update.channel": "none",
-    "workbench.statusBar.feedback.visible": false
+    "workbench.statusBar.feedback.visible": false,
+    "gitlens.gitExplorer.files.layout": "tree",
+    "workbench.colorTheme": "One Dark Pro"
 }
