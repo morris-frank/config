@@ -12,20 +12,21 @@ export SAVEHIST=50000
 # Colors
 export RES='\e[0m'
 export RED='\e[0;31m'
-export GRE='\e[0;32m'
-export BLU='\e[0;34m'
+export GREEN='\e[0;32m'
+export BLUE='\e[0;34m'
+export GREY='\e[1;30m'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-[[ -d "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
+test -d "$HOME/.rvm/bin" && export PATH="$PATH:$HOME/.rvm/bin"
 
-[[ -s "$CONFIG_DIR/profile_private.rc" ]] && source "${CONFIG_DIR}/profile_private.rc"
+test -r "$CONFIG_DIR/profile_private.rc" && source "${CONFIG_DIR}/profile_private.rc"
 
-[[ -s "$CONFIG_DIR/alias.rc" ]] && source "${CONFIG_DIR}/alias.rc"
+test -r "$CONFIG_DIR/alias.rc" && source "${CONFIG_DIR}/alias.rc"
 
-[[ -s "$CONFIG_DIR/alias_private.rc" ]] && source "${CONFIG_DIR}/alias_private.rc"
+test -r "$CONFIG_DIR/alias_private.rc" && source "${CONFIG_DIR}/alias_private.rc"
 
-[[ -s "$CONFIG_DIR/functions.rc" ]] && source "${CONFIG_DIR}/functions.rc"
+test -r "$CONFIG_DIR/functions.rc" && source "${CONFIG_DIR}/functions.rc"
 
-[[ -s "$CONFIG_DIR/functions_private.rc" ]] && source "${CONFIG_DIR}/functions_private.rc"
+test -r "$CONFIG_DIR/functions_private.rc" && source "${CONFIG_DIR}/functions_private.rc"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+test -r "$HOME/.rvm/scripts/rvm" && source "$HOME/.rvm/scripts/rvm"

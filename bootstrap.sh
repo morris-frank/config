@@ -7,7 +7,7 @@ source "$PWD/profile.rc"
 
 #CREATE DIRECTORY ENVIROMENT
 ###
-	echo "${GRE}[bootstrap.sh] Make the home directory structure${RES}"
+	echo "${GREEN}[bootstrap.sh] Make the home directory structure${RES}"
 	mkdir -p "$HOME"
 	mkdir -p "$HOME/tmp"
 	mkdir -p "$HOME/docs"
@@ -18,7 +18,7 @@ source "$PWD/profile.rc"
 
 #CONFIG FILES
 ###
-	echo "${GRE}[bootstrap.sh] Link all config files to their correct positions${RES}"
+	echo "${GREEN}[bootstrap.sh] Link all config files to their correct positions${RES}"
 	#Xresources
 	ln -sf "$PWD/Xresources"  "$HOME/.Xresources"
 
@@ -50,9 +50,7 @@ source "$PWD/profile.rc"
 # Setting up ZSH
 ###
   if type zsh &> /dev/null; then
-		echo "${GRE}[bootstrap.sh] Setting up ZSH${RES}"
+		echo "${GREEN}[bootstrap.sh] Setting up ZSH${RES}"
 		ln -sf "$PWD/zsh.rc"  "$HOME/.zshrc"
-		rm -rf $HOME/.zplug
-		curl -sL --proto-redir -all,https https://zplug.sh/installer | zsh
   fi
 ###

@@ -1,26 +1,13 @@
-#Completion System
-###
-autoload -U compinit
-compinit
-#View Aliases as normal commands
-setopt complete_aliases
-#Complete in both directions
-setopt complete_in_word
-#ext. Regex in complt.
-setopt extended_glob
-#Send no err. Message when pattern has no result
-unsetopt no_match
-#Use Menu compl. after second press
-#setopt auto_menu
-#Make globbing (filename generation) sensitive to case
-unsetopt CASE_GLOB
-#Required for git plugin
-setopt prompt_subst
-#Use fish like highlighting
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+plugins=(… zsh-completions)
+autoload -U compinit; compinit
+
+setopt complete_aliases #View Aliases as normal commands
+setopt complete_in_word #Complete in both directions
+setopt extended_glob #ext. Regex in complt.
+unsetopt no_match #Send no err. Message when pattern has no result
+unsetopt CASE_GLOB #Make globbing (filename generation) sensitive to case
+setopt prompt_subst #Required for git plugin
 
 zstyle ':completion::complete:*'       use-cache on
 zstyle ':completion::complete:*'       cache-path "$HOME/.zcache"
@@ -66,7 +53,7 @@ zstyle ':completion:*'                 group-name ''
 
 # if there are more than 2 options allow selecting from a menu
 zstyle ':completion:*'                 menu select=2
- zstyle ":completion:*"                 menu select=long
+zstyle ":completion:*"                 menu select=long
 
 zstyle ':completion:*:messages'        format '%d'
 zstyle ':completion:*:options'         auto-description '%d'
@@ -86,7 +73,7 @@ zstyle ':completion:*'                 verbose true
 # recent (as of Dec 2007) zsh versions are able to provide descriptions
 # for commands (read: 1st word in the line) that it will list for the user
 # to choose from. The following disables that, because it's not exactly fast.
-zstyle ':completion:*:-command-:*:'    verbose false
+zstyle ':completion:*:-command-:*:'    verbose true
 
 # set format for warnings
 zstyle ':completion:*:warnings'        format $'%{\e[0;31m%}No matches for:%{\e[0m%} %d'

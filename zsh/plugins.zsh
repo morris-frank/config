@@ -1,25 +1,11 @@
-# opam configuration
+
+autoload -U promptinit; promptinit
+prompt pure
+
+test -r /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+test -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+test -r /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh && source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 test -r /home/morris/.opam/opam-init/init.zsh && . /home/morris/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-source /usr/share/zsh/scripts/zplug/init.zsh
-
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "supercrabtree/k", from:github
-zplug "srijanshetty/zsh-pip-completion", from:github
-zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
-
-# Install plugins if there are plugins that have not been installed
-# if ! zplug check --verbose; then
-#    printf "Install? [y/N]: "
-#    if read -q; then
-#        echo; zplug install
-#    fi
-# fi
-
-# Then, source plugins and add commands to $PATH
-zplug load
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Git plugin
 ###

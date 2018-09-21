@@ -1,13 +1,8 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-if [[ ${EUID} == 0 ]] ; then
-	PS1='\[\033[01m\][ \[\033[01;31m\]\u ¦ \h \[\033[00m\]\[\033[01m\]] \[\033[1;97m\]\w\[\033[00m\]\n\[\033[01;33m\][\[\033[01;31m\]$?\[\033[01;33m\][\[\033[01;31m\]$\[\033[00m\]> '
-else
-	PS1='\[\033[01m\][ \[\033[01;34m\]\u ¦ \h \[\033[00m\]\[\033[01m\]] \[\033[1;97m\]\w\[\033[00m\]\n\[\033[01;33m\][\[\033[01;31m\]$?\[\033[01;33m\][\[\033[01;34m\]$\[\033[00m\]> '
-fi
+[[ $- != *i* ]] && return # If not running interactively, don't do anything
 
 shopt -s histappend
 shopt -s cmdhist
 
 source "${HOME}/.profile"
+
+export PS1="${BLUE}\w ${RES}\u@\h\n> \[$(tput sgr0)\]"

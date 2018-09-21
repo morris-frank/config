@@ -1,15 +1,11 @@
-#Keybindings
-bindkey -e
-bindkey "$terminfo[khome]" beginning-of-line # Home
-bindkey "$terminfo[kend]" end-of-line # End
-bindkey "$terminfo[kich1]" overwrite-mode # Insert
-bindkey "$terminfo[kdch1]" delete-char # Delete
-bindkey "$terminfo[kcuu1]" up-line-or-history # Up
-bindkey "$terminfo[kcud1]" down-line-or-history # Down
-bindkey "$terminfo[kcub1]" backward-char # Left
-bindkey "$terminfo[kcuf1]" forward-char # Right
-# bindkey "$terminfo[kpp]" # PageUp
-# bindkey "$terminfo[knp]" # PageDown
-# Bind ctrl-left / ctrl-right
-bindkey "^F" backward-word
-bindkey "^B" forward-word
+bindkey -e # Use emacs keybindings
+
+bindkey "^H" backward-word
+bindkey "^L" forward-word
+
+default-backward-delete-word () {
+  local WORDCHARS="*?_[]~=/&;!#$%^(){}<>"
+  zle backward-delete-word
+}
+zle -N default-backward-delete-word
+bindkey '^W' default-backward-delete-word

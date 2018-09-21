@@ -32,7 +32,5 @@ source "$PWD/profile.rc"
   if type zsh &> /dev/null; then
 		echo "${GRE}[bootstrap.sh] Setting up ZSH${RES}"
 		ln -sf "$PWD/zsh.rc"  "$HOME/.zshrc"
-		rm -rf $HOME/.zplug
-		curl -sL --proto-redir -all,https https://zplug.sh/installer | zsh
   fi
 ###
