@@ -1,5 +1,4 @@
 
-plugins=(… zsh-completions)
 autoload -U compinit; compinit
 
 setopt complete_aliases #View Aliases as normal commands
