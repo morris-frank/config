@@ -11,7 +11,10 @@ autostart/
 caja/
 calibre/
 chromium/
-Code/
+Code/*
+!Code/User
+Code/User/workspaceStorage/
+Code/User/vsicons*
 configstore/
 darktable/
 dconf/
@@ -20,6 +23,7 @@ evolution/
 filezilla/
 flaska.net/
 fontconfig/
+ibus/
 gconf/
 geary/
 GIMP/
@@ -29,8 +33,7 @@ goa-1.0/
 google-chrome/
 gpick/
 gpicview/
-gtk*
-htop/
+gtk-*/
 inkscape/
 keepassx/
 keepassxc/
