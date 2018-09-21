@@ -3,6 +3,7 @@
 *~
 *.save
 .vscode
+*.old.*
 
 pavucontrol.ini
 

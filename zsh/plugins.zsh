@@ -1,3 +1,5 @@
+# opam configuration
+test -r /home/morris/.opam/opam-init/init.zsh && . /home/morris/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 source /usr/share/zsh/scripts/zplug/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2

@@ -1,4 +1,3 @@
-
 setopt NOTIFY
 setopt AUTO_CD
 unsetopt beep
