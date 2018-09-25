@@ -50,11 +50,13 @@
         "MD033": false,
         "MD002": false
     },
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-icons",
     "update.channel": "none",
     "workbench.statusBar.feedback.visible": false,
     "gitlens.gitExplorer.files.layout": "tree",
-    "workbench.colorTheme": "One Dark Pro",
     "java.errors.incompleteClasspath.severity": "ignore",
-    "latex-workshop.view.pdf.viewer": "tab"
+    "latex-workshop.view.pdf.viewer": "tab",
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "gitProjectManager.baseProjectsFolders": ["~/src/"]
 }

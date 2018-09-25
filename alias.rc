@@ -14,6 +14,7 @@
 	alias h='history|grep '
 	alias ipy='ipython '
 	alias j='joe '
+	alias jl='julia '
 	alias n='nano '
 	alias p='ps aux |grep '
 	alias pac='pacman '

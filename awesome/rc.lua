@@ -69,7 +69,7 @@ local terminal     = "kitty"
 local editor       = os.getenv("EDITOR") or "joe"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1_net", "2_code", "3", "4", "5", "6", "7", "8", "9", "10", "F1", "F2", "F3", "F4", "F5_cite", "F6_anki", "F7_pass", "F8_todo", "F9_mail", "F10_music" }
+awful.util.tagnames = { "1_net", "2_code", "3", "4", "5", "6", "7", "8", "9", "10", "F1", "F2", "F3", "F4", "F5", "F6_cite", "F7_pass", "F8_anki", "F9_mail", "F10_music" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.tile.bottom,
@@ -86,8 +86,8 @@ awful.layout.layouts = {
     --awful.layout.suit.corner.se,
     --lain.layout.cascade,
     --lain.layout.cascade.tile,
-    lain.layout.centerwork,
-    awful.layout.suit.floating,
+    -- lain.layout.centerwork,
+    -- awful.layout.suit.floating,
     --lain.layout.centerwork.horizontal,
     --lain.layout.termfair,
     --lain.layout.termfair.center,
@@ -464,15 +464,12 @@ awful.rules.rules = {
 
     -- Set default tags for my standard programs.
     { rule = { class = "Zotero" },
-        properties = { tag = awful.util.tagnames[15] } },
-
-    { rule = { class = "Anki" },
         properties = { tag = awful.util.tagnames[16] } },
 
     { rule = { class = "keepassxc" },
         properties = { tag = awful.util.tagnames[17] } },
 
-    { rule = { class = "Gnome-todo" },
+    { rule = { class = "Anki" },
         properties = { tag = awful.util.tagnames[18] } },
 
     { rule = { class = "Evolution" },
