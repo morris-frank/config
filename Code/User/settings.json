@@ -1,6 +1,6 @@
 {
     "explorer.confirmDelete": false,
-    "editor.fontSize": 12,
+    "editor.fontSize": 11,
     "files.associations": {
         "*.rc": "shellscript",
         "*.ml": "ocaml",
@@ -58,5 +58,39 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.colorTheme": "One Dark Pro",
-    "gitProjectManager.baseProjectsFolders": ["~/src/"]
+    "gitProjectManager.baseProjectsFolders": [
+        "~/src/"
+    ],
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-xelatex",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ]
 }
