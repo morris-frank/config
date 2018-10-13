@@ -12,7 +12,6 @@
 	alias clc=' reset'
 	alias f='find . |grep '
 	alias h='history|grep '
-	alias ipy='ipython '
 	alias j='joe '
 	alias jl='julia '
 	alias n='nano '

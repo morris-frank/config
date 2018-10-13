@@ -7,15 +7,15 @@
 
 pavucontrol.ini
 
+!Code/User
 autostart/
 caja/
 calibre/
 chromium/
 Code/*
-!Code/User
-Code/User/workspaceStorage/
-Code/User/vsicons*
 Code/User/gpm*
+Code/User/vsicons*
+Code/User/workspaceStorage/
 configstore/
 darktable/
 dconf/
@@ -24,7 +24,6 @@ evolution/
 filezilla/
 flaska.net/
 fontconfig/
-ibus/
 gconf/
 geary/
 GIMP/
@@ -35,6 +34,7 @@ google-chrome/
 gpick/
 gpicview/
 gtk-*/
+ibus/
 inkscape/
 keepassx/
 keepassxc/
@@ -44,6 +44,7 @@ mate/
 matplotlib/
 mpv/
 nautilus/
+octave/
 opera/
 pcloud/
 pulse/
@@ -52,6 +53,7 @@ QtProject.conf
 ranger/
 scdl/
 spotify/
+teamviewer/
 totem/
 Trolltech.conf
 yay/

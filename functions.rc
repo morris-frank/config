@@ -1,3 +1,13 @@
+function ipy() {
+	if ! type ptpython &> /dev/null; then
+		echo "${RED}[In ipy] ptpython not found${RES}"
+		echo "Drop-in ipython"
+		exec ipython "$@"
+	else
+		exec ptpython "$@"
+	fi
+}
+
 function za() {
 	if ! type zathura &> /dev/null; then
 		echo "${RED}[In za] zathura not found${RES}"
