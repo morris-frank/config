@@ -1,4 +1,6 @@
 *~
 *.old.*
-node_modules
+node_modules/
 *.save
+.venv/
+__pycache__/
