@@ -1,9 +1,6 @@
 .tags
 *private*
-*~
-*.save
 .vscode
-*.old.*
 
 pavucontrol.ini
 
@@ -27,7 +24,6 @@ fontconfig/
 gconf/
 geary/
 GIMP/
-git/
 GitKraken/
 goa-1.0/
 google-chrome/
