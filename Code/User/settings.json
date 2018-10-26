@@ -5,7 +5,8 @@
         "*.rc": "shellscript",
         "*.ml": "ocaml",
         "*.mli": "ocaml",
-        "*.cfg": "yaml"
+        "*.cfg": "yaml",
+        "*.html": "html"
     },
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
