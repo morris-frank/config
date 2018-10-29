@@ -30,7 +30,9 @@
         "**/*.fls": true,
         "**/*.synctex.gz": true,
         "**/__pycache__": true,
-        "**/.venv": true
+        "**/.venv": true,
+        "**/.ipynb_checkpoints": true,
+        "**/META-INF/": true
     },
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
