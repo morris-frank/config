@@ -1,6 +1,41 @@
+## General stuff
 *~
+META-INF/
 *.old.*
-node_modules/
 *.save
-.venv/
+*.log
+.Trash-*
+.DS_Store
+
+## JS/Node
+node_modules/
+
+## Python
 __pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+## LaTeX
+*.aux
+*.lof
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## SASS
+.sass-cache/
+
+
+## VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
