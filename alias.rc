@@ -14,6 +14,7 @@
 	alias h='history|grep '
 	alias j='joe '
 	alias jl='julia '
+	alias jpy='jupyter notebook &>/dev/null&! '
 	alias n='nano '
 	alias p='ps aux |grep '
 	alias pac='pacman '

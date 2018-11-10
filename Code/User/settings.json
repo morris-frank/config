@@ -32,7 +32,8 @@
         "**/__pycache__": true,
         "**/.venv": true,
         "**/.ipynb_checkpoints": true,
-        "**/META-INF/": true
+        "**/META-INF/": true,
+        "**/CMakeFiles/": true
     },
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
@@ -103,5 +104,6 @@
     "extensions.showRecommendationsOnlyOnDemand": true,
     "update.enableWindowsBackgroundUpdates": false,
     "python.jediEnabled": false,
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "snippet.openInNewEditor": false
 }

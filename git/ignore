@@ -6,6 +6,7 @@ META-INF/
 *.log
 .Trash-*
 .DS_Store
+CMakeFiles/
 
 ## JS/Node
 node_modules/
@@ -31,7 +32,6 @@ __pycache__/
 
 ## SASS
 .sass-cache/
-
 
 ## VSCode
 .vscode/*
