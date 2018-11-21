@@ -227,20 +227,6 @@ globalkeys = my_table.join(
         end,
         {description = "move client to the next tag", group = "client"}),
 
-    -- Default client focus
-    awful.key({ altkey,           }, "j",
-        function ()
-            awful.client.focus.byidx( 1)
-        end,
-        {description = "focus next by index", group = "client"}
-    ),
-    awful.key({ altkey,           }, "k",
-        function ()
-            awful.client.focus.byidx(-1)
-        end,
-        {description = "focus previous by index", group = "client"}
-    ),
-
     -- By direction client focus
     awful.key({ modkey }, "j",
         function()
@@ -296,8 +282,6 @@ globalkeys = my_table.join(
               {description = "decrement useless gaps", group = "layout"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -358,9 +342,7 @@ globalkeys = my_table.join(
 )
 
 clientkeys = my_table.join(
-    awful.key({ altkey, "Shift"   }, "m",      lain.util.magnify_client,
-              {description = "magnify client", group = "client"}),
-    awful.key({ modkey,           }, "f",
+    awful.key({ modkey,           }, "#95",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
@@ -368,9 +350,9 @@ clientkeys = my_table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+    awful.key({ modkey,           }, "f",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
-    awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
+    awful.key({ modkey,           }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
@@ -481,8 +463,8 @@ awful.rules.rules = {
     { rule = { class = "Gimp", role = "gimp-image-window" },
         properties = { maximized = true } },
 
-    { rule = { class = "Firefox" },
-        properties = { opacity = 1, maximized = false, floating = false } },
+    -- { rule = { class = "Firefox" },
+    --     properties = { opacity = 1, maximized = false, floating = false } },
 
 }
 -- }}}
