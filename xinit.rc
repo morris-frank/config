@@ -22,7 +22,7 @@ test -r "$usermodmap" && xmodmap "$usermodmap"
 # Shortcuts
 xbindkeys
 # German keymanp
-setxkbmap de
+setxkbmap demod
 # Make the Print/Druck key the Super_R key
 setxkbmap -option "altwin:prtsc_rwin"
 # Deactivate capslock

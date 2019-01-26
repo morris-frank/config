@@ -18,6 +18,7 @@ export GREY='\e[1;30m'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 test -d "$HOME/.rvm/bin" && export PATH="$PATH:$HOME/.rvm/bin"
+test -d "$HOME/.local/bin" && export PATH="$PATH:$HOME/.local/bin"
 
 test -r "$CONFIG_DIR/profile_private.rc" && source "${CONFIG_DIR}/profile_private.rc"
 

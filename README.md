@@ -39,3 +39,11 @@ cd ~/.config/
 
 ./bootstrap.sh
 ```
+
+### Fonts
+Fonts are set in:
+
+* ```awesome/theme.lua```
+* ```kitty/kitty.conf```
+* ```vscode.settings.json```
+* ```Xresources```

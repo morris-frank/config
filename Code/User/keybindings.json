@@ -28,5 +28,14 @@
         "key": "ctrl+shift+r",
         "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
         "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "alt+b",
+        "command": "-gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "alt+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
     }
 ]

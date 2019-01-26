@@ -13,7 +13,6 @@
     },
     "gitlens.historyExplorer.enabled": true,
     "editor.fontFamily": "Fira Code",
-    "editor.cursorStyle": "line-thin",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -63,12 +62,18 @@
     "gitlens.gitExplorer.files.layout": "tree",
     "java.errors.incompleteClasspath.severity": "ignore",
     "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.invert": 0,
+    "latex-workshop.view.pdf.external.command": {
+        "command": "zathura",
+        "args": [
+            "%PDF%"
+        ]
+    },
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.colorTheme": "One Dark Pro",
     "gitProjectManager.baseProjectsFolders": [
         "~/src/"
     ],
-    "latex-workshop.chktex.enabled": true,
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
@@ -105,5 +110,14 @@
     "update.enableWindowsBackgroundUpdates": false,
     "python.jediEnabled": false,
     "python.linting.enabled": false,
-    "snippet.openInNewEditor": false
+    "snippet.openInNewEditor": false,
+    "editor.cursorWidth": 2,
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "phase",
+    "gitlens.views.repositories.files.layout": "tree",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "breadcrumbs.enabled": true,
+    "latex-workshop.chktex.enabled": true,
+    "workbench.activityBar.visible": true
 }
