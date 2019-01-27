@@ -1,6 +1,6 @@
 {
     "explorer.confirmDelete": false,
-    "editor.fontSize": 11,
+    "editor.fontSize": 15,
     "files.associations": {
         "*.rc": "shellscript",
         "*.ml": "ocaml",
@@ -12,7 +12,7 @@
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.historyExplorer.enabled": true,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Operator Mono Book",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -50,7 +50,7 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "markdownlint.config": {
         "MD013": false,
         "MD033": false,
@@ -70,7 +70,7 @@
         ]
     },
     "vsicons.dontShowNewVersionMessage": true,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "ƒ - Gruvbox - Operator Mono/Italic",
     "gitProjectManager.baseProjectsFolders": [
         "~/src/"
     ],
@@ -119,5 +119,20 @@
     "gitlens.views.lineHistory.enabled": true,
     "breadcrumbs.enabled": true,
     "latex-workshop.chktex.enabled": true,
-    "workbench.activityBar.visible": true
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "titleBar.border": "#05080A",
+        "list.activeSelectionBackground": "#05080A",
+        "list.inactiveSelectionBackground": "#05080A",
+        "tab.inactiveBackground": "#05080A",
+        "editorGroupHeader.tabsBackground": "#05080A",
+        "editorGroupHeader.noTabsBackground": "#05080A",
+        "activityBar.background": "#05080A",
+        "sideBar.background": "#05080A",
+        "sideBarSectionHeader.background": "#05080A",
+        "activityBar.border": "#0b1015",
+        "tab.border": "#0b1015",
+        "panel.border": "#05080A",
+        "statusBar.border": "#05080A"
+      },
 }

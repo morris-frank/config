@@ -12,19 +12,17 @@ XTerm*utf8: 1
 
 ! --- variables ---
 #define myfont SauceCodePro Nerd Font
-#define t_bg_floor     #010000
+#define t_bg_floor     #FCE8C3
 #define t_bg_dip       #2B2B28
-#define t_background   #1E1E1E
+#define t_background   #282828
 #define t_bg_bump      #3F3E3B
-#define t_fg_comment   #7F7F83
-#define t_foreground   #A6A7AA
+#define t_fg_comment   #918175
+#define t_foreground   #ebdbb2
 #define t_fg_highlight #B6B7BB
 #define t_fg_ceiling   #FEFFFF
 
 *.background: t_background
 *.foreground: t_foreground
-xterm*background: t_background
-xterm*foreground: t_foreground
 
 *.colorBD: t_fg_highlight
 *.colorIT: t_fg_highlight
@@ -36,42 +34,20 @@ xterm*foreground: t_foreground
 *.color0: t_bg_bump
 *.color8: t_fg_comment
 
-! WHT
-*.color7: t_fg_highlight
-*.color15: t_fg_ceiling
-
-! RED
-*.color1: #B36B65
-*.color9: #EFA29B
-
-! YEL
-*.color3: #8D7E45
-*.color11: #C7B679
-
-! GRN
-*.color2: #4F8C61
-*.color10: #86C596
-
-! CYN
-*.color6: #0E8E9A
-*.color14: #5EC7D4
-
-! BLU
-*.color4: #6181B8
-*.color12: #9AB9F3
-
-! MAG
-*.color5: #A46D9D
-*.color13: #DFA4D7
-
-*.color16: t_bg_floor
-*.color17: t_bg_dip
-*.color18: t_background
-*.color19: t_bg_bump
-*.color20: t_fg_comment
-*.color21: t_foreground
-*.color22: t_fg_highlight
-*.color23: t_fg_ceiling
+*.color1:  #1C1B19
+*.color9:  #2D2B28
+*.color2:  #FF3128
+*.color10: #F75341
+*.color3:  #519F50
+*.color11: #98BC37
+*.color4:  #FBB829
+*.color12: #FED06E
+*.color5:  #5573A3
+*.color13: #8EB2F7
+*.color6:  #E02C6D
+*.color14: #E35682
+*.color7:  #0AAEB3
+*.color15: #53FDE9
 
 rofi.color-normal: t_background,  t_foreground,  t_bg_dip,  t_foreground,  t_background
 rofi.color-window: t_background, t_background, t_background
