@@ -1,5 +1,3 @@
-!Xresources
-
 Xft.autohint:  0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
@@ -10,53 +8,70 @@ Xft.rgba:      rgb
 XTerm*utf8: 1
 
 
-! --- variables ---
-#define myfont SauceCodePro Nerd Font
-#define t_bg_floor     #FCE8C3
-#define t_bg_dip       #2B2B28
-#define t_background   #282828
-#define t_bg_bump      #3F3E3B
-#define t_fg_comment   #918175
-#define t_foreground   #ebdbb2
-#define t_fg_highlight #B6B7BB
-#define t_fg_ceiling   #FEFFFF
+*.font: xft:Operator Mono Book:size=10
 
-*.background: t_background
-*.foreground: t_foreground
+! Base16 Gruvbox dark, hard
+! Scheme: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-*.colorBD: t_fg_highlight
-*.colorIT: t_fg_highlight
-*.colorUL: t_fg_highlight
+#define base00 #1d2021
+#define base01 #3c3836
+#define base02 #504945
+#define base03 #665c54
+#define base04 #bdae93
+#define base05 #d5c4a1
+#define base06 #ebdbb2
+#define base07 #fbf1c7
+#define base08 #fb4934
+#define base09 #fe8019
+#define base0A #fabd2f
+#define base0B #b8bb26
+#define base0C #8ec07c
+#define base0D #83a598
+#define base0E #d3869b
+#define base0F #d65d0e
 
-*.cursorColor: #CE94C6
+*foreground:   base05
+*background:   base00
+*cursorColor:  base05
 
-! BLK
-*.color0: t_bg_bump
-*.color8: t_fg_comment
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
 
-*.color1:  #1C1B19
-*.color9:  #2D2B28
-*.color2:  #FF3128
-*.color10: #F75341
-*.color3:  #519F50
-*.color11: #98BC37
-*.color4:  #FBB829
-*.color12: #FED06E
-*.color5:  #5573A3
-*.color13: #8EB2F7
-*.color6:  #E02C6D
-*.color14: #E35682
-*.color7:  #0AAEB3
-*.color15: #53FDE9
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07
 
-rofi.color-normal: t_background,  t_foreground,  t_bg_dip,  t_foreground,  t_background
-rofi.color-window: t_background, t_background, t_background
+! Enable the extended coloring options
+rofi.color-enabled: true
+
+! Property Name     BG       Border   Separator
+rofi.color-window:  #3c3836, #3c3836, #1d2021
+
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #3c3836, #d5c4a1, #3c3836, #3c3836, #fbf1c7
+rofi.color-active:  #3c3836, #83a598, #3c3836, #3c3836, #83a598
+rofi.color-urgent:  #3c3836, #fb4934, #3c3836, #3c3836, #fb4934
+
+rofi.lines:           4
+rofi.separator-style: solid
+rofi.location:        6
+rofi.hide-scrollbar:  true
+
 
 *.saveLines:       12000
 *.cursorBlink:     true
 *.cursorUnderline: true
-!!URxvt.letterSpace: -1
-!!*skipBuiltinGlyphs:true
 
 !Scrolling
 *.scrollBar:       false
