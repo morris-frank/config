@@ -44,8 +44,7 @@ local markup = lain.util.markup
 
 -- Textclock
 os.setlocale(os.getenv("LANG")) -- to localize the clock
-local clockicon = wibox.widget.imagebox(theme.widget_clock)
-local mytextclock = wibox.widget.textclock(markup("#778baf", "%H:%M "))
+local mytextclock = wibox.widget.textclock(markup("#8ec07c", "⏲ %H:%M"))
 mytextclock.font = theme.font
 
 -- Calendar
@@ -59,7 +58,6 @@ theme.cal = lain.widget.calendar({
 })
 
 -- Battery
-local baticon = wibox.widget.imagebox(theme.widget_batt)
 local bat = lain.widget.bat({
     settings = function()
         local perc = bat_now.perc ~= "N/A" and bat_now.perc .. "%" or bat_now.perc
@@ -68,19 +66,18 @@ local bat = lain.widget.bat({
             perc = perc .. " plug"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, perc .. " "))
+        widget:set_markup(markup.fontfg(theme.font, "#d3869b", "" .. perc .. " "))
     end
 })
 
 -- ALSA volume
-local volicon = wibox.widget.imagebox(theme.widget_vol)
 theme.volume = lain.widget.alsa({
     settings = function()
         if volume_now.status == "off" then
             volume_now.level = volume_now.level .. "M"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, "#7493d2", volume_now.level .. "% "))
+        widget:set_markup(markup.fontfg(theme.font, "#fabd2f", "🔈" .. volume_now.level .. "% "))
     end
 })
 
@@ -127,11 +124,8 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            baticon,
             bat.widget,
-            volicon,
             theme.volume.widget,
-            clockicon,
             mytextclock,
         },
     }
