@@ -117,7 +117,7 @@
     "gitlens.views.lineHistory.enabled": true,
     "breadcrumbs.enabled": true,
     "latex-workshop.chktex.enabled": true,
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
