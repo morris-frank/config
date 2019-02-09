@@ -37,6 +37,7 @@ xset -dpms
 xset s off
 # Set bell off
 xset b off
+xrandr --dpi 125.37
 ###
 
 ### GLOBAL X SCRIPTS

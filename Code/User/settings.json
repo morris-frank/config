@@ -1,6 +1,5 @@
 {
     "explorer.confirmDelete": false,
-    "editor.fontSize": 15,
     "files.associations": {
         "*.rc": "shellscript",
         "*.ml": "ocaml",
@@ -36,7 +35,6 @@
     },
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
-    "editor.fontLigatures": false,
     "editor.roundedSelection": false,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -50,7 +48,7 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": -1,
+    "window.zoomLevel": -2,
     "markdownlint.config": {
         "MD013": false,
         "MD033": false,
@@ -70,7 +68,7 @@
         ]
     },
     "vsicons.dontShowNewVersionMessage": true,
-    "workbench.colorTheme": "ƒ - Gruvbox - Operator Mono/Italic",
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
     "gitProjectManager.baseProjectsFolders": [
         "~/src/"
     ],
@@ -120,20 +118,82 @@
     "breadcrumbs.enabled": true,
     "latex-workshop.chktex.enabled": true,
     "workbench.activityBar.visible": true,
-    "workbench.colorCustomizations": {
-        "titleBar.border": "#1d2021",
-        "list.activeSelectionBackground": "#1d2021",
-        "list.inactiveSelectionBackground": "#1d2021",
-        "tab.inactiveBackground": "#1d2021",
-        "editorGroupHeader.tabsBackground": "#1d2021",
-        "editorGroupHeader.noTabsBackground": "#1d2021",
-        "activityBar.background": "#1d2021",
-        "sideBar.background": "#1d2021",
-        "sideBarSectionHeader.background": "#1d2021",
-        "activityBar.border": "#1d2021",
-        "tab.border": "#1d2021",
-        "panel.border": "#1d2021",
-        "statusBar.border": "#1d2021",
-        "editor.background": "#1d2021"
-      },
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "meta.import.ts meta.block.ts variable.other.readwrite.alias.ts",
+                    "meta.import.tsx meta.block.tsx variable.other.readwrite.alias.tsx",
+                    "meta.import.js variable.other",
+                    "meta.export.ts meta.block.ts variable.other.readwrite.alias.ts",
+                    "meta.export.tsx meta.block.tsx variable.other.readwrite.alias.tsx",
+                    "meta.export.js variable.other",
+                    "entity.name.function.ts",
+                    "entity.name.function.tsx",
+                    "support.type.primitive",
+                    "entity.other.attribute-name",
+                    "entity.name.tag.custom",
+                    "source.js.jsx keyword.control.flow.js",
+                    "support.type.property.css",
+                    "support.function.basic_functions",
+                    "variable.assignment.coffee",
+                    "support.function.basic_functions",
+                    "keyword.operator.type.annotation",
+                    "punctuation.section.embedded",
+                    "assignment.coffee",
+                    "entity.name.type.ts",
+                    "support.constant.math",
+                    "meta.object-literal.key",
+                    "meta.var.expr storage.type",
+                    "text.html.markdown",
+                    "parameter",
+                    "string",
+                    "italic",
+                    "quote",
+                    "keyword",
+                    "storage",
+                    "language",
+                    "type .function",
+                    "type.function",
+                    "storage.type.class",
+                    "type.var",
+                    "meta.parameter",
+                    "variable.parameter",
+                    "meta.parameters",
+                    "keyword.control",
+                    "modifier",
+                    "this",
+                    "comment"
+                  ],
+                  "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "meta.property-list.css meta.property-value.css variable.other.less",
+                    "meta.property-list.scss variable.scss",
+                    "meta.property-list.sass variable.sass",
+                    "keyword.operator.logical",
+                    "keyword.operator.arithmetic",
+                    "keyword.operator.bitwise",
+                    "keyword.operator.increment",
+                    "keyword.operator.ternary",
+                    "keyword.operator.comparison",
+                    "keyword.operator.assignment",
+                    "keyword.operator.operator",
+                    "keyword.operator.or.regexp",
+                    "punctuation.section.embedded.js",
+                    "punctuation.definintion.string",
+                    "punctuation"
+                  ],
+                  "settings": {
+                    "fontStyle": ""
+            }
+            }
+        ],
+    }
 }

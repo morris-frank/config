@@ -16,27 +16,18 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.confdir                                   = os.getenv("CONFIG_DIR") .. "/awesome/"
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.font                                      = "OperatorMono Light"
-theme.menu_bg_normal                            = "#1d2021"
-theme.menu_bg_focus                             = "#1d2021"
-theme.bg_normal                                 = "#1d2021"
-theme.bg_focus                                  = "#1d2021"
-theme.bg_urgent                                 = "#1d2021"
-theme.fg_normal                                 = "#d5c4a1"
-theme.fg_focus                                  = "#ff8c00"
-theme.fg_urgent                                 = "#af1d18"
-theme.fg_minimize                               = "#ffffff"
+theme.font                                      = "OperatorMono Light 8"
+theme.bg_normal                                 = "#282828"
+theme.bg_focus                                  = "#d65d0e"
+theme.bg_urgent                                 = "#cc241d"
+theme.fg_normal                                 = "#ebdbb2"
+theme.fg_focus                                  = "#282828"
+theme.fg_urgent                                 = "#282828"
+theme.fg_minimize                               = "#ebdbb2"
 theme.border_width                              = 1
 theme.border_normal                             = "#1c2022"
 theme.border_focus                              = "#606060"
 theme.border_marked                             = "#3ca4d8"
-theme.menu_border_width                         = 0
-theme.menu_width                                = 130
-theme.menu_submenu_icon                         = theme.confdir .. "/icons/submenu.png"
-theme.menu_fg_normal                            = "#d5c4a1"
-theme.menu_fg_focus                             = "#ff8c00"
-theme.menu_bg_normal                            = "#050505dd"
-theme.menu_bg_focus                             = "#050505dd"
 theme.widget_temp                               = theme.confdir .. "/icons/temp.png"
 theme.widget_uptime                             = theme.confdir .. "/icons/ac.png"
 theme.widget_cpu                                = theme.confdir .. "/icons/cpu.png"
@@ -45,22 +36,9 @@ theme.widget_clock                              = theme.confdir .. "/icons/clock
 theme.widget_vol                                = theme.confdir .. "/icons/spkr.png"
 theme.taglist_squares_sel                       = theme.confdir .. "/icons/square_a.png"
 theme.taglist_squares_unsel                     = theme.confdir .. "/icons/square_b.png"
-theme.tasklist_plain_task_name                  = true
-theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = 0
+theme.useless_gap                               = 1
 theme.layout_tile                               = theme.confdir .. "/icons/tile.png"
-theme.layout_tilegaps                           = theme.confdir .. "/icons/tilegaps.png"
-theme.layout_tileleft                           = theme.confdir .. "/icons/tileleft.png"
 theme.layout_tilebottom                         = theme.confdir .. "/icons/tilebottom.png"
-theme.layout_tiletop                            = theme.confdir .. "/icons/tiletop.png"
-theme.layout_fairv                              = theme.confdir .. "/icons/fairv.png"
-theme.layout_fairh                              = theme.confdir .. "/icons/fairh.png"
-theme.layout_spiral                             = theme.confdir .. "/icons/spiral.png"
-theme.layout_dwindle                            = theme.confdir .. "/icons/dwindle.png"
-theme.layout_max                                = theme.confdir .. "/icons/max.png"
-theme.layout_fullscreen                         = theme.confdir .. "/icons/fullscreen.png"
-theme.layout_magnifier                          = theme.confdir .. "/icons/magnifier.png"
-theme.layout_floating                           = theme.confdir .. "/icons/floating.png"
 
 local markup = lain.util.markup
 
@@ -78,14 +56,6 @@ theme.cal = lain.widget.calendar({
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
-})
-
--- CPU
-local cpuicon = wibox.widget.imagebox(theme.widget_cpu)
-local cpu = lain.widget.cpu({
-    settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#e33a6e", cpu_now.usage .. "% "))
-    end
 })
 
 -- Battery
@@ -138,11 +108,9 @@ function theme.at_screen_connect(s)
                            awful.button({ }, 3, function () awful.layout.inc(-1) end),
                            awful.button({ }, 4, function () awful.layout.inc( 1) end),
                            awful.button({ }, 5, function () awful.layout.inc(-1) end)))
-    -- Create a taglist widget
-    s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons)
 
-    -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
+    -- Create a taglist widget
+    s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons, { bg_focus = barcolor })
 
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s, height = 18, bg = theme.bg_normal, fg = theme.fg_normal })
@@ -155,20 +123,16 @@ function theme.at_screen_connect(s)
             s.mytaglist,
             s.mypromptbox,
         },
-        -- s.mytasklist, -- Middle widget
         nil,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            cpuicon,
-            cpu.widget,
             baticon,
             bat.widget,
             volicon,
             theme.volume.widget,
             clockicon,
             mytextclock,
-            s.mylayoutbox
         },
     }
 end

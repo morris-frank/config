@@ -69,28 +69,10 @@ local terminal     = "kitty"
 local editor       = os.getenv("EDITOR") or "joe"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1_net", "2_code", "3", "4", "5", "6", "7", "8", "9", "10", "F1", "F2", "F3", "F4", "F5", "F6_cite", "F7_pass", "F8_anki", "F9_mail", "F10_music" }
+awful.util.tagnames = { "www", "code", "3", "4", "5", "cite", "pass", "anki", "mail", "music" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    awful.layout.suit.tile.bottom,
-    --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.spiral,
-    --awful.layout.suit.spiral.dwindle,
-    --awful.layout.suit.max,
-    --awful.layout.suit.max.fullscreen,
-    --awful.layout.suit.magnifier,
-    --awful.layout.suit.corner.nw,
-    --awful.layout.suit.corner.ne,
-    --awful.layout.suit.corner.sw,
-    --awful.layout.suit.corner.se,
-    --lain.layout.cascade,
-    --lain.layout.cascade.tile,
-    -- lain.layout.centerwork,
-    -- awful.layout.suit.floating,
-    --lain.layout.centerwork.horizontal,
-    --lain.layout.termfair,
-    --lain.layout.termfair.center,
+    awful.layout.suit.tile.bottom
 }
 awful.util.taglist_buttons = my_table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -367,12 +349,10 @@ clientkeys = my_table.join(
 )
 
 -- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it works on any keyboard layout.
--- This should map on the two top rows of the keyboard: 1 to 0 and F1 to F10
-for i = 1, 20 do
+for i = 1, 10 do
     -- Hack to only show tags 1,10,F1 and F10 in the shortcut window (mod+s)
     local descr_view, descr_toggle, descr_move, descr_toggle_focus
-    if i == 1 or i == 10 or i == 11 or i == 20 then
+    if i == 1 or i == 10 then
         descr_view = {description = "view tag #", group = "tag"}
         descr_toggle = {description = "toggle tag #", group = "tag"}
         descr_move = {description = "move focused client to tag #", group = "tag"}
@@ -446,19 +426,19 @@ awful.rules.rules = {
 
     -- Set default tags for my standard programs.
     { rule = { class = "Zotero" },
-        properties = { tag = awful.util.tagnames[16] } },
+        properties = { tag = awful.util.tagnames[6] } },
 
     { rule = { class = "keepassxc" },
-        properties = { tag = awful.util.tagnames[17] } },
+        properties = { tag = awful.util.tagnames[7] } },
 
     { rule = { class = "Anki" },
-        properties = { tag = awful.util.tagnames[18] } },
+        properties = { tag = awful.util.tagnames[8] } },
 
-    { rule = { class = "Evolution" },
-        properties = { tag = awful.util.tagnames[19] } },
+    { rule = { class = "Thunderbird" },
+        properties = { tag = awful.util.tagnames[9] } },
 
     { rule = { class = "Spotify" },
-        properties = { tag = awful.util.tagnames[20] } },
+        properties = { tag = awful.util.tagnames[10] } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
         properties = { maximized = true } },
