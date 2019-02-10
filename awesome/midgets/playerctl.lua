@@ -21,7 +21,12 @@ local function factory(args)
     function playerctl.update()
         helpers.async({ shell, "-c", cmd }, function(f)
             widget = playerctl.widget
-            playerctl_now = string.match(f , "(.*)\n")
+            match = string.match(f , "(.*)\n")
+            if match == nil or match == '' then
+                playerctl_now = ""
+            else
+                playerctl_now = "⚞ <i>" .. match .. "</i> ⚟"
+            end
             settings()
             if f ~= helpers.get_map("current spotify track") then
                 helpers.set_map("current spotify track", "test")

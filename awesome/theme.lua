@@ -44,7 +44,7 @@ theme.cal = lain.widget.calendar({
 -- Music player
 local playerctl = midgets.playerctl({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#b8bb26", "⚞ <i>" .. playerctl_now .. "</i> ⚟"))
+        widget:set_markup(markup.fontfg(theme.font, "#b8bb26", playerctl_now))
     end
 })
 
