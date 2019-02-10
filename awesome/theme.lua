@@ -1,14 +1,8 @@
---[[
-
-     Multicolor Awesome WM theme 2.0
-     github.com/lcpz
-
---]]
-
 local gears = require("gears")
 local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
+local midgets = require("midgets")
 
 local os = { getenv = os.getenv, setlocale = os.setlocale }
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
@@ -28,23 +22,13 @@ theme.border_width                              = 1
 theme.border_normal                             = "#1c2022"
 theme.border_focus                              = "#606060"
 theme.border_marked                             = "#3ca4d8"
-theme.widget_temp                               = theme.confdir .. "/icons/temp.png"
-theme.widget_uptime                             = theme.confdir .. "/icons/ac.png"
-theme.widget_cpu                                = theme.confdir .. "/icons/cpu.png"
-theme.widget_batt                               = theme.confdir .. "/icons/bat.png"
-theme.widget_clock                              = theme.confdir .. "/icons/clock.png"
-theme.widget_vol                                = theme.confdir .. "/icons/spkr.png"
-theme.taglist_squares_sel                       = theme.confdir .. "/icons/square_a.png"
-theme.taglist_squares_unsel                     = theme.confdir .. "/icons/square_b.png"
 theme.useless_gap                               = 1
-theme.layout_tile                               = theme.confdir .. "/icons/tile.png"
-theme.layout_tilebottom                         = theme.confdir .. "/icons/tilebottom.png"
 
 local markup = lain.util.markup
 
 -- Textclock
 os.setlocale(os.getenv("LANG")) -- to localize the clock
-local mytextclock = wibox.widget.textclock(markup("#8ec07c", "⏲ %H:%M"))
+local mytextclock = wibox.widget.textclock(markup("#83a598", "⏲ %H:%M"))
 mytextclock.font = theme.font
 
 -- Calendar
@@ -57,6 +41,13 @@ theme.cal = lain.widget.calendar({
     }
 })
 
+-- Music player
+local playerctl = midgets.playerctl({
+    settings = function()
+        widget:set_markup(markup.fontfg(theme.font, "#b8bb26", "⚞ <i>" .. playerctl_now .. "</i> ⚟"))
+    end
+})
+
 -- Battery
 local bat = lain.widget.bat({
     settings = function()
@@ -66,7 +57,7 @@ local bat = lain.widget.bat({
             perc = perc .. " plug"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, "#d3869b", "" .. perc .. " "))
+        widget:set_markup(markup.fontfg(theme.font, "#d3869b", "⚇" .. perc .. " "))
     end
 })
 
@@ -80,6 +71,9 @@ theme.volume = lain.widget.alsa({
         widget:set_markup(markup.fontfg(theme.font, "#fabd2f", "🔈" .. volume_now.level .. "% "))
     end
 })
+
+local rspace = wibox.widget.textbox()
+rspace.forced_width = 10
 
 function theme.at_screen_connect(s)
     -- Quake application
@@ -112,20 +106,28 @@ function theme.at_screen_connect(s)
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s, height = 18, bg = theme.bg_normal, fg = theme.fg_normal })
 
+    local wiboxlayout = wibox.layout.align.horizontal()
+    wiboxlayout.expand = "none"
     -- Add widgets to the wibox
     s.mywibox:setup {
-        layout = wibox.layout.align.horizontal,
+        layout = wiboxlayout,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
             s.mypromptbox,
         },
-        nil,
+        {
+            layout = wibox.layout.fixed.horizontal,
+            playerctl.widget,
+        },
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
+            rspace,
             bat.widget,
+            rspace,
             theme.volume.widget,
+            rspace,
             mytextclock,
         },
     }

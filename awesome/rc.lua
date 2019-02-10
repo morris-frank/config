@@ -58,6 +58,7 @@ end
 --- AUTOSTART
 run_once({"nm-applet"})
 run_once({"unclutter"})
+run_once({"compton"})
 run_once({"pcloud"})
 ---
 
@@ -71,8 +72,8 @@ local editor       = os.getenv("EDITOR") or "joe"
 awful.util.terminal = terminal
 awful.util.tagnames = { "www", "code", "3", "4", "5", "cite", "pass", "anki", "mail", "music" }
 awful.layout.layouts = {
-    awful.layout.suit.tile,
-    awful.layout.suit.tile.bottom
+    awful.layout.suit.tile.left,
+    awful.layout.suit.tile.top
 }
 awful.util.taglist_buttons = my_table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
