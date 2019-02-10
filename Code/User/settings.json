@@ -10,7 +10,6 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "gitlens.historyExplorer.enabled": true,
     "editor.fontFamily": "Operator Mono Book",
     "files.exclude": {
         "**/.git": true,
@@ -36,7 +35,6 @@
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
     "editor.roundedSelection": false,
-    "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "window.menuBarVisibility": "toggle",
     "files.insertFinalNewline": true,
@@ -48,18 +46,17 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": -2,
+    "window.zoomLevel": -3,
     "markdownlint.config": {
         "MD013": false,
         "MD033": false,
         "MD002": false
     },
-    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+    "workbench.iconTheme": "material-icon-theme",
     "update.channel": "none",
     "workbench.statusBar.feedback.visible": false,
-    "gitlens.gitExplorer.files.layout": "tree",
     "java.errors.incompleteClasspath.severity": "ignore",
-    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.view.pdf.invert": 0,
     "latex-workshop.view.pdf.external.command": {
         "command": "zathura",
@@ -81,7 +78,6 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-pdf",
-                "-xelatex",
                 "%DOC%"
             ]
         },
@@ -115,9 +111,8 @@
     "gitlens.views.repositories.files.layout": "tree",
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
-    "breadcrumbs.enabled": true,
     "latex-workshop.chktex.enabled": true,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "explorer.confirmDragAndDrop": false,
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
@@ -195,5 +190,18 @@
             }
             }
         ],
-    }
+    },
+    "window.titleBarStyle": "native",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#689d6a"
+    },
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "breadcrumbs.filePath": "off",
+    "workbench.editor.enablePreview": false,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.intellisense.surroundCommand.enabled": true,
+    "latex-workshop.latex.autoBuild.onTexChange.enabled": true,
+    "latex-workshop.latex.clean.enabled": true,
+    "latex-workshop.view.pdf.ref.viewer": "external"
 }

@@ -10,7 +10,7 @@ export EDITOR="nano"
 export DRI_PRIME=1
 # export GTK_MODULES=rgba
 export QT_QPA_PLATFORMTHEME=qt5ct
-#export QT_STYLE_OVERRIDE=gtk2
+# export QT_STYLE_OVERRIDE=gtk2
 ###
 
 ### PATH
