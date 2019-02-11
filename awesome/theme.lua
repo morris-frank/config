@@ -44,7 +44,16 @@ theme.cal = lain.widget.calendar({
 -- Music player
 local playerctl = midgets.playerctl({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#b8bb26", playerctl_now))
+        local musc = ""
+        local fcol = "#a89984"
+        if playerctl_now.status ~= 'N/A' then
+            musc = '<i>' .. playerctl_now.artist .. ' - ' .. playerctl_now.title .. '</i>'
+        end
+        if playerctl_now.status == 'Playing' then
+            fcol = "#b8bb26"
+            musc = "⚞ " .. musc .. " ⚟"
+        end
+        widget:set_markup(markup.fontfg(theme.font, fcol, musc))
     end
 })
 
