@@ -47,7 +47,7 @@ keystate_numlock = enable
  XF86AudioNext
 
 "playerctl previous"
- XF86AudioPrec
+ XF86AudioPrev
 
 "playerctl play-pause"
  XF86AudioPlay
