@@ -16,7 +16,6 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
---local menubar       = require("menubar")
 local freedesktop   = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
@@ -165,15 +164,7 @@ screen.connect_signal("property::geometry", function(s)
 end)
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) end)
--- }}}
-
--- {{{ Mouse bindings
-root.buttons(my_table.join(
-    awful.button({ }, 3, function () awful.util.mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
-))
--- }}}
+-- }}}}
 
 -- {{{ Key bindings
 globalkeys = my_table.join(
@@ -301,16 +292,6 @@ globalkeys = my_table.join(
     -- Copy clipboard to primary (gtk to terminals)
     awful.key({ modkey }, "v", function () awful.spawn("xsel -b | xsel") end,
               {description = "copy gtk to terminal", group = "hotkeys"}),
-
-    -- Default
-    -- Menubar
-    -- awful.key({ modkey }, "p", function() menubar.show() end,
-            --   {description = "show the menubar", group = "launcher"})
-    -- awful.key({ }, "VoidSymbol", function () awful.spawn("rofi -show run") end,
-            --   {description = "show dmenu", group = "launcher"}),
-    -- Prompt
-    -- awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
-            --   {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
