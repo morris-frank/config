@@ -46,7 +46,7 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": -3,
+    "window.zoomLevel": -2,
     "markdownlint.config": {
         "MD013": false,
         "MD033": false,
@@ -68,36 +68,6 @@
     "workbench.colorTheme": "Gruvbox Dark (Medium)",
     "gitProjectManager.baseProjectsFolders": [
         "~/src/"
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        }
     ],
     "latex-workshop.message.update.show": false,
     "extensions.showRecommendationsOnlyOnDemand": true,
@@ -200,8 +170,45 @@
     "breadcrumbs.filePath": "off",
     "workbench.editor.enablePreview": false,
     "latex-workshop.intellisense.package.enabled": true,
-    "latex-workshop.intellisense.surroundCommand.enabled": true,
-    "latex-workshop.latex.autoBuild.onTexChange.enabled": true,
-    "latex-workshop.latex.clean.enabled": true,
-    "latex-workshop.view.pdf.ref.viewer": "external"
+    "latex-workshop.view.pdf.ref.viewer": "external",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "latex-workshop.intellisense.unimathsymbols.enabled": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "-xelatex",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        }
+    ]
 }
