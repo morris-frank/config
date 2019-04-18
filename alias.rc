@@ -39,6 +39,7 @@
 	alias less='less -R '
 	alias ls='ls --color=force -phl'
 	alias mkdir='mkdir -p -v'
+	alias ssh='TERM=xterm ssh '
 	alias watch='watch --no-title --differences '
 	alias jpegoptim='jpegoptim -s -m90 -f '
 	alias yay='yay --sortby=popularity '
