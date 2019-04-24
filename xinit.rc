@@ -11,6 +11,7 @@ export DRI_PRIME=1
 # export GTK_MODULES=rgba
 export QT_QPA_PLATFORMTHEME=qt5ct
 # export QT_STYLE_OVERRIDE=gtk2
+export TEXMFHOME=~/.texmf
 ###
 
 ### PATH
