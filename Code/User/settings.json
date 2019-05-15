@@ -30,7 +30,8 @@
         "**/.venv": true,
         "**/.ipynb_checkpoints": true,
         "**/META-INF/": true,
-        "**/CMakeFiles/": true
+        "**/CMakeFiles/": true,
+        "**/*.xdv": true
     },
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
@@ -55,7 +56,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "update.channel": "none",
     "workbench.statusBar.feedback.visible": false,
-    "java.errors.incompleteClasspath.severity": "ignore",
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.view.pdf.invert": 0,
     "latex-workshop.view.pdf.external.command": {
@@ -72,8 +72,6 @@
     "latex-workshop.message.update.show": false,
     "extensions.showRecommendationsOnlyOnDemand": true,
     "update.enableWindowsBackgroundUpdates": false,
-    "python.jediEnabled": false,
-    "python.linting.enabled": false,
     "snippet.openInNewEditor": false,
     "editor.cursorWidth": 2,
     "editor.cursorStyle": "block",
@@ -174,7 +172,6 @@
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "latex-workshop.intellisense.unimathsymbols.enabled": true,
     "latex-workshop.latex.tools": [
         {
@@ -210,5 +207,23 @@
             ],
             "env": {}
         }
+    ],
+    "cSpell.language": "en",
+    "cSpell.userWords": [
+        "Autoencoders",
+        "Convolutional",
+        "Gaussians",
+        "LSTM",
+        "autoencoder",
+        "datapoint",
+        "dataset",
+        "datasets",
+        "denoise",
+        "embeddings",
+        "fullfilled",
+        "hyperparameters",
+        "orderable",
+        "preprocess",
+        "preprocessed"
     ]
 }
