@@ -105,7 +105,7 @@ awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) 
 -- {{{ Key bindings
 globalkeys = my_table.join(
     -- Hotkeys
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,           }, "#67",      hotkeys_popup.show_help,
               {description = "show help", group="awesome"}),
     -- Tag browsing
     awful.key({ modkey,           }, "h",   awful.tag.viewprev,
@@ -188,7 +188,7 @@ globalkeys = my_table.join(
     -- Standard program
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+    awful.key({ "Control", altkey   }, "#115", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
     awful.key({ modkey,           }, "w", function () awful.util.mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
@@ -222,7 +222,7 @@ globalkeys = my_table.join(
 )
 
 clientkeys = my_table.join(
-    awful.key({ modkey,           }, "#95",
+    awful.key({ modkey,           }, "m",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
@@ -239,13 +239,7 @@ clientkeys = my_table.join(
     awful.key({ modkey,           }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
-              {description = "move to screen", group = "client"}),
-    awful.key({ modkey,           }, "m",
-        function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end,
-        {description = "maximize", group = "client"})
+              {description = "move to screen", group = "client"})
 )
 
 -- Bind all key numbers to tags.
