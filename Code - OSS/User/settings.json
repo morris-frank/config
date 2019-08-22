@@ -35,7 +35,6 @@
     },
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
-    "editor.roundedSelection": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "window.menuBarVisibility": "toggle",
     "files.insertFinalNewline": true,
@@ -73,7 +72,6 @@
     "update.enableWindowsBackgroundUpdates": false,
     "snippet.openInNewEditor": false,
     "editor.cursorWidth": 2,
-    "editor.cursorStyle": "block",
     "editor.cursorBlinking": "phase",
     "gitlens.views.repositories.files.layout": "tree",
     "gitlens.views.fileHistory.enabled": true,
@@ -82,7 +80,6 @@
     "workbench.activityBar.visible": true,
     "explorer.confirmDragAndDrop": false,
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -225,5 +222,7 @@
         "preprocess",
         "preprocessed"
     ],
-    "window.zoomLevel": -1
+    "window.zoomLevel": -1,
+    "editor.renderWhitespace": "selection",
+    "editor.tabCompletion": "on"
 }
