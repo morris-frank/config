@@ -4,22 +4,21 @@
 
 pavucontrol.ini
 
-!Code/User
-Code - OSS/
 0ad/
 ardour5/
 Autodesk/
 autostart/
 Cadence/
+Electron/
 caja/
 calibre/
 cef_user_data/
 chromium/
 Clementine/
-Code/*
-Code/User/gpm*
-Code/User/vsicons*
-Code/User/workspaceStorage/
+Code - OSS/*
+!Code - OSS/User/
+Code - OSS/User/workspaceStorage/
+Code - OSS/User/globalStorage
 configstore/
 darktable/
 dconf/
