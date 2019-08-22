@@ -10,7 +10,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.confdir                                   = os.getenv("CONFIG_DIR") .. "/awesome/"
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.font                                      = "OperatorMono Light 8"
+theme.font                                      = "Fira Sans Book 8"
 theme.bg_normal                                 = "#282828"
 theme.bg_focus                                  = "#d65d0e"
 theme.bg_urgent                                 = "#cc241d"
@@ -113,7 +113,7 @@ function theme.at_screen_connect(s)
     s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons, { bg_focus = barcolor })
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 18, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 20, bg = theme.bg_normal, fg = theme.fg_normal })
 
     local wiboxlayout = wibox.layout.align.horizontal()
     wiboxlayout.expand = "none"
