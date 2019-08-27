@@ -12,7 +12,7 @@ theme.confdir                                   = os.getenv("CONFIG_DIR") .. "/a
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
 theme.font                                      = "Fira Sans Book 8"
 theme.bg_normal                                 = "#282828"
-theme.bg_focus                                  = "#d65d0e"
+theme.bg_focus                                  = "#689D6A"
 theme.bg_urgent                                 = "#cc241d"
 theme.fg_normal                                 = "#ebdbb2"
 theme.fg_focus                                  = "#282828"
@@ -22,13 +22,13 @@ theme.border_width                              = 1
 theme.border_normal                             = "#1c2022"
 theme.border_focus                              = "#606060"
 theme.border_marked                             = "#3ca4d8"
-theme.useless_gap                               = 1
+theme.useless_gap                               = 5
 
 local markup = lain.util.markup
 
 -- Textclock
 os.setlocale(os.getenv("LANG")) -- to localize the clock
-local mytextclock = wibox.widget.textclock(markup("#83a598", "⏲ %H:%M"))
+local mytextclock = wibox.widget.textclock(markup(theme.fg_normal, "%H:%M "))
 mytextclock.font = theme.font
 
 -- Calendar
@@ -45,7 +45,7 @@ theme.cal = lain.widget.calendar({
 local playerctl = midgets.playerctl({
     settings = function()
         local musc = ""
-        local fcol = "#a89984"
+        local fcol = theme.bg_focus
         if playerctl_now.status ~= 'N/A' then
             musc = '<i>' .. playerctl_now.artist .. ' - ' .. playerctl_now.title .. '</i>'
         end
@@ -59,14 +59,15 @@ local playerctl = midgets.playerctl({
 
 -- Battery
 local bat = lain.widget.bat({
+    batteries = {"BAT0", "BAT1"},
     settings = function()
-        local perc = bat_now.perc ~= "N/A" and bat_now.perc .. "%" or bat_now.perc
+        local perc = bat_now.perc ~= "N/A" and bat_now.time or bat_now.perc
 
         if bat_now.ac_status == 1 then
             perc = perc .. " plug"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, "#d3869b", "⚇" .. perc .. " "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, perc))
     end
 })
 
@@ -77,7 +78,7 @@ theme.volume = lain.widget.alsa({
             volume_now.level = volume_now.level .. "M"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, "#fabd2f", "🔈" .. volume_now.level .. "% "))
+        widget:set_markup(markup.fontfg(theme.font, theme.fg_normal, volume_now.level .. "%"))
     end
 })
 
@@ -113,7 +114,7 @@ function theme.at_screen_connect(s)
     s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons, { bg_focus = barcolor })
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 20, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 19, bg = theme.bg_normal, fg = theme.fg_normal })
 
     local wiboxlayout = wibox.layout.align.horizontal()
     wiboxlayout.expand = "none"

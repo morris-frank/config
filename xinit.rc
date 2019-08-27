@@ -38,7 +38,8 @@ xset -dpms
 xset s off
 # Set bell off
 xset b off
-xrandr --dpi 125.37
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
 ###
 
 ### GLOBAL X SCRIPTS

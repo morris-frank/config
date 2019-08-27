@@ -4,24 +4,24 @@
 
 pavucontrol.ini
 
+!Code - OSS/User/
 0ad/
 ardour5/
 Autodesk/
 autostart/
 Cadence/
-Electron/
 caja/
 calibre/
 cef_user_data/
 chromium/
 Clementine/
 Code - OSS/*
-!Code - OSS/User/
-Code - OSS/User/workspaceStorage/
 Code - OSS/User/globalStorage
+Code - OSS/User/workspaceStorage/
 configstore/
 darktable/
 dconf/
+Electron/
 enchant/
 evolution/
 falkTX/
@@ -43,6 +43,7 @@ ibus/
 inkscape/
 insight-nodejs/
 jack/
+Kaku/
 keepassx/
 keepassxc/
 kicad/
@@ -51,6 +52,7 @@ libreoffice/
 mate/
 matplotlib/
 mpv/
+MusicBrainz/
 nautilus/
 nemo/
 octave/
