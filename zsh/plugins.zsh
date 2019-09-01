@@ -1,11 +1,10 @@
-
 autoload -U promptinit; promptinit
 prompt pure
 
 test -r /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 test -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 test -r /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh && source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-test -r /home/morris/.opam/opam-init/init.zsh && . /home/morris/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
 #Git plugin
 ###
 	autoload -Uz vcs_info
