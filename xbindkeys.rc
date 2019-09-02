@@ -23,10 +23,10 @@ keystate_numlock = enable
  XF86ScreenSaver
 
 # Display brightness
-"xbacklight -dec 20"
+"light -U 20"
  XF86MonBrightnessDown
 
-"xbacklight -inc 20"
+"light -A 20"
  XF86MonBrightnessUp
 
 # Sound Volume
