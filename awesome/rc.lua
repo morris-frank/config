@@ -66,7 +66,7 @@ local terminal     = "kitty"
 local editor       = os.getenv("EDITOR") or "joe"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "www", "code", "3", "4", "5", "cite", "pass", "anki", "mail", "music" }
+awful.util.tagnames = { "www", "code", "3", "4", "5", "6", "7", "8", "pass", "music" }
 awful.layout.layouts = {
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.top
@@ -319,16 +319,7 @@ awful.rules.rules = {
 
 
     -- Set default tags for my standard programs.
-    { rule = { class = "Zotero" },
-        properties = { tag = awful.util.tagnames[6] } },
-
     { rule = { class = "keepassxc" },
-        properties = { tag = awful.util.tagnames[7] } },
-
-    { rule = { class = "Anki" },
-        properties = { tag = awful.util.tagnames[8] } },
-
-    { rule = { class = "Thunderbird" },
         properties = { tag = awful.util.tagnames[9] } },
 
     { rule = { class = "Spotify" },
@@ -336,10 +327,6 @@ awful.rules.rules = {
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
         properties = { maximized = true } },
-
-    -- { rule = { class = "Firefox" },
-    --     properties = { opacity = 1, maximized = false, floating = false } },
-
 }
 -- }}}
 
