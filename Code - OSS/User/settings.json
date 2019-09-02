@@ -52,7 +52,7 @@
         "MD002": false
     },
     "workbench.iconTheme": "material-icon-theme",
-    "update.channel": "none",
+    "update.mode": "none",
     "workbench.statusBar.feedback.visible": false,
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.view.pdf.invert": 0,
@@ -165,6 +165,7 @@
     "workbench.editor.enablePreview": false,
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.view.pdf.ref.viewer": "external",
+    "latex-workshop.view.pdf.external.viewer.command": "zathura",
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "editor.suggestSelection": "first",
