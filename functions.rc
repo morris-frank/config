@@ -21,7 +21,9 @@ function o() {
 		echo "${RED}[In o] xdg-open not found${RES}"
 	else
 		for file in "$@"; do
-			exec xdg-open "$file" &> /dev/null & disown
+			if test -f "${file}"; then
+				exec xdg-open "${file}" &> /dev/null & disown
+			fi
 		done
 	fi
 }
