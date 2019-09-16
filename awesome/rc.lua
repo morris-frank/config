@@ -68,8 +68,8 @@ local editor       = os.getenv("EDITOR") or "joe"
 awful.util.terminal = terminal
 awful.util.tagnames = { "www", "code", "3", "4", "5", "6", "7", "8", "pass", "music" }
 awful.layout.layouts = {
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.top
+    awful.layout.suit.tile.right,
+    awful.layout.suit.tile.bottom
 }
 
 local theme_path = string.format("%s/awesome/theme.lua", os.getenv("CONFIG_DIR"))

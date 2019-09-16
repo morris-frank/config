@@ -22,7 +22,7 @@ local opts = {
     -- high
     -- veryhigh
 
-    height = 12,
+    height = 8,
     -- [4 .. 12]
 }
 
@@ -159,7 +159,7 @@ local function get_visualizer(name, quality)
         return ""
     end
 
-    h = w * opts.height / 16
+    h = w
 
     if name == "showcqt" then
         local count = math.ceil(w * 180 / 1920 / fps)
