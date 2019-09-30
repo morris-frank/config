@@ -313,6 +313,11 @@ awful.rules.rules = {
      },
     },
 
+
+    -- Start windows as slave
+    { rule = { }, properties = { }, callback = awful.client.setslave },
+
+
     -- Titlebars
     { rule_any = { type = { "dialog", "normal" } },
         properties = { titlebars_enabled = false } },
