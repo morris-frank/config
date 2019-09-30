@@ -31,6 +31,7 @@ x-scheme-handler/parsec=parsec.desktop
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 audio/mpeg=mpv.desktop
 video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;firefox-developer-edition.desktop;
@@ -50,3 +51,4 @@ application/pdf=firefox-developer-edition.desktop;org.pwmt.zathura-pdf-poppler.d
 text/plain=visual-studio-code.desktop;
 audio/mpeg=mpv.desktop;
 video/mp4=mpv.desktop;
+video/x-matroska=mpv.desktop;
