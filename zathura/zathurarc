@@ -31,5 +31,8 @@ set completion-highlight-bg     "#83a598"
 set recolor-lightcolor          "#282828"
 set recolor-darkcolor           "#ebdbb2"
 
-set recolor                     "true"
-set recolor-keephue             "true"
+set recolor                     "false"
+set recolor-keephue             "false"
+
+set font                        "Fira Sans Book 8"
+set guioptions                  ""
