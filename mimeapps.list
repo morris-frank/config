@@ -32,6 +32,7 @@ application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 audio/mpeg=mpv.desktop
 video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop
+x-scheme-handler/fasp=aspera-connect.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;firefox-developer-edition.desktop;

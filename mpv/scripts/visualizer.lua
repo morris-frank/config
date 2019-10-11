@@ -11,8 +11,8 @@ end
 local msg     = require 'mp.msg'
 
 local function get_visualizer()
-    local fps = 45
-    local w = 800
+    local fps = 50
+    local w = 700
     local h = w
 
     return "[aid1] asplit [ao]," ..
@@ -20,12 +20,14 @@ local function get_visualizer()
         "aformat            =" ..
             "sample_rates   = 192000," ..
         "avectorscope       =" ..
+            "scale          = lin:" ..
+            "draw           = line:" ..
             "size           =" .. w .. "x" .. h .. ":" ..
-            "m              = lissajous_xy:" ..
-            "rc             = 232:" ..
+            "m              = lissajous:" ..
+            "rc             = 200:" ..
             "gc             = 72:" ..
             "bc             = 96:" ..
-            "rf             = 45:" ..
+            "rf             = 35:" ..
             "gf             = 100:" ..
             "bf             = 80:" ..
             "r              =" .. fps .. "," ..

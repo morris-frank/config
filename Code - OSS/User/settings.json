@@ -222,5 +222,6 @@
     ],
     "window.zoomLevel": -1,
     "editor.renderWhitespace": "selection",
-    "editor.tabCompletion": "on"
+    "editor.tabCompletion": "on",
+    "python.jediEnabled": false
 }
