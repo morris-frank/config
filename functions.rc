@@ -1,10 +1,9 @@
 function ipy() {
-	if ! type bpython &> /dev/null; then
-		echo "${RED}[In ipy] bpython not found${RES}"
-		echo "Drop-in ipython"
-		ipython "$@"
+	if ! type ipython &> /dev/null; then
+		echo "${RED}[In ipy] ipython not found${RES}"
+		python "$@"
 	else
-		bpython -i ~/.config/bpython/startup.py
+		ipython "$@"
 	fi
 }
 
