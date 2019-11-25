@@ -208,6 +208,7 @@
         "Convolutional",
         "Gaussians",
         "LSTM",
+        "Spotify",
         "approximator",
         "autoencoder",
         "boardgame",
