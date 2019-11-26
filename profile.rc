@@ -1,4 +1,4 @@
-export CONFIG_DIR='/home/morris/.config/'
+export CONFIG_DIR="${HOME}/.config/"
 
 #History
 export HISTCONTROL=ignoredups
