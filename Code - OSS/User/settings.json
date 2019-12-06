@@ -7,9 +7,6 @@
         "*.cfg": "yaml",
         "*.html": "html"
     },
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
     "editor.fontFamily": "Operator Mono Book",
     "files.exclude": {
         "**/.git": true,
@@ -46,34 +43,19 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "workbench.startupEditor": "newUntitledFile",
-    "markdownlint.config": {
-        "MD013": false,
-        "MD033": false,
-        "MD002": false
-    },
     "workbench.iconTheme": "material-icon-theme",
     "update.mode": "none",
-    "workbench.statusBar.feedback.visible": false,
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.view.pdf.invert": 0,
     "latex-workshop.view.pdf.external.viewer.command": "zathura",
     "latex-workshop.view.pdf.external.viewer.args": [
         "%PDF%"
     ],
-    "vsicons.dontShowNewVersionMessage": true,
     "workbench.colorTheme": "Gruvbox Dark (Medium)",
-    "gitProjectManager.baseProjectsFolders": [
-        "~/src/"
-    ],
     "latex-workshop.message.update.show": false,
     "extensions.showRecommendationsOnlyOnDemand": true,
-    "update.enableWindowsBackgroundUpdates": false,
-    "snippet.openInNewEditor": false,
     "editor.cursorWidth": 2,
     "editor.cursorBlinking": "phase",
-    "gitlens.views.repositories.files.layout": "tree",
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
     "latex-workshop.chktex.enabled": true,
     "workbench.activityBar.visible": true,
     "explorer.confirmDragAndDrop": false,
@@ -211,11 +193,13 @@
         "Spotify",
         "approximator",
         "autoencoder",
+        "autoregressive",
         "boardgame",
         "datapoint",
         "dataset",
         "datasets",
         "denoise",
+        "discretize",
         "embeddings",
         "fullfilled",
         "hyperparameters",
@@ -226,5 +210,7 @@
     "window.zoomLevel": -1,
     "editor.renderWhitespace": "selection",
     "editor.tabCompletion": "on",
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "html.format.wrapLineLength": 80,
+    "editor.rulers": [80]
 }

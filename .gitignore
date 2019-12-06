@@ -17,3 +17,4 @@ QtProject.conf
 !sway/
 !systemd/
 !zathura/
+!matplotlib/
