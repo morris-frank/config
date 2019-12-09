@@ -54,7 +54,7 @@ end
 --- AUTOSTART
 run_once({"nm-applet"})
 run_once({"unclutter"})
-run_once({"picom"})
+-- run_once({"picom"})
 run_once({"pcloud"})
 ---
 

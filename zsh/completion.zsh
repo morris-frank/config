@@ -105,6 +105,3 @@ rationalise-dot() {
 zle -N rationalise-dot
 bindkey . rationalise-dot
 bindkey -M isearch . self-insert # history search fix
-
-# PIP
-eval "`pip completion --zsh`"
