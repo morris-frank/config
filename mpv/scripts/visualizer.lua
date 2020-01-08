@@ -24,12 +24,12 @@ local function get_visualizer()
             "draw           = line:" ..
             "size           =" .. w .. "x" .. h .. ":" ..
             "m              = lissajous:" ..
-            "rc             = 200:" ..
-            "gc             = 72:" ..
-            "bc             = 96:" ..
-            "rf             = 35:" ..
-            "gf             = 100:" ..
-            "bf             = 80:" ..
+            "rc             = 72:" ..
+            "gc             = 200:" ..
+            "bc             = 150:" ..
+            "rf             = 100:" ..
+            "gf             = 50:" ..
+            "bf             = 100:" ..
             "r              =" .. fps .. "," ..
         "format             = rgb0 [vo]"
 end
