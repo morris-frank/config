@@ -7,7 +7,7 @@
         "*.cfg": "yaml",
         "*.html": "html"
     },
-    "editor.fontFamily": "Operator Mono Book",
+    "editor.fontFamily": "Fira Code",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -51,7 +51,6 @@
     "latex-workshop.view.pdf.external.viewer.args": [
         "%PDF%"
     ],
-    "workbench.colorTheme": "Gruvbox Dark (Medium)",
     "latex-workshop.message.update.show": false,
     "extensions.showRecommendationsOnlyOnDemand": true,
     "editor.cursorWidth": 2,
@@ -186,8 +185,10 @@
     ],
     "cSpell.language": "en",
     "cSpell.userWords": [
+        "ADSR",
         "Autoencoders",
         "Convolutional",
+        "FOSS",
         "Gaussians",
         "LSTM",
         "Spotify",
@@ -201,6 +202,7 @@
         "denoise",
         "discretize",
         "embeddings",
+        "explainability",
         "fullfilled",
         "hyperparameters",
         "orderable",
@@ -208,9 +210,12 @@
         "preprocessed"
     ],
     "window.zoomLevel": -1,
-    "editor.renderWhitespace": "selection",
+    "editor.renderWhitespace": "all",
     "editor.tabCompletion": "on",
     "python.jediEnabled": false,
     "html.format.wrapLineLength": 80,
-    "editor.rulers": [80]
+    "editor.rulers": [
+        80
+    ],
+    "workbench.colorTheme": "Gruvbox Dark Medium"
 }
