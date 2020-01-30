@@ -68,6 +68,7 @@ function run_once() {
 
 function wifi_restart() {
 	sudo rfkill block wifi
+	sudo macchanger -e wlp3s0
 	sleep 3
 	sudo rfkill unblock wifi
 }

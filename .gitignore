@@ -4,6 +4,9 @@
 
 pavucontrol.ini
 QtProject.conf
+kdeglobals
+konsole.kmessagebox
+konsole.notifyrc
 
 */
 !alacritty/

@@ -10,7 +10,7 @@ keystate_numlock = enable
 #  XF86Launch1
 
 # Spawning controls
-"kitty"
+"konsole"
  Mod4 + d
 
 "gnome-system-monitor"

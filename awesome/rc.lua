@@ -62,7 +62,7 @@ run_once({"blueman-tray"})
 
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "kitty"
+local terminal     = "konsole"
 local editor       = os.getenv("EDITOR") or "joe"
 
 awful.util.terminal = terminal

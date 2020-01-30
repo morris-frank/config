@@ -18,11 +18,11 @@ theme.fg_normal                                 = "#ebdbb2"
 theme.fg_focus                                  = "#282828"
 theme.fg_urgent                                 = "#282828"
 theme.fg_minimize                               = "#ebdbb2"
-theme.border_width                              = 1
+theme.border_width                              = 0
 theme.border_normal                             = "#1c2022"
 theme.border_focus                              = "#606060"
 theme.border_marked                             = "#3ca4d8"
-theme.useless_gap                               = 5
+theme.useless_gap                               = 0
 
 local markup = lain.util.markup
 

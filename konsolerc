@@ -1,0 +1,23 @@
+[Desktop Entry]
+DefaultProfile=Profile 1.profile
+
+[DownloadDialog Settings]
+Height 1080=488
+Width 1920=700
+
+[Favorite Profiles]
+Favorites=standard.profile
+
+[FileLocation]
+scrollbackUseCacheLocation=true
+scrollbackUseSystemLocation=false
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 1080=1039
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB2oAAAQPAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1898
