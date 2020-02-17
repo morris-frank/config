@@ -6,9 +6,6 @@ keystate_numlock = enable
  m:0x0 + c:66
  #VoidSymbol
 
-# "rofi -show run"
-#  XF86Launch1
-
 # Spawning controls
 "konsole"
  Mod4 + d

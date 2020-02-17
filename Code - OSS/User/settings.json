@@ -187,6 +187,7 @@
     "cSpell.userWords": [
         "ADSR",
         "Autoencoders",
+        "Collaboratory",
         "Convolutional",
         "FOSS",
         "Gaussians",
@@ -207,7 +208,8 @@
         "hyperparameters",
         "orderable",
         "preprocess",
-        "preprocessed"
+        "preprocessed",
+        "upsampling"
     ],
     "window.zoomLevel": -1,
     "editor.renderWhitespace": "all",

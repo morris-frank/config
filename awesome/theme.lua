@@ -9,7 +9,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.confdir                                   = os.getenv("CONFIG_DIR") .. "/awesome/"
-theme.wallpaper                                 = theme.confdir .. "/wall.png"
+theme.wallpaper                                 = theme.confdir .. "/wall_2.jpg"
 theme.font                                      = "Fira Sans Book 8"
 theme.bg_normal                                 = "#282828"
 theme.bg_focus                                  = "#689D6A"
@@ -35,7 +35,7 @@ mytextclock.font = theme.font
 theme.cal = lain.widget.calendar({
     attach_to = { mytextclock },
     notification_preset = {
-        font = theme.font,
+        font = "Fira Code 7",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -50,7 +50,7 @@ local playerctl = midgets.playerctl({
             musc = '<i>' .. playerctl_now.artist .. ' - ' .. playerctl_now.title .. '</i>'
         end
         if playerctl_now.status == 'Playing' then
-            fcol = "#b8bb26"
+            fcol = "#689D6A"
             musc = "⚞ " .. musc .. " ⚟"
         end
         widget:set_markup(markup.fontfg(theme.font, fcol, musc))
