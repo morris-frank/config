@@ -145,7 +145,6 @@
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.view.pdf.ref.viewer": "external",
     "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
     "editor.suggestSelection": "first",
     "latex-workshop.intellisense.unimathsymbols.enabled": true,
     "latex-workshop.latex.tools": [
@@ -219,5 +218,6 @@
     "editor.rulers": [
         80
     ],
-    "workbench.colorTheme": "Gruvbox Dark Medium"
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "latex-workshop.latex.autoBuild.run": "never"
 }
