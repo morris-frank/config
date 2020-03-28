@@ -7,6 +7,7 @@
 
 [core]
 attributesfile = ~/.config/git/attributes
+	autocrlf = input
 
 [filter "nbstrip_full"]
 clean = "jq --indent 1 \

@@ -25,8 +25,8 @@ command -v pyenv 1>/dev/null 2>&1 && eval "$(pyenv init -)"
 test -d "$HOME/.gem/ruby/2.7.0/bin" && export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-test -d "$HOME/.rvm/bin" && export PATH="$PATH:$HOME/.rvm/bin"
-test -d "$HOME/.local/bin" && export PATH="$PATH:$HOME/.local/bin"
+test -d "$HOME/.rvm/bin" && export PATH="$HOME/.rvm/bin:$PATH"
+test -d "$HOME/.local/bin" && export PATH="$HOME/.local/bin:$PATH"
 
 test -r "$CONFIG_DIR/profile_private.rc" && source "${CONFIG_DIR}/profile_private.rc"
 

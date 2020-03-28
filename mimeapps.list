@@ -35,6 +35,7 @@ video/x-matroska=mpv.desktop
 x-scheme-handler/fasp=aspera-connect.desktop
 text/plain=emacs.desktop
 audio/x-wav=mpv.desktop
+video/quicktime=mpv.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;firefox-developer-edition.desktop;
@@ -56,3 +57,4 @@ audio/mpeg=mpv.desktop;
 video/mp4=mpv.desktop;
 video/x-matroska=mpv.desktop;
 audio/x-wav=mpv.desktop;
+video/quicktime=mpv.desktop;

@@ -5,7 +5,8 @@
         "*.ml": "ocaml",
         "*.mli": "ocaml",
         "*.cfg": "yaml",
-        "*.html": "html"
+        "*.html": "html",
+        "*.def": "latex"
     },
     "editor.fontFamily": "Fira Code",
     "files.exclude": {
@@ -195,12 +196,16 @@
         "approximator",
         "autoencoder",
         "autoregressive",
+        "autoregressiveness",
         "boardgame",
         "datapoint",
         "dataset",
         "datasets",
         "denoise",
+        "denoising",
         "discretize",
+        "discretizes",
+        "downstreaming",
         "embeddings",
         "explainability",
         "fullfilled",
@@ -208,7 +213,10 @@
         "orderable",
         "preprocess",
         "preprocessed",
-        "upsampling"
+        "reparameterization",
+        "unparametrized",
+        "upsampling",
+        "upstreaming"
     ],
     "window.zoomLevel": -1,
     "editor.renderWhitespace": "all",
@@ -218,6 +226,8 @@
     "editor.rulers": [
         80
     ],
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "latex-workshop.latex.autoBuild.run": "never"
+    "workbench.colorTheme": "Gruvbox Dark Soft",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "grammarly.userWords": [],
+    "git.enableSmartCommit": true
 }

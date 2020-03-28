@@ -14,10 +14,6 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export TEXMFHOME=~/.local/share/texmf
 ###
 
-### PATH
-test -d ~/bin/ && export PATH=~/bin:$PATH
-###
-
 ### KEYBOARD
 test -r "$usermodmap" && xmodmap "$usermodmap"
 # Shortcuts
