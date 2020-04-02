@@ -219,7 +219,7 @@
         "upstreaming"
     ],
     "window.zoomLevel": -1,
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "boundary",
     "editor.tabCompletion": "on",
     "python.jediEnabled": false,
     "html.format.wrapLineLength": 80,
@@ -229,5 +229,7 @@
     "workbench.colorTheme": "Gruvbox Dark Soft",
     "latex-workshop.latex.autoBuild.run": "never",
     "grammarly.userWords": [],
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "grammarly.dialect": "british",
+    "grammarly.domain": "technical"
 }
