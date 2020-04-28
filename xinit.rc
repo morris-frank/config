@@ -19,7 +19,7 @@ test -r "$usermodmap" && xmodmap "$usermodmap"
 # Shortcuts
 xbindkeys
 # Set my special keymaps
-setxkbmap -model pc104 -layout morris,morris -variant de,ir
+setxkbmap -layout morris,morris -variant de,ir -option "grp:shifts_toggle"
 # Make the Print/Druck key the Super_R key
 setxkbmap -option "altwin:prtsc_rwin"
 # Deactivate capslock
