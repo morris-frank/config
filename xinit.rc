@@ -18,8 +18,8 @@ export TEXMFHOME=~/.local/share/texmf
 test -r "$usermodmap" && xmodmap "$usermodmap"
 # Shortcuts
 xbindkeys
-# German keymanp
-setxkbmap demod,irmod -option "grp:shifts_toggle"
+# Set my special keymaps
+setxkbmap -model pc104 -layout morris,morris -variant de,ir
 # Make the Print/Druck key the Super_R key
 setxkbmap -option "altwin:prtsc_rwin"
 # Deactivate capslock
