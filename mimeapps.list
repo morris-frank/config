@@ -37,6 +37,7 @@ text/plain=emacs.desktop
 audio/x-wav=mpv.desktop
 video/quicktime=mpv.desktop
 image/x-xcf=gimp.desktop
+audio/flac=mpv.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox-developer-edition.desktop
@@ -60,3 +61,4 @@ video/x-matroska=mpv.desktop
 audio/x-wav=mpv.desktop
 video/quicktime=mpv.desktop
 image/x-xcf=gimp.desktop;
+audio/flac=mpv.desktop;

@@ -47,7 +47,9 @@
 # Script-Like aliases
 #####################
 	alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
-	alias wetter='curl wttr.in/Amsterdam?lang=de'
+	alias هوا='curl wttr.in/Amsterdam?lang=en'
+	alias play='mpv --lavfi-complex="[aid1]asplit [ao], afifo, showspectrum=color=fire:scale=sqrt:orientation=vertical:overlap=1:fscale=lin:start=150:stop=2000, format=rgb0 [vo]"'
+	#alias play_chillwave='play --no-video --demuxer-seekable-cache=no https://www.youtube.com/watch?v=5qap5aO4i9A'
 
 # GIT
 #####
@@ -58,3 +60,9 @@
 	alias ga='git add'
 	alias gpull='git pull origin $(current_branch)'
 	alias gpush='git push origin $(current_branch)'
+
+# Optirun
+	alias v_nvidia='optimus-manager --switch nvidia'
+	alias v_intel='optimus-manager --switch intel'
+	alias v_switch='sudo prime-switch'
+	alias v_offload='prime-offload'

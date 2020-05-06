@@ -52,10 +52,7 @@ local function run_once(cmd_arr)
 end
 
 --- AUTOSTART
-run_once({"nm-applet"})
-run_once({"unclutter"})
-run_once({"pcloud"})
-run_once({"blueman-tray"})
+run_once({"nm-applet", "unclutter", "pcloud", "blueman-tray"})
 ---
 
 -- {{{ Variable definitions
