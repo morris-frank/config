@@ -35,14 +35,19 @@
 	alias g++='g++ -fdiagnostics-color=always '
 	alias gcc='gcc -fdiagnostics-color=always '
 	alias grep='grep --color=auto '
-	alias l='ls --color=force -phlgo'
 	alias less='less -R '
-	alias ls='ls --color=force -phl'
 	alias mkdir='mkdir -p -v'
 	alias ssh='TERM=xterm ssh '
 	alias watch='watch --no-title --differences '
 	alias jpegoptim='jpegoptim -s -m90 -f '
 	alias yay='yay --sortby=popularity '
+	if type lsd &> /dev/null; then
+		alias l='lsd'
+		alias ls='lsd -l'
+	else
+		alias l='ls --color=force -phlgo'
+		alias ls='ls --color=force -phl'
+	fi
 
 # Script-Like aliases
 #####################
@@ -62,6 +67,7 @@
 	alias gpush='git push origin $(current_branch)'
 
 # Optirun
+	alias v_status='optimus-manager --status'
 	alias v_nvidia='optimus-manager --switch nvidia'
 	alias v_intel='optimus-manager --switch intel'
 	alias v_switch='sudo prime-switch'
