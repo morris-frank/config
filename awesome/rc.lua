@@ -13,7 +13,6 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
-local freedesktop   = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 -- }}}
@@ -76,11 +75,6 @@ beautiful.init(theme_path)
 --{{{ Notifications
 naughty.config.defaults['icon_size'] = 100
 --- }}}
-
--- {{{ Menu
-awful.util.mymainmenu = freedesktop.menu.build({
-    icon_size = beautiful.menu_height or 16
-})
 
 -- {{{ Screen
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -204,8 +198,6 @@ globalkeys = my_table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ "Control", altkey   }, "#115", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-    awful.key({ modkey,           }, "w", function () awful.util.mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
 
     awful.key({ modkey, "Alt"   }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -236,30 +228,20 @@ globalkeys = my_table.join(
 )
 
 clientkeys = my_table.join(
-    awful.key({ modkey,           }, "m",
-        function (c)
-            c.fullscreen = not c.fullscreen
-            c:raise()
-        end,
-        {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey,           }, "f",
-        function (c)
-            c.ontop = not c.ontop
-            awful.client.floating.toggle()
-        end,
-        {description = "toggle floating (and keeping it on top)", group = "client"}),
+              function (c)
+                  c.ontop = not c.ontop
+                  awful.client.floating.toggle()
+              end,
+              {description = "toggle floating (and keeping it on top)", group = "client"}),
     awful.key({ modkey,           }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "m",
-        function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end ,
-        {description = "maximize", group = "client"})
+    awful.key({ modkey,           }, "m", function (c) c.fullscreen = not c.fullscreen     end,
+              {description = "toggle fullscreen", group = "client"})
 )
 
 -- Bind all key numbers to tags.
