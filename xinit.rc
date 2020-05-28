@@ -11,12 +11,11 @@ export DRI_PRIME=1
 # export GTK_MODULES=rgba
 export QT_QPA_PLATFORMTHEME=qt5ct
 # export QT_STYLE_OVERRIDE=gtk2
-export TEXMFHOME=~/.local/share/texmf
 ###
 
 ### KEYBOARD
 test -r "$usermodmap" && xmodmap "$usermodmap"
-# Shortcuts
+# Load Shortcuts
 xbindkeys
 # Set my special keymaps
 setxkbmap -layout morris,morris -variant de,ir -option "grp:shifts_toggle"
@@ -24,6 +23,12 @@ setxkbmap -layout morris,morris -variant de,ir -option "grp:shifts_toggle"
 setxkbmap -option "altwin:prtsc_rwin"
 # Deactivate capslock
 setxkbmap -option "caps:none"
+# Make tapping possbile on the TouchPad
+xinput set-prop 'Synaptics TM3053-004' 'libinput Tapping Enabled' 1
+# Reverse TouchPad scrolling (like MacOS)
+xinput set-prop 'Synaptics TM3053-004' 'libinput Natural Scrolling Enabled' 1
+# Make the trackpoint really slow
+xinput set-prop 'TPPS/2 IBM TrackPoint' 'libinput Accel Speed' -.7
 ###
 
 ### OTHER CONFIG
