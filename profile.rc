@@ -1,7 +1,6 @@
 export CONFIG_DIR="${HOME}/.config/"
 
 export EDITOR="nano"
-export TEXMFHOME=~/.local/share/texmf
 
 #History
 export HISTCONTROL=ignoredups
@@ -19,7 +18,13 @@ export GREEN='\e[0;32m'
 export BLUE='\e[0;34m'
 export GREY='\e[1;30m'
 
-# Setup for Python / PyENV
+# Import rest of shell setup
+test -r "$CONFIG_DIR/alias.sh" && source "${CONFIG_DIR}/alias.sh"
+test -r "$CONFIG_DIR/alias_private.sh" && source "${CONFIG_DIR}/alias_private.sh"
+test -r "$CONFIG_DIR/functions.sh" && source "${CONFIG_DIR}/functions.sh"
+test -r "$CONFIG_DIR/functions_private.sh" && source "${CONFIG_DIR}/functions_private.sh"
+
+# Setup for Python
 export PYTHONBREAKPOINT=ipdb.set_trace
 if hash pyenv 2>/dev/null; then
     export PYENV_ROOT="$HOME/.pyenv"
@@ -27,24 +32,11 @@ if hash pyenv 2>/dev/null; then
     eval "$(pyenv init -)"
 fi
 
-# Setup for PERL
-export PATH="/home/morris/perl5/bin${PATH:+:${PATH}}"
-export PERL5LIB="/home/morris/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
-export PERL_LOCAL_LIB_ROOT="/home/morris/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
-export PERL_MB_OPT="--install_base \"/home/morris/perl5\""
-export PERL_MM_OPT="INSTALL_BASE=/home/morris/perl5"
-
-
 # Setup for Ruby
 test -d "$HOME/.gem/ruby/2.7.0/bin" && export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 test -d "$HOME/.rvm/bin" && export PATH="$HOME/.rvm/bin:$PATH"
 test -d "$HOME/.local/bin" && export PATH="$HOME/.local/bin:$PATH"
-
-# Import rest of shell setup
-test -r "$CONFIG_DIR/profile_private.rc" && source "${CONFIG_DIR}/profile_private.rc"
-test -r "$CONFIG_DIR/alias.rc" && source "${CONFIG_DIR}/alias.rc"
-test -r "$CONFIG_DIR/alias_private.rc" && source "${CONFIG_DIR}/alias_private.rc"
-test -r "$CONFIG_DIR/functions.rc" && source "${CONFIG_DIR}/functions.rc"
-test -r "$CONFIG_DIR/functions_private.rc" && source "${CONFIG_DIR}/functions_private.rc"
-
 test -r "$HOME/.rvm/scripts/rvm" && source "$HOME/.rvm/scripts/rvm"
+
+# Setup for LaTeX
+export TEXMFHOME=~/.local/share/texmf

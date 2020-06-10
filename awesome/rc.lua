@@ -240,7 +240,11 @@ clientkeys = my_table.join(
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
-    awful.key({ modkey,           }, "m", function (c) c.fullscreen = not c.fullscreen     end,
+    awful.key({ modkey,           }, "m",
+              function (c)
+                  c.fullscreen = not c.fullscreen
+                  c.maximized = false
+              end,
               {description = "toggle fullscreen", group = "client"})
 )
 

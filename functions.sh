@@ -1,29 +1,12 @@
-function ipy() {
-	if ! type ipython &> /dev/null; then
-		echo "${RED}[In ipy] ipython not found${RES}"
-		python "$@"
-	else
-		ipython "$@"
-	fi
-}
-
-function za() {
-	if ! type zathura &> /dev/null; then
-		echo "${RED}[In za] zathura not found${RES}"
-	else
-		exec zathura "$@" &> /dev/null & disown
-	fi
-}
-
 function o() {
-	if ! type xdg-open &> /dev/null; then
-		echo "${RED}[In o] xdg-open not found${RES}"
-	else
+	if hash xdg-open &> /dev/null; then
 		for file in "$@"; do
 			if test -f "${file}"; then
 				exec xdg-open "${file}" &> /dev/null & disown
 			fi
 		done
+	else
+		echo "${RED}[In o] xdg-open not found${RES}"
 	fi
 }
 
@@ -59,7 +42,6 @@ function gclone() {
 }
 
 function run_once() {
-	echo "$@"
 	pgrep -u $USER -x "$@"
     if ! pgrep -u $USER -x "$@" > /dev/null; then
 		exec "$@" &> /dev/null & disown

@@ -8,10 +8,10 @@
 	alias ...='cd ../..'
 	alias ..='cd ..'
 	alias c='cd '
-	alias rcp='rsync -a --progress --stats '
 	alias clc=' reset'
 	alias f='find . |grep '
 	alias h='history|grep '
+	alias ipy='ipython '
 	alias j='joe '
 	alias jl='julia '
 	alias jpy='jupyter notebook &>/dev/null&! '
@@ -20,11 +20,13 @@
 	alias pac='pacman '
 	alias py='python '
 	alias q='exit'
+	alias rcp='rsync -a --progress --stats '
+	alias s='sudo '
 	alias t='tmux '
 	alias ta='tmux attach '
-	alias s='sudo '
 	alias v='source .venv/bin/activate'
 	alias x='atool -x '
+	alias za='zathura '
 
 # Default options
 #################
@@ -44,9 +46,11 @@
 	if type lsd &> /dev/null; then
 		alias l='lsd'
 		alias ls='lsd -l'
+		alias لس='lsd -l'
 	else
 		alias l='ls --color=force -phlgo'
 		alias ls='ls --color=force -phl'
+		alias لس='ls --color=force -phl'
 	fi
 
 # Script-Like aliases
@@ -66,7 +70,8 @@
 	alias gpull='git pull origin $(current_branch)'
 	alias gpush='git push origin $(current_branch)'
 
-# Optirun
+# Optirun / Nvidia
+##################
 	alias v_status='optimus-manager --status'
 	alias v_nvidia='optimus-manager --switch nvidia'
 	alias v_intel='optimus-manager --switch intel'

@@ -2,7 +2,6 @@
 
 shopt -s histappend
 shopt -s cmdhist
+export PS1="${BLUE}\w ${RES}\u@\h\n> \[$(tput sgr0)\]"
 
 source "${HOME}/.profile"
-
-export PS1="${BLUE}\w ${RES}\u@\h\n> \[$(tput sgr0)\]"

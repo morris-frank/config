@@ -62,3 +62,4 @@ audio/x-wav=mpv.desktop
 video/quicktime=mpv.desktop
 image/x-xcf=gimp.desktop;
 audio/flac=mpv.desktop;
+application/x-tex=code-oss.desktop;
