@@ -44,7 +44,6 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "material-icon-theme",
     "update.mode": "none",
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.view.pdf.invert": 0,
@@ -218,7 +217,7 @@
         "upsampling",
         "upstreaming"
     ],
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 1,
     "editor.renderWhitespace": "boundary",
     "editor.tabCompletion": "on",
     "python.jediEnabled": false,
@@ -228,8 +227,22 @@
     ],
     "workbench.colorTheme": "Gruvbox Dark Soft",
     "latex-workshop.latex.autoBuild.run": "never",
-    "grammarly.userWords": [],
+    "grammarly.userWords": [
+        "tightness"
+    ],
     "git.enableSmartCommit": true,
     "grammarly.dialect": "british",
-    "grammarly.domain": "technical"
+    "grammarly.domain": "academic",
+    "latex-workshop.chktex.args.active": [
+        "-wall",
+        "-n22",
+        "-n30",
+        "-e16",
+        "-q",
+        "-n21"
+    ],
+    "php.executablePath": "/usr/bin/php",
+    "php.suggest.basic": false,
+    "php.validate.executablePath": "/usr/bin/php",
+    "python.languageServer": "Microsoft"
 }

@@ -8,6 +8,7 @@
 	alias ...='cd ../..'
 	alias ..='cd ..'
 	alias c='cd '
+	alias cs='cd ~/src/morris-frank/'
 	alias clc=' reset'
 	alias f='find . |grep '
 	alias h='history|grep '

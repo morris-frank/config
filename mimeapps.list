@@ -38,6 +38,7 @@ audio/x-wav=mpv.desktop
 video/quicktime=mpv.desktop
 image/x-xcf=gimp.desktop
 audio/flac=mpv.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox-developer-edition.desktop
@@ -63,3 +64,5 @@ video/quicktime=mpv.desktop
 image/x-xcf=gimp.desktop;
 audio/flac=mpv.desktop;
 application/x-tex=code-oss.desktop;
+application/octet-stream=org.gnome.gedit.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;

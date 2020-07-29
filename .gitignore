@@ -3,7 +3,6 @@
 .vscode
 
 pavucontrol.ini
-QtProject.conf
 kdeglobals
 konsole.kmessagebox
 konsole.notifyrc
@@ -12,6 +11,8 @@ Binaural*
 zoomus.conf
 marblerc
 DirectionalCompressor.settings
+kconf*
+*conf
 
 */
 !alacritty/
