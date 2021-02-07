@@ -58,7 +58,8 @@
 #####################
 	alias view_webcam='mpv /dev/video0 --vf=mirror --vf=eq=1.2:1.5:0.0:1.1:1.2:1.0:1.1'
 	alias هوا='curl wttr.in/Amsterdam?lang=en'
-	alias play='mpv --lavfi-complex="[aid1]asplit [ao], afifo, showspectrum=color=fire:scale=sqrt:orientation=vertical:overlap=1:fscale=lin:start=150:stop=2000, format=rgb0 [vo]"'
+	alias play='mpv --lavfi-complex="[aid1]asplit [ao], afifo, showspectrum=color=nebulae:scale=sqrt:orientation=vertical:overlap=1:fscale=lin:start=40:stop=1340:data=magnitude:win_func=hamming:slide=rscroll:legend=enabled, format=rgb0 [vo]"'
+	alias rmtex='rm -f *log *aux *out *bbl *blg *bcl *bcf *run.xml __latexindent_temp.tex *fls *toc *fdb_latexmk *snm *nav'
 	#alias play_chillwave='play --no-video --demuxer-seekable-cache=no https://www.youtube.com/watch?v=5qap5aO4i9A'
 
 # GIT

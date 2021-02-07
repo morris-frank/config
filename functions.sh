@@ -54,3 +54,4 @@ function wifi_restart() {
 	sleep 3
 	sudo rfkill unblock wifi
 }
+export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"

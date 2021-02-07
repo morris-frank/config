@@ -13,6 +13,7 @@ marblerc
 DirectionalCompressor.settings
 kconf*
 *conf
+kwalletrc
 
 */
 !alacritty/
